@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
+import { button } from '@storybook/addon-knobs';
 import { Button } from '../components/Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -27,6 +27,12 @@ export const Primary: Story = {
     primary: true,
     label: 'Button',
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/8Z2Q5HyARcGjoxggaFmKj9/tpg_ds?type=design&node-id=1-10&mode=design&t=TgAL9m8lSO4geoc9-4"
+    }
+  }
 };
 
 export const Warning: Story = {

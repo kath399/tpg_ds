@@ -1,0 +1,20 @@
+.textfield {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 1;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+}
+
+.textfield--default {
+    color: grey;
+    background-color: transparent;
+    border-color: grey;
+}
+
+.textfield--active {
+    color: aqua;
+    background-color: transparent;
+    border-color: aqua;
+}
