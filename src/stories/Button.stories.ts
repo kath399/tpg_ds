@@ -40,6 +40,12 @@ export const Warning: Story = {
     primary: true,
     label: 'Warning',
     backgroundColor: 'red'
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/8Z2Q5HyARcGjoxggaFmKj9/tpg_ds?type=design&node-id=1-11&mode=design&t=TgAL9m8lSO4geoc9-4"
+    }
   }
 };
 
@@ -47,6 +53,12 @@ export const Secondary: Story = {
   args: {
     label: 'Button',
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/8Z2Q5HyARcGjoxggaFmKj9/tpg_ds?type=design&node-id=1-12&mode=design&t=TgAL9m8lSO4geoc9-4"
+    }
+  }
 };
 
 export const Large: Story = {
