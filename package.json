@@ -11,6 +11,10 @@
     "@types/node": "^16.18.40",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -24,6 +28,7 @@
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "prepare": "npm run build",
     "chromatic": "npx chromatic --project-token=chpt_51b9d05166353c1"
   },
   "eslintConfig": {
@@ -64,6 +69,8 @@
     "storybook-addon-designs": "^6.3.1",
     "webpack": "^5.88.2"
   },
-  "readme": "ERROR: No README data found!",
-  "_id": "my-app@0.1.0"
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
