@@ -20,18 +20,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-/*export const Default: Story = {
+export const Default: Story = {
     args: {
-        id: 'Default',
-        status: 'default',
-        label: 'Name: ',
+        id: ''
     },
 }
-
-export const Active: Story = {
-    args: {
-        id: 'Active',
-        status: 'active',
-        label: 'Text: ',
-    },
-}*/
