@@ -22,22 +22,16 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     args: {
-        primary: true,
-        id: 'Textfield',
-        borderColor: 'grey',
+        id: 'Default',
         status: 'default',
-        isDisabled: false,
         label: 'Name: ',
     },
 }
 
 export const Active: Story = {
     args: {
-        primary: true,
-        id: 'Textfield',
-        borderColor: 'aqua',
+        id: 'Active',
         status: 'active',
-        isDisabled: false,
-        label: 'Text',
+        label: 'Text: ',
     },
 }

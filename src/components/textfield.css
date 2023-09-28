@@ -5,11 +5,12 @@
     cursor: pointer;
     display: inline-block;
     line-height: 1;
+    border-radius: 10;
 }
 
-.textfield--default {
+.textfield--isDisabled {
     color: grey;
-    background-color: transparent;
+    background-color: grey;
     border-color: grey;
 }
 
@@ -17,4 +18,10 @@
     color: aqua;
     background-color: transparent;
     border-color: aqua;
+    border-radius: 10;
+    border: 2;
+}
+
+.textfield--default[type=text] {
+    border: 2;
 }
