@@ -8,9 +8,20 @@ interface BoxProps {
 }
 
 export const Box = ({
+    backgroundColor,
+    borderColor,
+    size
 }: BoxProps) => {
     return (
-        <></>
+        <div 
+            className='box'
+            style={{
+                backgroundColor: backgroundColor,
+                borderColor: borderColor,
+            }}
+        >
+
+        </div>
     );
 };
   
