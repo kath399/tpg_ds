@@ -24,8 +24,9 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
-    primary: true,
+    mode: 'primary',
     label: 'Button',
+    state: 'default',
   },
   parameters: {
     design: {
@@ -35,11 +36,12 @@ export const Primary: Story = {
   }
 };
 
-export const Warning: Story = {
+export const Secondary: Story = {
   args: {
-    primary: true,
-    label: 'Warning',
-    backgroundColor: 'red'
+    mode: 'secondary',
+    label: 'Button',
+    backgroundColor: '#333333',
+    state: 'default'
   },
   parameters: {
     design: {
@@ -49,8 +51,22 @@ export const Warning: Story = {
   }
 };
 
-export const Secondary: Story = {
+export const Tertiary: Story = {
   args: {
+    mode: 'tertiary',
+    label: 'Button',
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/8Z2Q5HyARcGjoxggaFmKj9/tpg_ds?type=design&node-id=1-12&mode=design&t=TgAL9m8lSO4geoc9-4"
+    }
+  }
+};
+
+export const Success: Story = {
+  args: {
+    mode: 'success',
     label: 'Button',
   },
   parameters: {

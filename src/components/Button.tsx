@@ -5,7 +5,8 @@ interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
-  primary?: boolean;
+  //primary?: boolean;
+  mode?: string;
   /**
    * What background color to use
    */
@@ -21,6 +22,8 @@ interface ButtonProps {
   /**
    * Optional click handler
    */
+  state?: 'default' | 'hover' | 'pressed' | 'disabled' | 'focused';
+
   onClick?: () => void;
 }
 
@@ -28,17 +31,19 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
+  //primary = false,
+  mode = 'primary',
   size = 'medium',
   backgroundColor,
   label,
+  state = 'default',
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  //const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={['storybook-button', `storybook-button--${size}`, `storybook-button--${mode}--${state}`].join(' ')}
       style={{ backgroundColor }}
       {...props}
     >

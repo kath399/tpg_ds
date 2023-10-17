@@ -20,10 +20,16 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Selected: Story = {
     args: {
         id: '',
-        numButtons: 2,
-        option1: 'radio'
+        label: 'Label'
     },
+}
+
+export const Unselected: Story = {
+  args: {
+      id: '',
+      label: 'Label'
+  },
 }
