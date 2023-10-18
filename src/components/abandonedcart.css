@@ -10,11 +10,13 @@
     height: 50px;
 }
 
-.cart--desktop {
+.cart {
     width: 340px;
     height: 368px;
     align-content: center;
     border-radius: 0px 0px 6px 6px;
+    box-shadow: 2px 2px 8px #00000029;
+    padding: 24px;
 }
 
 .cart--tablet {
@@ -33,5 +35,10 @@ h1 {
 h2 {
     font-size: 28px;
     font-weight: normal;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
     text-align: center;
 }

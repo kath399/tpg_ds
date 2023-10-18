@@ -32,7 +32,7 @@ interface ButtonProps {
  */
 export const Button = ({
   //primary = false,
-  mode = 'primary',
+  mode,
   size = 'medium',
   backgroundColor,
   label,

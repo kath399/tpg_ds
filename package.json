@@ -69,6 +69,7 @@
     "prop-types": "^15.8.1",
     "storybook": "^7.2.3",
     "storybook-addon-designs": "^6.3.1",
+    "storybook-design-token": "^2.10.0",
     "webpack": "^5.88.2"
   },
   "main": "index.js",

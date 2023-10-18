@@ -10,6 +10,7 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "@storybook/addon-designs",
     "@storybook/addon-knobs",
+    'storybook-design-token'
   ],
   framework: {
     name: "@storybook/react-webpack5",

@@ -6,7 +6,6 @@ const meta = {
   title: 'Components/AbandonedCart',
   component: AbandonedCart,
   parameters: {
-    
     layout: 'centered',
   },
   tags: ['autodocs'],
@@ -18,16 +17,30 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Recognised: Story = {
   args: {
     mode: 'primary',
-    label: 'Button',
+    buttonlabel: 'Button',
     viewport: 'desktop'
   },
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/8Z2Q5HyARcGjoxggaFmKj9/tpg_ds?type=design&node-id=1-10&mode=design&t=TgAL9m8lSO4geoc9-4"
+      url: "https://www.figma.com/file/BtunVVjUyt3jJvT40IYBg5/Vodafone-Components?type=design&node-id=1416-33900&mode=design&t=rJ1y09iN25QXyGJz-4"
     }
   }
 };
+
+export const Unrecognised: Story = {
+    args: {
+      mode: 'primary',
+      buttonlabel: 'Button',
+      viewport: 'desktop'
+    },
+    parameters: {
+      design: {
+        type: "figma",
+        url: "https://www.figma.com/file/BtunVVjUyt3jJvT40IYBg5/Vodafone-Components?type=design&node-id=1416-33900&mode=design&t=rJ1y09iN25QXyGJz-4"
+      }
+    }
+  };
