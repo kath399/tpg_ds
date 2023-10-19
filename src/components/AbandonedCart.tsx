@@ -3,28 +3,36 @@ import './abandonedcart.css';
 import {Button} from './Button';
 
 interface AbandonedCartProps {
-  mode?: string;
   viewport?: 'desktop' | 'tablet' | 'mobile';
-  buttonlabel: string;
   number?: string;
+  singleItem: boolean;
+  items?: number;
 }
 
 export const AbandonedCart = ({
-    //primary = false,
-    mode = 'primary',
     viewport = 'desktop',
-    buttonlabel = 'Go to cart',
-    number = '04XX XXX 246',
+    number,
+    items = 2,
+    singleItem,
     ...props
   }: AbandonedCartProps) => {
-    //const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+    const itemsToShow = `You have ${items} <span class="bold">items</span> saved in your cart from your previous visit`;
+    
+    if (singleItem) {
+      // Change itemsToShow to show single item
+    }
+    const element = document.getElementById("myElement");
+    if (element) {
+      element.style.textAlign = "center";
+      element.textContent = itemsToShow;
+    }
     return (
         <div className='cart'>
             <h1>Welcome back</h1>
             <h2>{number}</h2>
             <p>This is saved in your cart:</p>
-
-            <Button label={buttonlabel} mode='primary' state='default'/>
+            {itemsToShow}
+            <button type="button" className="cartbutton">Go to cart</button>
             <p><u><a>No thanks</a></u></p>
         </div>
     );
