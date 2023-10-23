@@ -1,0 +1,58 @@
+.inline-container {
+    padding: 17px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 35px auto;
+    grid-gap: 0px;
+    border-color: transparent;
+}
+
+.grid-item {
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.dollarsign {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.amount {
+    text-decoration: line-through;
+    margin-top: 7px;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
+.permonth {
+    margin: 0px;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+    margin: 0
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0
+}
+
+.details {
+    text-align: left;
+    font-size: 14px;
+    margin: 5px;
+}
