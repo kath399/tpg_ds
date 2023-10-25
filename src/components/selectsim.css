@@ -1,0 +1,67 @@
+.selectsim {
+    width: 288px;
+    height: 570px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px #00000029;
+    padding: 16px;
+}
+
+.sim-grid-container {
+    display: grid;
+    grid-template-columns: 60px auto;
+    grid-gap: 0px;
+    border-color: transparent;
+}
+
+.sim-grid-item {
+    padding: 10px;
+}
+
+.sim-h1 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0px;
+}
+
+.sim-text {
+    font-size: 18px;
+    text-align: left;
+}
+
+.physicalbtn {
+    width: fill;
+    height: 50px;
+    color: white;
+    background-color: #008A00;
+    border-color: transparent;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    size: 16px;
+}
+
+.ebtn {
+    width: fill;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #999999;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    size: 16px;
+}
+
+.info-grid-container {
+    display: grid;
+    grid-template-columns: 24px auto;
+    grid-gap: 16px;
+    border-color: transparent;
+}
+
+.info-grid-item {
+    padding: 10px;
+}
+
+.info-text {
+    font-size: 14px;
+    text-align: left;
+}

@@ -13,13 +13,16 @@ export const Textfield = ({
   label
 }: TextfieldProps) => {
   return (
-    <label htmlFor={id}> {label}
-      <input 
-        type="text"
-        id={id} 
-        className={`textfield--${status}`}
-      />
-    </label>
+    <div>
+      <label htmlFor={id}> {label} 
+        <input 
+          type="text"
+          id={id} 
+          className={`textfield--${status}`}
+        />
+      </label>
+      <button>Submit</button>
+    </div>
   );
 };
   

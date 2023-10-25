@@ -1,0 +1,95 @@
+.card {
+    height: 882px;
+    width: 380px;
+    border-radius: 0px 6px 6px 6px;
+    box-shadow: 2px 2px 8px #00000029;
+    position: relative;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 0px;
+    border-color: transparent;
+}
+
+.grid-item {
+    padding: 10px;
+    text-align: center;
+}
+
+.divider {
+    border-left: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.value {
+    color: #E60000;
+    font-weight: bold;
+    margin: 24px 0px 0px 0px;
+}
+
+.permonth {
+    margin: 0px;
+}
+
+.h1text {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.gbtext {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.plan { 
+    background-color: #EBEBEB;
+    padding: 12px 16px 12px 16px;
+}
+
+.planname {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 12px;
+    text-align: left;
+}
+
+.headline {
+    padding: 16px 16px 12px 16px;
+}
+
+.headlinetext {
+    text-align: left;
+    margin: 0px;
+}
+
+.loremipsum {
+    text-align: left;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.selectbtn {
+    background-color: #E60000;
+    border-radius: 6px;
+    border-color: transparent;
+    color: white;
+    size: 20px;
+    width: fill;
+    padding: 15px 20px 15px 20px;
+}
+
+.chin {
+    background-color: #F4F4F4;
+    bottom: 0px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+}

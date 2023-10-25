@@ -1,0 +1,32 @@
+.horizontal-stepper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .step-indicator {
+    display: flex;
+    align-items: center;
+  }
+  
+  .step-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+  }
+  
+  .step-circle.active {
+    background: #333333;
+    color: #fff;
+  }
+  
+  .step-line {
+    height: 2px;
+    background: #ccc;
+  }
+  
