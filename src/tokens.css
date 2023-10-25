@@ -1,0 +1,22 @@
+:root {
+    /**
+    * @tokens Animations
+    * @presenter Animation
+    */
+  
+    --animation-rotate: rotate 1.2s infinite cubic-bezier(0.55, 0, 0.1, 1);
+  
+    /**
+    * @tokens Colors
+    * @presenter Color
+    */
+  
+    --color-brand-primary: hsl(240, 100%, 90%); /* Token Description Example  @presenter Color */
+    --color-brand-secondary: hsl(240, 100%, 80%);
+    --color-brand-tertiary: hsl(240, 100%, 70%);
+  
+    /**
+    * @tokens Others
+    */
+    --border-normal: 3px dashed red; /* Token Description Example @presenter BorderRadius */
+  }
