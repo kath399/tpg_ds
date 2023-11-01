@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { button } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 import { AbandonedCart } from '../components/AbandonedCart';
 
 const meta = {
@@ -10,6 +10,7 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
+    singleItem: { control: 'boolean' }
   },
 } satisfies Meta<typeof AbandonedCart>;
 
@@ -18,10 +19,10 @@ type Story = StoryObj<typeof meta>;
 
 export const Recognised: Story = {
   args: {
-    viewport: 'desktop',
+    //viewport: 'desktop',
     items: 2,
     number: '04XX XXX 246',
-    singleItem: true,
+    singleItem: false,
   },
   parameters: {
     design: {
@@ -32,15 +33,15 @@ export const Recognised: Story = {
 };
 
 export const Unrecognised: Story = {
-    args: {
-      viewport: 'desktop',
-      items: 2,
-      singleItem: true,
-    },
-    parameters: {
-      design: {
-        type: "figma",
-        url: "https://www.figma.com/file/BtunVVjUyt3jJvT40IYBg5/Vodafone-Components?type=design&node-id=1416-33900&mode=design&t=rJ1y09iN25QXhttps://www.figma.com/file/BtunVVjUyt3jJvT40IYBg5/Vodafone-Components?type=design&node-id=1416-33891&mode=design&t=fsDgVHmmAGHmcbEu-4"
-      }
+  args: {
+    //viewport: 'desktop',
+    items: 2,
+    singleItem: false,
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/BtunVVjUyt3jJvT40IYBg5/Vodafone-Components?type=design&node-id=1416-33891&mode=design&t=fsDgVHmmAGHmcbEu-4"
     }
-  };
+  }
+};
