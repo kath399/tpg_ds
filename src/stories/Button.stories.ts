@@ -14,7 +14,7 @@ const meta = {
   tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: { control: 'color' }, 
   },
 } satisfies Meta<typeof Button>;
 
@@ -27,6 +27,7 @@ export const Primary: Story = {
     mode: 'primary',
     label: 'Button',
     state: 'default',
+    size: 'small',
   },
   parameters: {
     design: {
@@ -40,7 +41,8 @@ export const Secondary: Story = {
   args: {
     mode: 'secondary',
     label: 'Button',
-    state: 'default'
+    state: 'default',
+    size: 'small',
   },
   parameters: {
     design: {
@@ -54,6 +56,8 @@ export const Tertiary: Story = {
   args: {
     mode: 'tertiary',
     label: 'Button',
+    state: 'default',
+    size: 'small',
   },
   parameters: {
     design: {
@@ -67,6 +71,8 @@ export const Success: Story = {
   args: {
     mode: 'success',
     label: 'Button',
+    state: 'default',
+    size: 'small',
   },
   parameters: {
     design: {
@@ -74,18 +80,4 @@ export const Success: Story = {
       url: "https://www.figma.com/file/8Z2Q5HyARcGjoxggaFmKj9/tpg_ds?type=design&node-id=1-12&mode=design&t=TgAL9m8lSO4geoc9-4"
     }
   }
-};
-
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
-
-export const Small: Story = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
 };

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { InlineTotal } from '../components/InlineTotal';
 import { within, userEvent } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
+//import { expect } from '@storybook/jest';
 
 const meta = {
   title: 'Components/InlineTotal',

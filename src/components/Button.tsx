@@ -12,9 +12,9 @@ interface ButtonProps {
    */
   backgroundColor?: string;
   /**
-   * How large should the button be?
+   * How large should the button be? 
    */
-  size?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'large';
   /**
    * Button contents
    */
@@ -33,7 +33,7 @@ interface ButtonProps {
 export const Button = ({
   //primary = false,
   mode,
-  size = 'medium',
+  size = 'small',
   backgroundColor,
   label,
   state = 'default',

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { SelectSIM } from '../components/SelectSIM';
 import { within, userEvent } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
+//import { expect } from '@storybook/jest';
 
 const meta = {
   title: 'Components/SelectSIM',
