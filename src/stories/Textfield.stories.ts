@@ -21,33 +21,59 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Simple: Story = {
     args: {
-        id: 'Default',
-        status: 'default',
-        label: 'Name:',
+        id: 'Simple',
+        complex: false,
+        state: 'enabled',
+        label: 'Label',
+        error: false,
+        errortext: 'Error',
+    },
+    
+    parameters: {
+        design: {
+            type: "figma",
+            url: "https://www.figma.com/file/BtunVVjUyt3jJvT40IYBg5/Vodafone-Components?type=design&node-id=896-28676&mode=design&t=Kf2VfR9SgOm0o792-4"
+        }
     },
     play: async ({ canvasElement }) => {
       const canvas = within(canvasElement);
   
-      const nameInput = canvas.getByLabelText('Name:', {
+      const nameInput = canvas.getByLabelText('Label', {
         selector: 'input',
       });
   
-      await userEvent.type(nameInput, 'name', {
+      await userEvent.type(nameInput, 'user input text', {
         delay: 100,
       });
-      
-      const submitButton = canvas.getByRole('button');
-  
-      await userEvent.click(submitButton);
+
     },
 }
 
-export const Active: Story = {
+export const Complex: Story = {
     args: {
         id: 'Active',
-        status: 'active',
-        label: 'Text: ',
+        complex: true,
+        state: 'enabled',
+        label: 'Label',
+        error: false
+    },
+
+    parameters: {
+      design: {
+        type: 'figma',
+        url:"https://www.figma.com/file/BtunVVjUyt3jJvT40IYBg5/Vodafone-Components?type=design&node-id=894-32414&mode=design&t=Lx4uU7loBvdsJPIU-4"
+      }
+    },
+
+    play: async ({ canvasElement }) => {
+      const canvas = within(canvasElement);
+  
+      const nameInput = canvas.getByLabelText('Label', {
+        selector: 'input',
+      });
+  
+
     },
 }

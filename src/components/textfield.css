@@ -8,20 +8,36 @@
     border-radius: 10;
 }
 
-.textfield--isDisabled {
-    color: grey;
-    background-color: grey;
-    border-color: grey;
+input[type=text] {
+    width: 100%;
+    height: 50px;
+    padding: 0px 16px 0px 16px;
+    margin: 12px 0;
+    display: inline-block;
+    border: 1px solid #999999;
+    border-radius: 6px;
+    box-sizing: border-box;
 }
 
-.textfield--active {
-    color: aqua;
-    background-color: transparent;
-    border-color: aqua;
-    border-radius: 10;
-    border: 2;
+input[type=text]:focus {
+    outline: none;
+    border: 2px solid #00B0CA;
 }
 
-.textfield--default[type=text] {
-    border: 2;
+input[type="text"]:disabled {
+    background: #EBEBEB;
+}
+
+input:required:invalid {
+    border: 2px solid #BD0000; /* Set a red border */
+}
+  
+
+.error {
+    border: 2px solid #BD0000;
+}
+
+.error-message {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #BD0000;
 }

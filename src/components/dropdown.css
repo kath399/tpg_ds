@@ -1,0 +1,84 @@
+.dropdown-container {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: inline-block;
+    position: relative;
+    width: 480px;
+  }
+  
+  .dropdown-select {
+    background-color: transparent;
+    border: 1px solid #999999;
+    border-radius: 6px;
+    padding: 0px 16px 0px 16px;
+    width: fill;
+    height: 50px;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 12px;
+      /* Remove default arrow and style a custom one */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Add a custom arrow */
+    background-image: url('./Chevrondown.svg'); /* You can use an arrow image */
+    background-position: right 16px center;
+    background-repeat: no-repeat;
+  }
+
+  .dropdown-select:focus {
+    border: 2px solid #00B0CA;
+  }
+
+  .dropdown-select::-ms-expand {
+    display: none;
+  }
+
+  /* Style the dropdown options */
+  .dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #FFFFFF;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    z-index: 1;
+    margin: 16px;
+  }
+  
+  /* Style the individual options */
+  .dropdown-options option {
+    padding: 16px;
+  }
+  
+  /* Style the options on hover */
+  .dropdown-options option:hover {
+    background-color: #EBEBEB;
+    color: #fff;
+  }
+
+  .dropdown-select-error {
+    background-color: transparent;
+    border: 2px solid #BD0000;
+    border-radius: 6px;
+    padding: 0px 16px 0px 16px;
+    width: fill;
+    height: 50px;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 12px;
+      /* Remove default arrow and style a custom one */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Add a custom arrow */
+    background-image: url('./Chevrondown.svg'); /* You can use an arrow image */
+    background-position: right 16px center;
+    background-repeat: no-repeat;
+   
+  }
