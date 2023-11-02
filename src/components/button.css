@@ -11,12 +11,23 @@
   height: 50px;
   color: white;
 }
-/* PRIMARY BUTTONS */
+
+/* PRIMARY BUTTONS DYNAMIC STATES */
+.storybook-button--primary--default:hover {
+  background-color: #BD0000;  
+}
+.storybook-button--primary--default:focus {
+  background-color: #E60000;
+  border-color: #007C92;
+}
+.storybook-button--primary--default:active {
+  background-color: #990000;
+  border-color: transparent;
+}
+
+/* PRIMARY BUTTONS STATIC STATES */
 .storybook-button--primary--default {
   background-color: #E60000; 
-}
-.stoyrbook-button--primary--default:hover { /* check if necessary */
-  background-color: #BD0000;
 }
 .storybook-button--primary--hover {
   background-color: #BD0000;
@@ -33,7 +44,20 @@
   border-color: #007c92;
 }
 
-/* SECONDARY BUTTONS */
+/* SECONDARY BUTTONS DYNAMIC STATES */
+.storybook-button--secondary--default:hover {
+  background-color: #969696;  
+}
+.storybook-button--secondary--default:focus {
+  background-color: #333333;
+  border-color: #007c92; 
+}
+.storybook-button--secondary--default:active {
+  background-color: #25282b;
+  border-color: transparent;
+}
+
+/* SECONDARY BUTTONS STATIC STATES */
 .storybook-button--secondary--default {
   background-color: #333333;
 }
@@ -52,7 +76,24 @@
   border-color: #007c92;  
 }
 
-/* TERTIARY BUTTONS */
+/* TERTIARY BUTTONS DYNAMIC STATES */
+.storybook-button--tertiary--default:hover {
+  background-color: #f4f4f4;
+  border-color: #333333; 
+  color: #333333;
+}
+.storybook-button--tertiary--default:focus {
+  background-color: #f9f9f9;
+  border-color: #17869a;
+  color: #333333;
+}
+.storybook-button--tertiary--default:active {
+  background-color: #939393;
+  border-color: #333333;
+  color: #333333; 
+}
+
+/* TERTIARY BUTTONS STATIC STATES*/
 .storybook-button--tertiary--default {
   background-color: #f9f9f9;
   border-color: #939393;  
@@ -81,7 +122,20 @@
 
 /* TERTIARY TRANSPARAENT BUTTONS ??? */
 
-/* SUCCESS BUTTONS */
+/* SUCCESS BUTTONS DYNAMIC STATES */
+.storybook-button--success--default:hover {
+  background-color: #666666;
+}
+.storybook-button--success--default:focus {
+  background-color: #333333;
+  border-color: #007c92; 
+}
+.storybook-button--success--default:active {
+  background-color: #008a00; 
+  border-color: transparent;
+}
+
+/* SUCCESS BUTTONS STATIC STATES */
 .storybook-button--success--default {
   background-color: #414141; 
 }
