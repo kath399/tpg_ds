@@ -1,3 +1,5 @@
+
+
 :root {
     /**
     * @tokens Animations
@@ -10,13 +12,21 @@
     * @tokens Colors
     * @presenter Color
     */
-  
-    --color-brand-primary: hsl(240, 100%, 90%); /* Token Description Example  @presenter Color */
-    --color-brand-secondary: hsl(240, 100%, 80%);
-    --color-brand-tertiary: hsl(240, 100%, 70%);
+
+    --color-background-action-primary: #E60000;
+    --color-background-action-primary-hover: #C60000;
+    --color-background-action-primary-pressed: #A60000;
+    --color-content-action-primary: #FFFFFF;
+
   
     /**
     * @tokens Others
     */
-    --border-normal: 3px dashed red; /* Token Description Example @presenter BorderRadius */
+
+  }
+
+  :root {
+    --spacing-spacing-150: 12px;
+    --spacing-spacing-200: 16px;
+    --spacing-spacing-300: 24px;
   }
