@@ -4,6 +4,18 @@
     position: relative;
     width: 480px;
   }
+
+  @media screen and (max-width: 767px) {
+    .dropdown-container {
+      width: 328px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .dropdown-container {
+      width: 480px;
+    }
+  }
   
   .dropdown-select {
     background-color: transparent;

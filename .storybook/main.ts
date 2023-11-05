@@ -10,7 +10,7 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "@storybook/addon-designs",
     "@storybook/addon-knobs",
-    'storybook-design-token',
+    { name: 'storybook-design-token', options: {preserveCSSVars: true} }, 
     '@storybook/addon-a11y',
   ],
   framework: {
@@ -20,8 +20,8 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  // staticDirs: ["..\\public"], 
+  staticDirs: ["..\\public"], 
   // currently ommitted and will prevent Storybook from serving any static assets
-  staticDirs: [],
+  //staticDirs: [],
 };
 export default config;

@@ -1,3 +1,5 @@
+@import '../tokens.css';
+
 .storybook-button {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -27,13 +29,18 @@
 
 /* PRIMARY BUTTONS STATIC STATES */
 .storybook-button--primary--default {
-  background-color: #E60000; 
+  background-color: var(--color-background-action-primary); 
 }
+
+.stoyrbook-button--primary--default:hover { /* check if necessary */
+  background-color: var(--color-background-action-primary-hover);
+}
+
 .storybook-button--primary--hover {
-  background-color: #BD0000;
+  background-color: var(--color-background-action-primary-hover);
 }
 .storybook-button--primary--pressed {
-  background-color: #990000;
+  background-color: var(--color-background-action-primary-pressed);
 }
 .storybook-button--primary--disabled {
   color: #666666;
