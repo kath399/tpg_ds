@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { button } from '@storybook/addon-knobs';
 import { Button } from '../components/Button';
+import { string } from 'prop-types';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -9,6 +10,23 @@ const meta = {
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'centered',
+    docs: {
+      description: {
+        component: `<div><strong>Overview:</strong> Buttons are clickable elements that allow users to interact with a page and make choices with a single tap. 
+          They communicate different calls to action with each variant representing a different function and level of priority. 
+          These variants must be used consistently across the product so that the message to the user remains clear and uniform.</div> <br /> <div>
+
+          <strong>Guidelines:</strong> Button consists of a shape and a corresponding label, which describes the action that will occur.
+          The button component has four appearances representing different functions and levels of priority. 
+          Use them consistently across the screens and platforms to ensure a uniform message to the user. 
+          Button and Button With Icon are merged into a single component - Button.</div> <br /> <div>
+          
+          <strong>Related Components:</strong> Back button, Link button</div> <br /> <div>
+          
+          <strong>Properties:</strong> (Name, Required, Type, Default & Description)</div>
+        `,
+      },
+    }
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
