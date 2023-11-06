@@ -39,15 +39,15 @@ export const Checkbox = ({
   };
 
   return (
-    <label className='font-container'>
+    <label className='container'>
       <input
         type="checkbox"
         checked={checked}
         onChange={handleCheckboxChange}
-        className={['storybook-checkbox', `storybook-checkbox--${mode}--${state}`].join(' ')}
+        className={[`checkmark--${mode}--${state}`].join(' ')}
         {...props} 
       />
-        {label}
+      <span className='checkmark'></span>{label}
     </label>
   );
 };
