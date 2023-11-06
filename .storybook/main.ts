@@ -1,7 +1,7 @@
 import type { StorybookConfig } from "@storybook/react-webpack5";
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: ["../src/**/*.mdx", '../src/**/*.stories.mdx', "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -12,6 +12,15 @@ const config: StorybookConfig = {
     "@storybook/addon-knobs",
     { name: 'storybook-design-token', options: {preserveCSSVars: true} }, 
     '@storybook/addon-a11y',
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        jsxOptions: {},
+        csfPluginOptions: null,
+        mdxPluginOptions: {},
+        configureJSX: true,
+      },
+    },
   ],
   framework: {
     name: "@storybook/react-webpack5",
