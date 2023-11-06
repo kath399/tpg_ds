@@ -7,6 +7,20 @@ const meta = {
   component: AbandonedCart,
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component: `<div><strong>Overview:</strong> Checkboxes allow users to select one or more items from a set and can be used to turn an option on or off. 
+          They’re a kind of selection control that helps users make a choice from a set of options.</div> <br /> <div>
+
+          <strong>Guidelines:</strong> Single-line fields, as the cursor reaches the right field edge, 
+          text longer than the input line automatically scrolls left. Text areas are fixed-height fields</div> <br /> <div>
+          
+          <strong>Related Components:</strong> N/A</div> <br /> <div>
+          
+          <strong>Properties:</strong> (Name, Required, Type, Default & Description)</div>
+        `,
+      },
+    }
   },
   tags: ['autodocs'],
   argTypes: {
