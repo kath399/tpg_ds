@@ -45,27 +45,3 @@ export const Secondary: Story = {
     }
   }
 };
-
-export const Tertiary: Story = {
-  args: {
-    Label: 'Label'
-  },
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/8Z2Q5HyARcGjoxggaFmKj9/tpg_ds?type=design&node-id=1-12&mode=design&t=TgAL9m8lSO4geoc9-4"
-    }
-  }
-};
-
-export const Success: Story = {
-  args: {
-    Label: 'Label'
-  },
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/8Z2Q5HyARcGjoxggaFmKj9/tpg_ds?type=design&node-id=1-12&mode=design&t=TgAL9m8lSO4geoc9-4"
-    }
-  }
-};

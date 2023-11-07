@@ -4,7 +4,7 @@ import { within, userEvent } from '@storybook/testing-library';
 //import { expect } from '@storybook/jest';
 
 const meta = {
-  title: 'Components/InlineTotal',
+  title: 'Components/Other/InlineTotal',
   component: InlineTotal,
   parameters: {
     layout: 'centered',

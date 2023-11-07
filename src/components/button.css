@@ -14,6 +14,20 @@
   color: white;
 }
 
+@media screen and (max-width: 767px) {
+  .storybook-button {
+    width: 328px;
+    height: 44px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .storybook-button {
+    width: 150px;
+    height: 50px;
+  }
+}
+
 /* PRIMARY BUTTONS DYNAMIC STATES */
 .storybook-button--primary--default:hover {
   background-color: #BD0000;  
