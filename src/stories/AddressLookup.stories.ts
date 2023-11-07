@@ -35,7 +35,7 @@ export const Simple: Story = {
     play: async ({ canvasElement }) => {
       const canvas = within(canvasElement);
   
-      const nameInput = canvas.getByLabelText('Label', {
+      const nameInput = canvas.getByLabelText('Home Address', {
         selector: 'input',
       });
   

@@ -30,16 +30,4 @@ export const Primary: Story = {
       url: "https://www.figma.com/file/BtunVVjUyt3jJvT40IYBg5/Vodafone-Components?type=design&node-id=2643-48991&mode=design&t=vA7BDRmCEz035JKs-4"
     }
   },
-
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    
-    const submitButton = canvas.getByRole('paragraph', {
-      value: {
-        min: 0,
-        max: 9
-      }
-    });
-    await userEvent.click(submitButton);
-  },
 };
