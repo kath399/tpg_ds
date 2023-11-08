@@ -4,7 +4,7 @@ import { within, userEvent } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
 const meta = {
-  title: 'Components/StickyCart',
+  title: 'Components/Product/Sticky Cart',
   component: StickyCart,
   parameters: {
     layout: 'centered',

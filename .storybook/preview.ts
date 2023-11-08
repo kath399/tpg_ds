@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/react";
+import { Title, Subtitle, Description, Primary, Controls, Stories } from '@storybook/blocks';
 // import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 const MY_VIEWPORTS = {
@@ -39,6 +40,9 @@ const preview: Preview = {
     }, 
     designToken: {
       defaultTab: 'Colors'
+    },
+    docs: {
+      
     },
   },
 };

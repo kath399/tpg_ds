@@ -3,7 +3,7 @@ import { Filter } from '../components/Filter';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: 'Components/Filter',
+  title: 'Components/Core/Filter',
   component: Filter,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
@@ -42,30 +42,6 @@ export const Secondary: Story = {
     design: {
       type: "figma",
       url: "https://www.figma.com/file/8Z2Q5HyARcGjoxggaFmKj9/tpg_ds?type=design&node-id=1-11&mode=design&t=TgAL9m8lSO4geoc9-4"
-    }
-  }
-};
-
-export const Tertiary: Story = {
-  args: {
-    Label: 'Label'
-  },
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/8Z2Q5HyARcGjoxggaFmKj9/tpg_ds?type=design&node-id=1-12&mode=design&t=TgAL9m8lSO4geoc9-4"
-    }
-  }
-};
-
-export const Success: Story = {
-  args: {
-    Label: 'Label'
-  },
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/8Z2Q5HyARcGjoxggaFmKj9/tpg_ds?type=design&node-id=1-12&mode=design&t=TgAL9m8lSO4geoc9-4"
     }
   }
 };

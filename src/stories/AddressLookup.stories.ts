@@ -4,7 +4,7 @@ import { userEvent, within } from '@storybook/testing-library';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: 'Components/AddressLookup',
+  title: 'Components/Product/Address Lookup',
   component: AddressLookup,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
@@ -35,7 +35,7 @@ export const Simple: Story = {
     play: async ({ canvasElement }) => {
       const canvas = within(canvasElement);
   
-      const nameInput = canvas.getByLabelText('Label', {
+      const nameInput = canvas.getByLabelText('Home Address', {
         selector: 'input',
       });
   

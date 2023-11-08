@@ -29,7 +29,7 @@ export const Textfield = ({
   };
 
   return (
-    <div>
+    <div className='txtfield'>
       <label htmlFor={id} className='textfield'> {label} </label>
       <input 
         id={id}

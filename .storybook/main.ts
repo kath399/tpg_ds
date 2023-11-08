@@ -12,6 +12,15 @@ const config: StorybookConfig = {
     "@storybook/addon-knobs",
     { name: 'storybook-design-token', options: {preserveCSSVars: true} }, 
     '@storybook/addon-a11y',
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        jsxOptions: {},
+        csfPluginOptions: null,
+        mdxPluginOptions: {},
+        configureJSX: true,
+      },
+    },
   ],
   framework: {
     name: "@storybook/react-webpack5",
