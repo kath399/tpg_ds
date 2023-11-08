@@ -20,8 +20,8 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  staticDirs: ["..\\public"], 
+  //staticDirs: ["..\\public"], 
   // currently ommitted and will prevent Storybook from serving any static assets
-  //staticDirs: [],
+  staticDirs: [],
 };
 export default config;
