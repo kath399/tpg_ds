@@ -1,0 +1,73 @@
+.abandonedcartTitle {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    width: 150px;
+    height: 50px;
+}
+
+.cart {
+    width: 340px;    
+    align-content: center;
+    border-radius: 0px 0px 6px 6px;
+    box-shadow: 2px 2px 8px #00000029;
+    padding: 10px 24px 24px 24px;
+}
+
+.cartbutton {
+    width: -webkit-fill-available;
+    width: fill;
+    height: 50px;
+    background-color: #E60000;
+    border-color: transparent;
+    border-radius: 6px;
+    color: white;
+    align-self: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.cart--tablet {
+    width: 310px;
+    height: 336px;
+    align-content: center;
+    border-radius: 0px 0px 6px 6px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.productImage {
+    width:80px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.itemContainer {
+    display: flex;
+    align-items: center;
+}
+
+/*# sourceMappingURL=stories-AbandonedCart-stories.ff476bd0.chunk.css.map*/

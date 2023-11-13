@@ -1,0 +1,20 @@
+.accordion {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: flex;
+    width: 1180px;
+    background-color: white;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.accordion-header {
+    font-size: 20px;
+    color: black;
+}
+
+.accordion-content {
+    font-size: 18px;
+    color: black;
+}
+
+/*# sourceMappingURL=stories-Accordion-stories.f377ce69.chunk.css.map*/

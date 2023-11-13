@@ -1,0 +1,81 @@
+.filter-primary {
+    display: flex;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border: transparent;
+    border-radius: 25px;
+    padding: 10px 20px 10px 20px;
+    background: transparent;
+}
+
+.filter-primary:hover {
+    background-color: #F4F4F4;
+}
+
+.filter-primary:disabled {
+    background-color: #EBEBEB;
+    color: #999999;
+}
+
+.selected-primary {
+    display: flex;
+    align-items: center;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    size: 20px;
+    border-radius: 25px;
+    padding: 10px 20px 10px 20px;
+    background-color: #E60000;
+    color: white;
+    border: transparent;
+}
+
+.selected-primary:hover {
+    border: 2px solid #00B0CA;
+}
+
+.filter-secondary {
+    display: flex;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border: transparent;
+    border-radius: 25px;
+    padding: 10px 20px 10px 20px;
+    background: transparent;
+}
+
+.filter-secondary:hover {
+    background-color: #F4F4F4;
+}
+
+.filter-secondary:disabled {
+    background-color: #EBEBEB;
+    color: #999999;
+}
+
+.selected-secondary {
+    display: flex;
+    align-items: center;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    size: 20px;
+    border-radius: 25px;
+    padding: 10px 20px 10px 20px;
+    background-color: #333333;
+    color: white;
+    border: transparent;
+}
+
+.selected-secondary:hover {
+    border: 2px solid #00B0CA;
+}
+
+@media screen and (max-width: 767px) {
+    .filter-primary .filter-secondary {
+      size: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .filter-primary .filter-secondary {
+      size: 20px;
+    }
+}
+
+/*# sourceMappingURL=stories-Filter-stories.d3e6a706.chunk.css.map*/

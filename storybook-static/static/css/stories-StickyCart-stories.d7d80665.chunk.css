@@ -1,0 +1,50 @@
+.stickycart {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: flex;
+    width: 600px;
+    height: 84px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px #00000029;
+    padding: 16px;
+    align-items: center;
+    gap: 8px;
+}
+
+.content {
+    display: inline-block;
+    width: 261px;
+}
+
+.link {
+    display: flex;
+    padding: 4px 12px;
+    align-items: center;
+    gap: 10px;
+}
+
+.continuetocart {
+    flex-direction: column;
+    align-items: center;
+    justify-self: flex-end;
+    gap: 8px;
+    background-color: #E60000;
+    width: 166px;
+    height: 50px;
+    border-radius: 6px;
+    border-color: transparent;
+    color: white;
+    padding: 15px 20px 15px 20px;
+}
+
+.expanded {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #F4F4F4;
+    width: 600px;
+    padding: 10px 16px 10px 16px;
+}
+
+.item {
+    display: flex;
+}
+
+/*# sourceMappingURL=stories-StickyCart-stories.d7d80665.chunk.css.map*/
