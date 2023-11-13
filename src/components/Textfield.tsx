@@ -9,6 +9,7 @@ interface TextfieldProps {
     error?: boolean;
     errortext?: string;
     suggestions?: string[]; // Add a new prop for suggestions
+    errorsuggestions?: string[];
 }
 
 export const Textfield = ({
@@ -22,11 +23,20 @@ export const Textfield = ({
 }: TextfieldProps) => {
   const [isEmpty, setIsEmpty] = useState(false);
   const [inputValue, setInputValue] = useState(''); // State to store input value
+  const [showInputError, setShowInputError] = useState(false)
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     setInputValue(value);
     setIsEmpty(value.trim() === ''); // Check if input is empty
+
+    setShowInputError(complex && value.trim() !== '' && !suggestions.includes(value.trim()));
   };
+
+  if(showInputError) {
+    suggestions = [];
+    suggestions.push('Cannot find')
+  }
 
   return (
     <div className='txtfield'>

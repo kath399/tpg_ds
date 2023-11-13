@@ -1,0 +1,125 @@
+.selectsim {
+    width: 288px;
+    
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px #00000029;
+    padding: 16px;
+}
+
+.sim-grid-container {
+    display: grid;
+    grid-template-columns: 60px auto;
+    grid-gap: 0px;
+    border-color: transparent;
+}
+
+.sim-grid-dropdown {
+    display: grid;
+    grid-template-columns: 60px auto 24px;
+    grid-gap: 0px;
+    border-color: transparent;
+}
+
+.sim-grid-item {
+    padding: 10px;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+
+
+.sim-h1 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0px;
+}
+
+.sim-text {
+    font-size: 18px;
+    text-align: left;
+}
+
+.physicalbtn {
+    width: -webkit-fill-available;
+    width: fill;
+    height: 50px;
+    color: white;
+    background-color: #008A00;
+    border-color: transparent;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ebtn {
+    width: -webkit-fill-available;
+    width: fill;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #999999;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    size: 16px;
+}
+
+.info-grid-container {
+    display: grid;
+    grid-template-columns: 24px auto;
+    grid-gap: 16px;
+    border-color: transparent;
+}
+
+.info-grid-item {
+    padding: 10px;
+}
+
+.info-text {
+    font-size: 14px;
+    text-align: left;
+}
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+/*# sourceMappingURL=stories-SelectSIM-stories.83d448c0.chunk.css.map*/

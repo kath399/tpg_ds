@@ -3,7 +3,7 @@ import { text } from '@storybook/addon-knobs';
 import { AbandonedCart } from '../components/AbandonedCart';
 
 const meta = {
-  title: 'Components/Product/Abandoned Cart',
+  title: 'Features/Cart & Checkout/Abandoned Cart',
   component: AbandonedCart,
   parameters: {
     layout: 'centered',
