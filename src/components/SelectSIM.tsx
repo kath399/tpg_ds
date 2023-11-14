@@ -29,7 +29,7 @@ export const SelectSIM = ({
                 </div>
                 {dropdown && (
                     <div className='sim-grid-item'>
-                        <img src={Chevron} onClick={toggleSim}/>
+                        <img src={Chevron} onClick={toggleSim} alt='Click'/>
                     </div>
                 )}
             </div>
@@ -53,7 +53,7 @@ export const SelectSIM = ({
             </>)}
 
             <button className='physicalbtn'>
-                <img src={Tick} style={{marginRight: 5}}/>
+                <img src={Tick} style={{marginRight: 5}} alt='Tick'/>
                 <text>Physical SIM</text>
             </button>
             <button className='ebtn'>Yes I want to use an eSIM</button>

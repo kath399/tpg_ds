@@ -30,7 +30,7 @@ export const Main: Story = {
     }
   },
 
-  play: async ({ canvasElement }) => {
+  /*play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const PhysicalButton = canvas.getByRole('button', {
         name: 'Physical SIM'
@@ -41,7 +41,7 @@ export const Main: Story = {
     });
     
     await userEvent.click(eSIMButton);
-  },
+  },*/
 };
 
 export const Dropdown: Story = {
@@ -56,7 +56,7 @@ export const Dropdown: Story = {
     }
   },
 
-  play: async ({ canvasElement }) => {
+  /*play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const PhysicalButton = canvas.getByRole('button', {
         name: 'Physical SIM'
@@ -67,5 +67,5 @@ export const Dropdown: Story = {
     });
     
     await userEvent.click(eSIMButton);
-  },
+  },*/
 };

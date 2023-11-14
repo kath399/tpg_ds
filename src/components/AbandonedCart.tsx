@@ -46,7 +46,7 @@ export const AbandonedCart = ({
   return (
     <div className='cart'>
       <h1>Welcome back</h1>
-      <h2>{number}</h2>
+      {number ? <h2>{number}</h2> : null}
       <p>This is saved in your cart:</p>
       {itemsToShow}
       <button type="button" className="cartbutton">Go to cart</button>

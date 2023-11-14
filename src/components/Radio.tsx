@@ -12,18 +12,15 @@ export const Radio = ({
 }: RadioProps) => {
 
   return (
-    <>
-      <input type='radio' className='tpgradio'></input>
-      <label id={id} className='container'>
-        <input 
-          id={id}
-          type="radio"
-          className=""
-          checked
-        />
-        <span className="checkmark"></span>{label}
-        </label>
-    </>
+    <label id={id} className='container'>
+      <input 
+        id={id}
+        type="radio"
+        className=""
+        checked
+      />
+      <span className="checkmark"></span>{label}
+    </label>
   );
 };
   
