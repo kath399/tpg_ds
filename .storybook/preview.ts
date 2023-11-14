@@ -44,6 +44,11 @@ const preview: Preview = {
     docs: {
       
     },
+    options: {
+      storySort: {
+        order: ['Documentation', 'Foundation', 'Core', 'Features'],
+      },
+    },
     a11y: {
       // Optional selector to inspect
       element: '#storybook-root',
@@ -65,9 +70,6 @@ const preview: Preview = {
         ],
       },
       // Axe's options parameter
-      options: {
-        storySort: (story1, story2) => globalThis['storybook-multilevel-sort:storySort'](story1, story2)
-      },
       // Optional flag to prevent the automatic check
       manual: false,
     },
