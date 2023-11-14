@@ -4,7 +4,7 @@ import Stepper from '../components/Stepper';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: 'Components/Core/Stepper',
+  title: 'Core/Core/Stepper',
   component: Stepper,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout

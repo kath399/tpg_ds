@@ -4,7 +4,7 @@ import { within, userEvent } from '@storybook/testing-library';
 //import { expect } from '@storybook/jest';
 
 const meta = {
-  title: 'Components/Other/SelectSIM',
+  title: 'Core/Other/SelectSIM',
   component: SelectSIM,
   parameters: {
     layout: 'centered',

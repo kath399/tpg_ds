@@ -4,7 +4,7 @@ import { within, userEvent } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
 const meta = {
-  title: 'Components/Core/Dropdown',
+  title: 'Core/Core/Dropdown',
   component: Dropdown,
   parameters: {
     layout: 'centered',

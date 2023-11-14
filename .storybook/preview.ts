@@ -65,7 +65,9 @@ const preview: Preview = {
         ],
       },
       // Axe's options parameter
-      options: {},
+      options: {
+        storySort: (story1, story2) => globalThis['storybook-multilevel-sort:storySort'](story1, story2)
+      },
       // Optional flag to prevent the automatic check
       manual: false,
     },
