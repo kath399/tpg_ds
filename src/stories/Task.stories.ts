@@ -3,7 +3,7 @@ import { Task } from '../components/Task';
 
 export default {
   component: Task,
-  title: 'Components/Other/Task',
+  title: 'Core/Other/Task',
   tags: ['autodocs'],
 };
 

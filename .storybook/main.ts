@@ -1,4 +1,27 @@
 import type { StorybookConfig } from "@storybook/react-webpack5";
+import { configureSort } from "storybook-multilevel-sort";
+
+configureSort({
+  storyOrder: {
+    Documentation: null,
+    Foundation: null,
+    // assets: null, 
+    Core: {
+      Core: {
+
+      },
+      Other: {
+
+      },
+    },
+    Features: {
+      'Cart & Checkout': {
+        '*': {'Abandoned Cart': null}
+      },
+    },
+    '**': { default: null }
+  }
+})
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -9,6 +32,7 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
     "@storybook/addon-designs",
+    "storybook-multilevel-sort",
     "@storybook/addon-knobs",
     { name: 'storybook-design-token', options: {preserveCSSVars: true} }, 
     '@storybook/addon-a11y',
@@ -29,8 +53,9 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  staticDirs: [], 
+
+  //staticDirs: ["..\\public"],
   // currently ommitted and will prevent Storybook from serving any static assets
-  //staticDirs: [],
+  staticDirs: [],
 };
 export default config;
