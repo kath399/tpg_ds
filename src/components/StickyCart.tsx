@@ -20,7 +20,7 @@ export const StickyCart =({
                     <p>Total min. cost: $0.00</p>
                 </div>
                 <div className='link' onClick={toggleCart}>
-                    <text style={{color: '#E60000'}}>See more</text><img src={Chevron}/>
+                    <text style={{color: '#E60000'}}>See more</text><img src={Chevron} alt="See More"/>
                 </div>
                 <button className='continuetocart'>
                     Continue to cart

@@ -33,10 +33,11 @@
     -moz-appearance: none;
     appearance: none;
 
-    /* Add a custom arrow */
-    background-image: url('./Chevrondown.svg'); /* You can use an arrow image */
+    /* Add a custom arrow 
+    background-image: url('./Chevrondown.svg'); /* You can use an arrow image
     background-position: right 16px center;
     background-repeat: no-repeat;
+    */
   }
 
   .dropdown-select:focus {

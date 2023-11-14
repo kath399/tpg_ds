@@ -31,7 +31,7 @@ export const PlanCards = ({
                 <p className='loremipsum'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet.</p>
                 <div className = 'grid-container'>
                     <div className='grid-item'>
-                        <img src={Vector}/>
+                        <img src={Vector} alt='Vector'/>
                     </div>
                     <div className='grid-item'>
                         <h3 className='headlinetext'>Headline</h3>
@@ -40,7 +40,7 @@ export const PlanCards = ({
                 </div>
                 <div className = 'grid-container'>
                     <div className='grid-item'>
-                        <img src={Vector}/>
+                        <img src={Vector} alt='Vector'/>
                     </div>
                     <div className='grid-item'>
                         <h3 className='headlinetext'>Headline</h3>

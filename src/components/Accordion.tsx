@@ -20,8 +20,8 @@ const Accordion: React.FC<AccordionProps> = ({
   return (
     <div className="accordion">
       <div className="accordion-header" onClick={toggleAccordion}>
-        <img/><h3>{Label}</h3>
-        <img src={Chevron} style={{display: 'flex', alignSelf: 'flex-end'}}/>
+        <h3>{Label}</h3>
+        <img src={Chevron} style={{display: 'flex', alignSelf: 'flex-end'}} alt='Chevron'/>
       </div>
       {isOpen && (
         <div className="accordion-content">

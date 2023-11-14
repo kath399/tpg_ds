@@ -21,7 +21,7 @@ export const Dropdown = ({
     };
     return (
         <div className="dropdown-container">
-            <label htmlFor="label">{label}</label>
+            <label htmlFor="label">{label}
             <br/>
             <select className={error ? 'dropdown-select-error' : 'dropdown-select'} value={selectedOption} onChange={handleOptionChange}>
                 {options.map((option, index) => (
@@ -30,6 +30,7 @@ export const Dropdown = ({
                     </option>
                 ))}
             </select>
+            </label>
             {error && <div className="error-message">Error</div>}
 
         </div>
