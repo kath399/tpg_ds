@@ -48,9 +48,19 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Documentation', 'Foundation', 'Core', 'Features'],
+        order: ["Foundation", "Core", "Features"],
       },
     },
+    
+    decorators: [
+      withThemeByClassName({
+        themes: {
+          light: 'light-theme',
+          dark: 'dark-theme',
+        },
+        defaultTheme: 'light',
+      }),
+    ],
     a11y: {
       // Optional selector to inspect
       element: '#storybook-root',
@@ -77,6 +87,7 @@ const preview: Preview = {
     },
   },
 };
+//export default preview;
 
 export default {
   decorators: [
@@ -91,4 +102,4 @@ export default {
   ...preview,
 };
 
-//export default preview;
+
