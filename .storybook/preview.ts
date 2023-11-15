@@ -1,5 +1,7 @@
 import type { Preview } from "@storybook/react";
 import { Title, Subtitle, Description, Primary, Controls, Stories } from '@storybook/blocks';
+import { withThemeByClassName } from "@storybook/addon-themes";
+import "../src/components/color-scheme.css";
 // import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 const MY_VIEWPORTS = {
@@ -76,4 +78,17 @@ const preview: Preview = {
   },
 };
 
-export default preview;
+export default {
+  decorators: [
+    withThemeByClassName({
+      themes: {
+        light: 'light-theme',
+        dark: 'dark-theme',
+      },
+      defaultTheme: 'light',
+    }),
+  ],
+  ...preview,
+};
+
+//export default preview;
