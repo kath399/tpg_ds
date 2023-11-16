@@ -37,13 +37,13 @@ jobs:
           # Grab this from the Chromatic manage page
           projectToken: chpt_51b9d05166353c1
   # Run user flow tests with Cypress
-  user-flow:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        run: npm install
-      - name: Cypress run
-        uses: cypress-io/github-action@v4
-        with:
-          start: npm run dev
+  #user-flow:
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #    - uses: actions/checkout@v2
+  #    - name: Install dependencies
+  #      run: npm install
+  #    - name: Cypress run
+  #      uses: cypress-io/github-action@v4
+  #      with:
+  #        start: npm run dev

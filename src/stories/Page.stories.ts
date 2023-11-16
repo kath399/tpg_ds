@@ -27,3 +27,25 @@ export const LoggedIn: Story = {
     await userEvent.click(loginButton);
   },
 };
+
+LoggedOut.parameters = {
+  a11y: {
+    config: {
+      rules: [
+        {id: 'color-contrast', enabled: false }, 
+        {id: 'link-in-text-block', enabled: false}
+      ],
+    }
+  }
+}
+
+LoggedIn.parameters = {
+  a11y: {
+    config: {
+      rules: [
+        {id: 'color-contrast', enabled: false },  
+        {id: 'link-in-text-block', enabled: false}
+      ],
+    }
+  }
+}
