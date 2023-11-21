@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/react";
 import { Title, Subtitle, Description, Primary, Controls, Stories } from '@storybook/blocks';
-import { withThemeByClassName } from "@storybook/addon-themes";
-import "../src/components/color-scheme.css";
+import { withThemeByClassName, withThemeFromJSXProvider } from "@storybook/addon-themes";
+
 // import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 const MY_VIEWPORTS = {
@@ -25,8 +25,8 @@ const MY_VIEWPORTS = {
       width: "1440px",
       height: "1024px",
     },
-  }
-}
+  },
+};
 
 const preview: Preview = {
   parameters: {
@@ -48,19 +48,9 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ["Foundation", "Core", "Features"],
+        order: ["Documentation", "Foundation", "Core", ["*", "Deprecated"], "Features"],
       },
     },
-    
-    decorators: [
-      withThemeByClassName({
-        themes: {
-          light: 'light-theme',
-          dark: 'dark-theme',
-        },
-        defaultTheme: 'light',
-      }),
-    ],
     a11y: {
       // Optional selector to inspect
       element: '#storybook-root',
@@ -85,10 +75,25 @@ const preview: Preview = {
       // Optional flag to prevent the automatic check
       manual: false,
     },
+    backgrounds: {
+      default: 'light',
+      values: [
+        {
+          name: 'light',
+          value: '#f3f3f3',
+        },
+        {
+          name: 'dark',
+          value: '#222',
+        },
+      ],
+    },
   },
 };
-//export default preview;
 
+export default preview;
+
+/*
 export default {
   decorators: [
     withThemeByClassName({
@@ -101,5 +106,5 @@ export default {
   ],
   ...preview,
 };
-
+*/
 
