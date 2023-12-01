@@ -3,6 +3,7 @@ import { button } from '@storybook/addon-knobs';
 import { Button } from '../components/Button';
 import { string } from 'prop-types';
 import { within, userEvent } from '@storybook/testing-library';
+import { actions } from '@storybook/addon-actions';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -11,6 +12,19 @@ const meta = {
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'centered',
+    backgrounds: {
+      default: 'Default',
+      values: [
+        {
+          name: 'Default',
+          value: '#f2f2f2',
+        },
+        {
+          name: 'Inverse',
+          value: '#262626',
+        },
+      ],
+    },
     docs: {
       description: {
         component: `<div><strong>Overview:</strong> Buttons are clickable elements that allow users to interact with a page and make choices with a single tap. 
@@ -33,7 +47,8 @@ const meta = {
   tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' }, 
+    //backgroundColor: { control: 'color' }, 
+    Inverse: { control: 'boolean' },
   },
 } satisfies Meta<typeof Button>;
 
@@ -43,35 +58,41 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
-    mode: 'primary',
-    label: 'Button',
-    state: 'default',
-    size: 'small',
+    Breakpoint: 'large',
+    Type: 'primary', 
+    Status: 'default', 
+    Inverse: false,
+    Text: 'Button', 
   },
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/BtunVVjUyt3jJvT40IYBg5/Vodafone-Components?type=design&node-id=2699-45109&mode=design&t=rJ1y09iN25QXyGJz-4"
-    }
+      url: "https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?node-id=5587%3A16583&mode=dev"
+    },
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const primarybutton = canvas.getByRole('button');
+
+    //conditionally trigger click event after a delay (for demonstration purposes) -- CHECK WITH TEAM 
+    //await new Promise((resolve) => setTimeout(resolve, 1000));
+    //await userEvent.click(primarybutton);
     await userEvent.click(primarybutton);
   },
 };
 
 export const Secondary: Story = {
   args: {
-    mode: 'secondary',
-    label: 'Button',
-    state: 'default',
-    size: 'small',
+    Breakpoint: 'large',
+    Type: 'secondary', 
+    Status: 'default', 
+    Inverse: false,
+    Text: 'Button', 
   },
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/8Z2Q5HyARcGjoxggaFmKj9/tpg_ds?type=design&node-id=1-11&mode=design&t=TgAL9m8lSO4geoc9-4"
+      url: "https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?node-id=6044%3A2863&mode=dev"
     }
   },
   play: async ({ canvasElement }) => {
@@ -83,15 +104,16 @@ export const Secondary: Story = {
 
 export const Tertiary: Story = {
   args: {
-    mode: 'tertiary',
-    label: 'Button',
-    state: 'default',
-    size: 'small',
+    Breakpoint: 'large',
+    Type: 'tertiary', 
+    Status: 'default', 
+    Inverse: false,
+    Text: 'Button', 
   },
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/8Z2Q5HyARcGjoxggaFmKj9/tpg_ds?type=design&node-id=1-12&mode=design&t=TgAL9m8lSO4geoc9-4"
+      url: "https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?node-id=5587%3A16577&mode=dev"
     }
   },
   play: async ({ canvasElement }) => {
@@ -101,22 +123,23 @@ export const Tertiary: Story = {
   },
 };
 
-export const Success: Story = {
+export const Link: Story = {
   args: {
-    mode: 'success',
-    label: 'Button',
-    state: 'default',
-    size: 'small',
+    Breakpoint: 'large',
+    Type: 'link', 
+    Status: 'default', 
+    Inverse: false,
+    Text: 'Button', 
   },
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/8Z2Q5HyARcGjoxggaFmKj9/tpg_ds?type=design&node-id=1-12&mode=design&t=TgAL9m8lSO4geoc9-4"
+      url: "https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?node-id=5587%3A16580&mode=dev"
     }
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const successbutton = canvas.getByRole('button');
-    await userEvent.click(successbutton);
+    const linkbutton = canvas.getByRole('button');
+    await userEvent.click(linkbutton);
   },
 };

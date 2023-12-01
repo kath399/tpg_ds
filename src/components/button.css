@@ -1,19 +1,6 @@
 @import '../tokens.css';
 
-.storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  border: 2px solid transparent; 
-  border-radius: 6px;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
-  width: 150px;
-  height: 50px;
-  color: white;
-}
-
+/*
 @media screen and (max-width: 767px) {
   .storybook-button {
     width: 328px;
@@ -26,159 +13,473 @@
     width: 150px;
     height: 50px;
   }
+} */
+
+@font-face {
+  font-family: 'Vodafone';
+    src: url('../fonts/Vodafone_SBd_W.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Vodafone_SBd_W.eot') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/Vodafone_SBd_W.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../fonts/Vodafone_SBd_W.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../fonts/Vodafone_SBd.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+.storybook-button {
+  cursor: pointer;
+
+  /* TYPOGRAPHY */
+  font-family: 'Vodafone';
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  letter-spacing: 0;
+  
+  /* BORDER */
+  border: solid transparent; 
+  border-radius: var(--button-radius-default, 8px);
+
+  /* LAYOUT */
+  display: flex;
+  min-width: 150px;
+  padding: var(--button-padding-top, 12px) var(--button-padding-right, 24px) var(--button-padding-bottom, 12px) var(--button-padding-left, 24px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* PRIMARY BUTTONS DYNAMIC STATES */
 .storybook-button--primary--default:hover {
-  background-color: #BD0000;  
+  background-color: var(--color-light-brand-600);
+  color: var(--color-monochrome-white);
 }
 .storybook-button--primary--default:focus {
-  background-color: #E60000;
-  border-color: #007C92;
+  align-self: stretch;
+  border: none;
+  background-color: var(--color-light-brand-600);
+  color: var(--color-monochrome-white);
+  outline: 2px solid var(--color-light-aqua-blue-400);
+  outline-offset: 2px;
 }
 .storybook-button--primary--default:active {
-  background-color: #990000;
-  border-color: transparent;
+  background-color: var(--color-light-brand-700);
+  color: var(--color-monochrome-white);
+  outline: none;
 }
 
 /* PRIMARY BUTTONS STATIC STATES */
 .storybook-button--primary--default {
-  background-color: var(--color-background-action-primary); 
-}
-
-.stoyrbook-button--primary--default:hover { /* check if necessary */
-  background-color: var(--color-background-action-primary-hover);
+  background-color: var(--color-light-brand-500);
+  color: var(--color-monochrome-white);
+  /*color: #ff6666; -- ACCESSIBILITY VIOLATION DEMO EXAMPLE */ 
 }
 
 .storybook-button--primary--hover {
-  background-color: var(--color-background-action-primary-hover);
+  background-color: var(--color-light-brand-600);
+  color: var(--color-monochrome-white);
 }
 .storybook-button--primary--pressed {
-  background-color: var(--color-background-action-primary-pressed);
+  background-color: var(--color-light-brand-700);
+  color: var(--color-monochrome-white);
 }
 .storybook-button--primary--disabled {
-  color: #666666;
-  background-color: #CCCCCC;
+  background-color: var(--color-light-brand-500);
+  opacity: 0.38;
+  color: var(--color-monochrome-white);
 }
 .storybook-button--primary--focused {
-  background-color: #E60000;
-  border-color: #007c92;
+  align-self: stretch;
+  border: none;
+  background-color: var(--color-light-brand-600);
+  color: var(--color-monochrome-white);
+  outline: 2px solid var(--color-light-aqua-blue-400);
+  outline-offset: 2px;
 }
+
+/* PRIMARY BUTTONS DYNAMIC INVERSE STATES */
+.storybook-button--primary--default:hover.button-inverse {
+  background: var(--button-primary-color-surface-hover-inverse, #D9D9D9);
+  color: var(--button-primary-color-content-inverse, #0D0D0D);
+}
+.storybook-button--primary--default:focus.button-inverse {
+  align-self: stretch;
+  border: none;
+  background: var(--button-primary-color-surface-hover-inverse, #D9D9D9);
+  color: var(--button-primary-color-content-inverse, #0D0D0D);
+  outline: 2px solid var(--color-border-contrast, #FFF);
+  outline-offset: 2px;
+}
+.storybook-button--primary--default:active.button-inverse {
+  background: var(--button-primary-color-surface-pressed-inverse, #B3B3B3);
+  color: var(--button-primary-color-content-inverse, #0D0D0D);
+  outline: transparent;
+}
+
+/* PRIMARY BUTTONS STATIC INVERSE STATES */
+.storybook-button--primary--default.button-inverse {
+  background: var(--button-primary-color-surface-inverse, #FFF);
+  color: var(--button-primary-color-content-inverse, #0D0D0D);
+}
+.storybook-button--primary--hover.button-inverse {
+  background: var(--button-primary-color-surface-hover-inverse, #D9D9D9);
+  color: var(--button-primary-color-content-inverse, #0D0D0D);
+}
+.storybook-button--primary--pressed.button-inverse {
+  background: var(--button-primary-color-surface-pressed-inverse, #B3B3B3);
+  color: var(--button-primary-color-content-inverse, #0D0D0D);
+}
+.storybook-button--primary--disabled.button-inverse {
+  background: var(--button-primary-color-surface-inverse, #FFF);
+  opacity: 0.38;
+  color: var(--button-primary-color-content-inverse, #0D0D0D);
+}
+.storybook-button--primary--focused.button-inverse {
+  align-self: stretch;
+  border: none;
+  background: var(--button-primary-color-surface-hover-inverse, #D9D9D9);
+  color: var(--button-primary-color-content-inverse, #0D0D0D);
+  outline: 2px solid var(--color-border-contrast, #FFF);
+  outline-offset: 2px;
+}
+
 
 /* SECONDARY BUTTONS DYNAMIC STATES */
 .storybook-button--secondary--default:hover {
-  background-color: #969696;  
+  background: var(--color-monochrome-850);
+  color: var(--color-monochrome-white);
 }
 .storybook-button--secondary--default:focus {
-  background-color: #333333;
-  border-color: #007c92; 
+  align-self: stretch;
+  border: none;
+  background: var(--color-monochrome-850);
+  color: var(--color-monochrome-white);
+  outline: 2px solid var(--color-light-aqua-blue-400);
+  outline-offset: 2px;
 }
 .storybook-button--secondary--default:active {
-  background-color: #25282b;
-  border-color: transparent;
+  background: var(--color-monochrome-650);
+  color: var(--color-monochrome-white);
+  outline: none;
 }
 
 /* SECONDARY BUTTONS STATIC STATES */
 .storybook-button--secondary--default {
-  background-color: #333333;
+  background: var(--color-monochrome-950);
+  color: var(--color-monochrome-white);
 }
 .storybook-button--secondary--hover {
-  background-color: #969696; 
+  background: var(--color-monochrome-850);
+  color: var(--color-monochrome-white);
 }
 .storybook-button--secondary--pressed {
-  background-color: #25282b;  
+  background: var(--color-monochrome-650);
+  color: var(--color-monochrome-white);
 }
 .storybook-button--secondary--disabled {
-  color: #666666;
-  background-color: #cccccc;
+  background: var(--color-monochrome-950);
+  color: var(--color-monochrome-white);
+  opacity: 0.38;
 }
 .storybook-button--secondary--focused {
-  background-color: #333333;
-  border-color: #007c92;  
+  align-self: stretch;
+  border: none;
+  background: var(--color-monochrome-850);
+  color: var(--color-monochrome-white);
+  outline: 2px solid var(--color-light-aqua-blue-400);
+  outline-offset: 2px;
+}
+
+/* SECONDARY BUTTONS DYNAMIC INVERSE STATES */
+.storybook-button--secondary--default:hover.button-inverse {
+  background: var(--button-secondary-color-surface-hover-inverse, #D9D9D9);
+  color: var(--button-secondary-color-content-inverse, #0D0D0D);
+}
+.storybook-button--secondary--default:focus.button-inverse {
+  align-self: stretch;
+  border: none;
+  background: var(--button-secondary-color-surface-hover-inverse, #D9D9D9);  
+  color: var(--button-secondary-color-content-inverse, #0D0D0D);
+  outline:  2px solid var(--color-border-contrast, #FFF);
+  outline-offset: 2px;
+}
+.storybook-button--secondary--default:active.button-inverse {
+  background: var(--button-secondary-color-surface-pressed-inverse, #B3B3B3);
+  color: var(--button-secondary-color-content-inverse, #0D0D0D);
+  outline: none;
+}
+
+/* SECONDARY BUTTONS STATIC INVERSE STATES */
+.storybook-button--secondary--default.button-inverse {
+  background: var(--button-secondary-color-surface-inverse, #FFF);
+  color: var(--button-secondary-color-content-inverse, #0D0D0D);
+}
+.storybook-button--secondary--hover.button-inverse {
+  background: var(--button-secondary-color-surface-hover-inverse, #D9D9D9);
+  color: var(--button-secondary-color-content-inverse, #0D0D0D);
+}
+.storybook-button--secondary--pressed.button-inverse {
+  background: var(--button-secondary-color-surface-pressed-inverse, #B3B3B3);
+  color: var(--button-secondary-color-content-inverse, #0D0D0D);
+}
+.storybook-button--secondary--disabled.button-inverse {
+  background: var(--button-secondary-color-surface-inverse, #FFF);
+  color: var(--button-secondary-color-content-inverse, #0D0D0D);
+  opacity: 0.38;
+}
+.storybook-button--secondary--focused.button-inverse {
+  align-self: stretch;
+  border: none;
+  background: var(--button-secondary-color-surface-hover-inverse, #D9D9D9);  
+  color: var(--button-secondary-color-content-inverse, #0D0D0D);
+  outline:  2px solid var(--color-border-contrast, #FFF);
+  outline-offset: 2px;
 }
 
 /* TERTIARY BUTTONS DYNAMIC STATES */
 .storybook-button--tertiary--default:hover {
-  background-color: #f4f4f4;
-  border-color: #333333; 
-  color: #333333;
+  border: 1px solid var(--color-monochrome-950);
+  background: var(--transparency-monochrome-150);
+  color: var(--color-monochrome-950);
 }
 .storybook-button--tertiary--default:focus {
-  background-color: #f9f9f9;
-  border-color: #17869a;
-  color: #333333;
+  align-self: stretch;
+
+  background-color: var(--transparency-monochrome-300);
+  color: var(--color-monochrome-950);
+  padding: 2px;
+  border: 1px solid var(--color-monochrome-950);
+  outline: 2px solid var(--color-light-aqua-blue-400);
+  outline-offset: 2px;
 }
 .storybook-button--tertiary--default:active {
-  background-color: #939393;
-  border-color: #333333;
-  color: #333333; 
+  background: var(--transparency-monochrome-300);
+  border: 1px solid var(--color-monochrome-950);  
+  color: var(--color-monochrome-950);
+  outline: transparent;
 }
 
-/* TERTIARY BUTTONS STATIC STATES*/
+/* TERTIARY BUTTONS STATIC STATES */
 .storybook-button--tertiary--default {
-  background-color: #f9f9f9;
-  border-color: #939393;  
-  color: #333333;
+  background-color: transparent;
+  border: 1px solid var(--color-monochrome-950);  
+  color: var(--color-monochrome-950);
 }
 .storybook-button--tertiary--hover {
-  background-color: #f4f4f4;
-  border-color: #333333; 
-  color: #333333;
+  border: 1px solid var(--color-monochrome-950);
+  background: var(--transparency-monochrome-150);
+  color: var(--color-monochrome-950);
 }
 .storybook-button--tertiary--pressed {
-  background-color: #939393;
-  border-color: #333333;
-  color: #333333; 
+  background: var(--transparency-monochrome-300);
+  border: 1px solid var(--color-monochrome-950);  
+  color: var(--color-monochrome-950);
 }
 .storybook-button--tertiary--disabled {
-  background-color: #cccccc;
-  border-color: #666666;
-  color: #666666;
+  background-color: transparent;
+  border: 1px solid var(--color-monochrome-950);  
+  color: var(--color-monochrome-950);
+  opacity: 0.38;
 }
 .storybook-button--tertiary--focused {
-  background-color: #f9f9f9;
-  border-color: #17869a;
-  color: #333333;
+  align-self: stretch;
+  background-color: var(--transparency-monochrome-300);
+  color: var(--color-monochrome-950);
+  padding: 2px;
+  border: 1px solid var(--color-monochrome-950);
+  outline: 2px solid var(--color-light-aqua-blue-400);
+  outline-offset: 2px;
 }
 
-/* TERTIARY TRANSPARAENT BUTTONS ??? */
+/* TERTIARY BUTTONS DYNAMIC INVERSE STATES */
+.storybook-button--tertiary--default:hover.button-inverse {
+  border: 1px solid var(--button-tertiary-color-border-inverse, #FFF);
+  background: var(--button-tertiary-color-surface-hover-inverse, rgba(255, 255, 255, 0.15));
+  border-color: transparent; 
+  color: var(--color-monochrome-white); 
+}
+.storybook-button--tertiary--default:focus.button-inverse {
+  align-self: stretch;
+  border: 1px solid var(--button-tertiary-color-border-inverse, #FFF);
+  background: var(--button-tertiary-color-surface-hover-inverse, rgba(255, 255, 255, 0.15));
+  outline: 2px solid var(--color-border-contrast, #FFF);
+  outline-offset: 2px;
+  color: var(--button-tertiary-color-content-inverse, #FFF);
+}
+.storybook-button--tertiary--default:active.button-inverse {
+  border: 1px solid var(--button-tertiary-color-border-inverse, #FFF);
+  background: var(--button-tertiary-color-surface-pressed-inverse, rgba(255, 255, 255, 0.30));
+  color: var(--color-monochrome-white);
+  outline: none;
+}
 
-/* SUCCESS BUTTONS DYNAMIC STATES */
-.storybook-button--success--default:hover {
-  background-color: #666666;
+/* TERTIARY BUTTONS STATIC INVERSE STATES */
+.storybook-button--tertiary--default.button-inverse {
+  border: 1px solid var(--button-tertiary-color-border-inverse, #FFF);
+  color: var(--color-monochrome-white);
 }
-.storybook-button--success--default:focus {
-  background-color: #333333;
-  border-color: #007c92; 
+.storybook-button--tertiary--hover.button-inverse {
+  border: 1px solid var(--button-tertiary-color-border-inverse, #FFF);
+  background: var(--button-tertiary-color-surface-hover-inverse, rgba(255, 255, 255, 0.15)); 
+  color: var(--color-monochrome-white); 
 }
-.storybook-button--success--default:active {
-  background-color: #008a00; 
-  border-color: transparent;
+.storybook-button--tertiary--pressed.button-inverse { 
+  border: 1px solid var(--button-tertiary-color-border-inverse, #FFF);
+  background: var(--button-tertiary-color-surface-pressed-inverse, rgba(255, 255, 255, 0.30));
+  color: var(--color-monochrome-white);
+}
+.storybook-button--tertiary--disabled.button-inverse {
+  border: 1px solid var(--button-tertiary-color-border-inverse, #FFF);
+  opacity: 0.38;
+  background: none;
+  color: var(--button-tertiary-color-content-inverse, #FFF);
+}
+.storybook-button--tertiary--focused.button-inverse { 
+  align-self: stretch;
+  border: 1px solid var(--button-tertiary-color-border-inverse, #FFF);
+  background: var(--button-tertiary-color-surface-hover-inverse, rgba(255, 255, 255, 0.15));
+  outline: 2px solid var(--color-border-contrast, #FFF);
+  outline-offset: 2px;
+  color: var(--button-tertiary-color-content-inverse, #FFF);
 }
 
-/* SUCCESS BUTTONS STATIC STATES */
-.storybook-button--success--default {
-  background-color: #414141; 
+
+/* LINK BUTTONS DYNAMIC STATES */
+.storybook-button--link--default:hover {
+  background: none;
+  border: none;
+  color: var(--color-light-brand-600);
+  text-decoration: underline; 
+  text-underline-position: under;
 }
-.storybook-button--success--hover {
-  background-color: #666666;  
+.storybook-button--link--default:focus {
+  background: none;
+  padding: 0px 2px;
+  border: 2px solid var(--color-light-aqua-blue-400);;
+  color: var(--color-light-brand-600);
+  text-decoration: underline; 
+  text-underline-position: under;
 }
-.storybook-button--success--pressed {
-  background-color: #008a00;  
+.storybook-button--link--default:active {
+  background: none;
+  border: none;
+  color: var(--color-light-brand-700);
+  text-decoration: underline; 
+  text-underline-position: under; 
 }
-.storybook-button--success--disabled {
-  background-color: #c6c6c6; 
+
+/* LINK BUTTONS STATIC STATES */
+.storybook-button--link--default {
+  background: none;
+  border: none;
+  color: var(--color-monochrome-950);
+  text-decoration: underline; 
+  text-underline-position: under;
 }
-.storybook-button--success--focused {
-  background-color: #333333;
-  border-color: #007c92; 
+.storybook-button--link--hover {
+  background: none;
+  border: none;
+  color: var(--color-light-brand-600);
+  text-decoration: underline; 
+  text-underline-position: under;
 }
+.storybook-button--link--pressed {
+  background: none;
+  border: none;
+  color: var(--color-light-brand-700);
+  text-decoration: underline; 
+  text-underline-position: under;
+}
+.storybook-button--link--disabled {
+  background: none;
+  border: none;
+  color: var(--color-monochrome-950);
+  opacity: 0.38;
+  text-decoration: underline; 
+  text-underline-position: under;
+}
+.storybook-button--link--focused {
+  background: none;
+  padding: 0px 2px;
+  border: 2px solid var(--color-light-aqua-blue-400);
+  color: var(--color-light-brand-600);
+  text-decoration: underline; 
+  text-underline-position: under;
+}
+
+/* SUCCESS BUTTONS DYNAMIC INVERSE STATES */
+.storybook-button--link--default:hover.button-inverse {
+  background: none;
+  border: none;
+  color: var(--color-monochrome-white);
+  text-decoration: underline; 
+  text-underline-position: under;
+}
+.storybook-button--link--default:focus.button-inverse {
+  background: none;
+  padding: 0px 2px;
+  border: 2px solid var(--color-monochrome-white);
+  color: var(--color-monochrome-white);
+  text-decoration: underline; 
+  text-underline-position: under;
+}
+.storybook-button--link--default:active.button-inverse {
+  background: none;
+  border: none;
+  color: var(--color-monochrome-white);
+  text-decoration: underline; 
+  text-underline-position: under;
+}
+
+/* SUCCESS BUTTONS STATIC INVERSE STATES */
+.storybook-button--link--default.button-inverse {
+  background: none;
+  border: none;
+  color: var(--color-monochrome-white);
+  text-decoration: underline; 
+  text-underline-position: under;
+}
+.storybook-button--link--hover.button-inverse {
+  background: none;
+  border: none;
+  color: var(--color-monochrome-white);
+  text-decoration: underline; 
+  text-underline-position: under;
+}
+.storybook-button--link--pressed.button-inverse {
+  background: none;
+  border: none;
+  color: var(--color-monochrome-white);
+  text-decoration: underline; 
+  text-underline-position: under;
+}
+.storybook-button--link--disabled.button-inverse {
+  background: none;
+  border: none;
+  color: var(--color-monochrome-white);
+  opacity: 0.38;
+  text-decoration: underline; 
+  text-underline-position: under;
+}
+.storybook-button--link--focused.button-inverse {
+  align-self: stretch;
+  background: none;
+  padding: 0px 2px;
+  border: 2px solid var(--color-border-contrast, #FFF);
+  color: var(--color-content-contrast, #FFF);
+  text-decoration: underline; 
+  text-underline-position: under;
+}
+
 
 /* SIZE OF BUTTONS */
 .storybook-button--small {
-  padding: 10px 16px;
+  width: 328px;
+  height: 44px;
 }
 .storybook-button--large {
-  padding: 12px 24px;
-  width: 300px;
+  width: 150px;
+  height: 48px;
 }
