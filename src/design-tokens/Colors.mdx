@@ -1,18 +1,22 @@
 
 import { Meta } from '@storybook/addon-docs';
-import { DesignTokenDocBlock } from "storybook-design-token/dist/doc-blocks";
-import { Tokens } from "../tokens.css";
-import { Figma } from "storybook-addon-designs/blocks"
 
 <Meta title="Foundation/Colors" />
 
 <style>
   {`
-  .table-border {
+  table {
     border-collapse: collapse;
+    border: none;
   }
-  .tr {
-    border-bottom: 1px solid;
+  tr:first-child {
+    border-top: none;
+  }
+  td {
+    border: none !important;
+  }
+  th {
+    border: none !important;
   }
   .token-column {
     width: 300px;
@@ -63,7 +67,7 @@ import { Figma } from "storybook-addon-designs/blocks"
     gap: 8px;
     box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
     background: #0d0d0d; 
-    text-align: center; 
+    text-align: center;
   }
   .dark-text-column {
     width: 110px;
@@ -80,6 +84,8 @@ import { Figma } from "storybook-addon-designs/blocks"
     stroke-width: 1px;
     stroke: #E5E5E5;
     border-radius: 50%;
+    border: 1px solid #dbdbdb;
+    margin: auto;
   }
   .dark-colour-swatch {
     width: 44px;
@@ -87,15 +93,17 @@ import { Figma } from "storybook-addon-designs/blocks"
     stroke-width: 1px;
     stroke: #E5E5E5;
     border-radius: 50%;
-    border: 1px solid #FFF;
+    border: 1px solid #dbdbdb;
+    margin: auto;
   }
   `}
 </style>
 
-
+{/* TEXT/CONTENT */}
 <br />
+# Text/Content
 <div>
-  <table style={{ borderCollapse: 'collapse' }}>
+  <table>
     <thead>
       <tr>
         <th className='token-column'>
@@ -117,9 +125,11 @@ import { Figma } from "storybook-addon-designs/blocks"
       </tr>
     </thead>
     <tbody>
-      <tr style={{ borderBottom: '1px solid' }}>
+      <tr>
         <td className='token-column'>
-          color-content-brand
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '127px', textAlign: 'center' }}>
+            color-content-brand
+          </div>
         </td>
         <td className='usage-column'>
           Text
@@ -137,7 +147,1868 @@ import { Figma } from "storybook-addon-designs/blocks"
           <span style={{ color: '#FFF' }}>#EC2F2F</span>
         </td>
       </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '135px', textAlign: 'center' }}>
+            color-content-default
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #0D0D0D
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#FFFFFF</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '130px', textAlign: 'center' }}>
+            color-content-subtle
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #262626
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#262626' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#F2F2F2' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#F2F2F2</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '145px', textAlign: 'center' }}>
+            color-content-contrast
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #FFFFFF
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#FFFFFF</span>
+        </td>
+      </tr>
+      {/* NO COLOUR SWATCH IN THE FIGMA FILE */}
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '144px', textAlign: 'center' }}>
+            color-content-disabled
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          XXXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>XXXXXXX</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '155px', textAlign: 'center' }}>
+            color-content-interactive
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #E60000
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#E60000' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#EC2F2F' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#EC2F2F</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '197px', textAlign: 'center' }}>
+            color-content-interactive-hover
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #C30000
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#C30000' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#C92828' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#C92828</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '211px', textAlign: 'center' }}>
+            color-content-interactive-pressed
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #A10000
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#A10000' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#A52121' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#A52121</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '206px', textAlign: 'center' }}>
+            color-content-interactive-inverse
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #FFFFFF
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#FFFFFF</span>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
 
+{/* BACKGROUND */}
+<br />
+# Background
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column'>
+          Usage
+        </th>
+        <th className='light-text-column'>
+        </th> 
+        <th className='light-swatch-column'>
+          Light
+        </th>
+        <th className='dark-swatch-column'>
+          <span style={{ color: '#FFF' }}>Dark</span>
+        </th>
+        <th className='dark-text-column'>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '153px', textAlign: 'center' }}>
+            color-background-brand
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #E60000
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#E60000' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#EC2F2F' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#EC2F2F</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '165px', textAlign: 'center' }}>
+            color-background-primary
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #F2F2F2
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#F2F2F2' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#262626' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#262626</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '181px', textAlign: 'center' }}>
+            color-background-secondary
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #FFFFFF
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#0D0D0D</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '163px', textAlign: 'center' }}>
+            color-background-tertiary
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #262626
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#262626' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#0D0D0D</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{/* SURFACE */}
+<br />
+# Surface
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column'>
+          Usage
+        </th>
+        <th className='light-text-column'>
+        </th> 
+        <th className='light-swatch-column'>
+          Light
+        </th>
+        <th className='dark-swatch-column'>
+          <span style={{ color: '#FFF' }}>Dark</span>
+        </th>
+        <th className='dark-text-column'>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '130px', textAlign: 'center' }}>
+            color-surface-brand
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #E60000
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#E60000' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#EC2F2F' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#EC2F2F</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '140px', textAlign: 'center' }}>
+            color-surface-contrast
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #FFFFFF
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#FFFFFF</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '124px', textAlign: 'center' }}>
+            color-surface-focus
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #0096AD
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#0096AD' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#00B0CA' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#00B0CA</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '140px', textAlign: 'center' }}>
+            color-surface-primary
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #FFFFFF
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#0D0D0D</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '180px', textAlign: 'center' }}>
+            color-surface-primary-hover
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #C5C7CB
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#C5C7CB' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#EAEBF0' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#EAEBF0</span>
+        </td>
+      </tr>
+      {/* MISSING COLOUR SWATCH FROM FIGMA*/}
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '200px', textAlign: 'center' }}>
+            color-surface-primary-disabled
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '160px', textAlign: 'center' }}>
+            color-surface-secondary
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #F2F2F2
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#F2F2F2' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#F2F2F2' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#F2F2F2</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '140px', textAlign: 'center' }}>
+            color-surface-tertiary
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #0D0D0D
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#0D0D0D</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '118px', textAlign: 'center' }}>
+            color-surface-offer
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #5E2750
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#5E2750' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#B04A98' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#B04A98</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '123px', textAlign: 'center' }}>
+            color-surface-input
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #FFFFFF
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#0D0D0D</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '185px', textAlign: 'center' }}>
+            color-surface-input-disabled
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '195px', textAlign: 'center' }}>
+            color-surface-input-unchecked
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #FFFFFF
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#0D0D0D</span>
+        </td>
+      </tr>
+      {/* MISSING COLOUR SWATCH FROM FIGMA*/}
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '260px', textAlign: 'center' }}>
+            color-surface-input-unchecked-disabled
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '180px', textAlign: 'center' }}>
+            color-surface-input-checked
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #00697C
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#00697C' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#0096AD' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#0096AD</span>
+        </td>
+      </tr>
+      {/* MISSING COLOUR SWATCH FROM FIGMA*/}
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '240px', textAlign: 'center' }}>
+            color-surface-input-checked-disabled
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{/* BORDER */}
+<br />
+# Border
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column'>
+          Usage
+        </th>
+        <th className='light-text-column'>
+        </th> 
+        <th className='light-swatch-column'>
+          Light
+        </th>
+        <th className='dark-swatch-column'>
+          <span style={{ color: '#FFF' }}>Dark</span>
+        </th>
+        <th className='dark-text-column'>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '118px', textAlign: 'center' }}>
+            color-border-focus
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #0096AD
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#0096AD' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#00B0CA' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#00B0CA</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '135px', textAlign: 'center' }}>
+            color-border-contrast
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #FFFFFF
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#FFFFFF</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '130px', textAlign: 'center' }}>
+            color-border-default
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #BEBEBE
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#BEBEBE' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#F2F2F2' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#F2F2F2</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{/* DIVIDER */}
+<br />
+# Divider
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column'>
+          Usage
+        </th>
+        <th className='light-text-column'>
+        </th> 
+        <th className='light-swatch-column'>
+          Light
+        </th>
+        <th className='dark-swatch-column'>
+          <span style={{ color: '#FFF' }}>Dark</span>
+        </th>
+        <th className='dark-text-column'>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '130px', textAlign: 'center' }}>
+            color-border-default
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #BEBEBE
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#BEBEBE' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#0D0D0D</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '135px', textAlign: 'center' }}>
+            color-border-contrast
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #FFFFFF
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#FFFFFF</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{/* FEEDBACK */}
+<br />
+# Feeback
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column'>
+          Usage
+        </th>
+        <th className='light-text-column'>
+        </th> 
+        <th className='light-swatch-column'>
+          Light
+        </th>
+        <th className='dark-swatch-column'>
+          <span style={{ color: '#FFF' }}>Dark</span>
+        </th>
+        <th className='dark-text-column'>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '130px', textAlign: 'center' }}>
+            color-feedback-error
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #BD0000
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#BD0000' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#F06666' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#F06666</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '150px', textAlign: 'center' }}>
+            color-feedback-warning
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #EB6100
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#EB6100' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#EB9700' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#EB9700</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '130px', textAlign: 'center' }}>
+            color-feedback-alert
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #EB6100
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#EB6100' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#FECB00' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#FECB00</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '150px', textAlign: 'center' }}>
+            color-feedback-success
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #008A00
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#008A00' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#B7BF10' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#B7BF10</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '170px', textAlign: 'center' }}>
+            color-feedback-informative
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #005EA5
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#005EA5' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#5F9BC8' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#5F9BC8</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '170px', textAlign: 'center' }}>
+            color-feedback-incomplete
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #BEBEBE
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#BEBEBE' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#262626' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#262626</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '145px', textAlign: 'center' }}>
+            color-feedback-skelton
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #BEBEBE
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#BEBEBE' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#262626' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#262626</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{/* STATES - MISSING COLOUR SWATCHES ON FIGMA FOR WHOLE TABLE */}
+<br />
+# States
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column'>
+          Usage
+        </th>
+        <th className='light-text-column'>
+        </th> 
+        <th className='light-swatch-column'>
+          Light
+        </th>
+        <th className='dark-swatch-column'>
+          <span style={{ color: '#FFF' }}>Dark</span>
+        </th>
+        <th className='dark-text-column'>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '120px', textAlign: 'center' }}>
+            color-states-hover
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '135px', textAlign: 'center' }}>
+            color-states-pressed
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '135px', textAlign: 'center' }}>
+            color-states-disabled
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '155px', textAlign: 'center' }}>
+            color-states-black-hover
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '170px', textAlign: 'center' }}>
+            color-states-black-pressed
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '175px', textAlign: 'center' }}>
+            color-states-black-disabled
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '160px', textAlign: 'center' }}>
+            color-states-white-hover
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '175px', textAlign: 'center' }}>
+            color-states-white-pressed
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '180px', textAlign: 'center' }}>
+            color-states-white-disabled
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{/* PRIMARY BUTTON */}
+<br />
+# Primary Button
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column'>
+          Usage
+        </th>
+        <th className='light-text-column'>
+        </th> 
+        <th className='light-swatch-column'>
+          Light
+        </th>
+        <th className='dark-swatch-column'>
+          <span style={{ color: '#FFF' }}>Dark</span>
+        </th>
+        <th className='dark-text-column'>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '240px', textAlign: 'center' }}>
+            button-primary-color-content-default
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #FFFFFF
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#FFFFFF</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '240px', textAlign: 'center' }}>
+            button-primary-color-content-inverse
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #0D0D0D
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#0D0D0D</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '240px', textAlign: 'center' }}>
+            button-primary-color-surface-default
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #E60000
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#E60000' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#EC2F2F' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#EC2F2F</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '240px', textAlign: 'center' }}>
+            button-primary-color-surface-inverse
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #FFFFFF
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#FFFFFF</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '240px', textAlign: 'center' }}>
+            button-primary-color-surface-hover
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #C30000
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#C30000' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#C92828' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#C92828</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '280px', textAlign: 'center' }}>
+            button-primary-color-surface-hover-inverse
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #D9D9D9
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#D9D9D9' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#D9D9D9' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#D9D9D9</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '240px', textAlign: 'center' }}>
+            button-primary-color-surface-pressed
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #A10000
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#A10000' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#A52121' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#A52121</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '295px', textAlign: 'center' }}>
+            button-primary-color-surface-pressed-inverse
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #B3B3B3
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#B3B3B3' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#B3B3B3' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#B3B3B3</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{/* SECONDARY BUTTON */}
+<br />
+# Secondary Button
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column'>
+          Usage
+        </th>
+        <th className='light-text-column'>
+        </th> 
+        <th className='light-swatch-column'>
+          Light
+        </th>
+        <th className='dark-swatch-column'>
+          <span style={{ color: '#FFF' }}>Dark</span>
+        </th>
+        <th className='dark-text-column'>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '255px', textAlign: 'center' }}>
+            button-secondary-color-content-default
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #FFFFFF
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#0D0D0D</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '255px', textAlign: 'center' }}>
+            button-secondary-color-content-inverse
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #0D0D0D
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#0D0D0D</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '255px', textAlign: 'center' }}>
+            button-secondary-color-surface-default
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #0D0D0D
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#FFFFFF</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '255px', textAlign: 'center' }}>
+            button-secondary-color-surface-inverse
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #FFFFFF
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#FFFFFF</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '245px', textAlign: 'center' }}>
+            button-secondary-color-surface-hover
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #595959
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#595959' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#D9D9D9' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#D9D9D9</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '295px', textAlign: 'center' }}>
+            button-secondary-color-surface-hover-inverse
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #D9D9D9
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#D9D9D9' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#D9D9D9' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#D9D9D9</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '260px', textAlign: 'center' }}>
+            button-secondary-color-surface-pressed
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #313131
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#313131' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#B3B3B3' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#B3B3B3</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '310px', textAlign: 'center' }}>
+            button-secondary-color-surface-pressed-inverse
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #B3B3B3
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#B3B3B3' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#B3B3B3' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#B3B3B3</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{/* TERTIARY BUTTON */}
+<br />
+# Tertiary Button
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column'>
+          Usage
+        </th>
+        <th className='light-text-column'>
+        </th> 
+        <th className='light-swatch-column'>
+          Light
+        </th>
+        <th className='dark-swatch-column'>
+          <span style={{ color: '#FFF' }}>Dark</span>
+        </th>
+        <th className='dark-text-column'>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '240px', textAlign: 'center' }}>
+            button-tertiary-color-content-default
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #0D0D0D
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#FFFFFF</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '240px', textAlign: 'center' }}>
+            button-tertiary-color-content-inverse
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #FFFFFF
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#FFFFFF</span>
+        </td>
+      </tr>
+      {/* MISSING COLOUR SWATCH ON FIGMA */}
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '230px', textAlign: 'center' }}>
+            button-tertiary-color-surface-hover
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+      {/* MISSING COLOUR SWATCH ON FIGMA */}
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '280px', textAlign: 'center' }}>
+            button-tertiary-color-surface-hover-inverse
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+      {/* MISSING COLOUR SWATCH ON FIGMA */}
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '240px', textAlign: 'center' }}>
+            button-tertiary-color-surface-pressed
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+      {/* MISSING COLOUR SWATCH ON FIGMA */}
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '290px', textAlign: 'center' }}>
+            button-tertiary-color-surface-pressed-inverse
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #XXXXXX
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: 'none' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#XXXXXX</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '230px', textAlign: 'center' }}>
+            button-tertiary-color-border-default
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #0D0D0D
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#0D0D0D' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#FFFFFF</span>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '235px', textAlign: 'center' }}>
+            button-tertiary-color-border-inverse
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #FFFFFF
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#FFFFFF</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
