@@ -72,7 +72,8 @@
 
 /* PRIMARY BUTTONS STATIC STATES */
 .storybook-button--primary--default {
-  background-color: var(--color-light-brand-500);
+  /*background-color: var(--color-light-brand-500); */
+  background-color: purple;
   color: var(--color-monochrome-white);
   /*color: #ff6666; -- ACCESSIBILITY VIOLATION DEMO EXAMPLE */ 
 }
