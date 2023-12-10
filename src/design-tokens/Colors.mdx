@@ -96,12 +96,82 @@ import { Meta } from '@storybook/addon-docs';
     border: 1px solid #dbdbdb;
     margin: auto;
   }
+  .heading-1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+  }
+  .heading-2 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .contents-button {
+    border-radius: 25px;
+    background: #FFF;
+    border: 1px solid black;
+    height: 48px;
+    width: 323px;
+    text-align: center; 
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+  }
+  .layout-contents-button {
+    display: flex;
+    padding: 12px 24px;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+  }
+  .title {
+    font-size: 64px;
+    font-weight: 600;
+  }
   `}
 </style>
 
+
+<div className="title">Colour</div>
+
+<div style={{ height: '48px'}}/>
+
+<div className='layout-contents-button'> 
+  <a href="#overview" target="_self"><button className='contents-button'>Overview</button></a>
+  <a href="#semantic-colours" target="_self"><button className='contents-button'>Semantic colours</button></a>
+  <a href="#component-colours" target="_self"><button className='contents-button'>Component colours</button></a>
+</div>
+
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="overview" className='heading-1'> Overview</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="semantic-colours" className='heading-1'> Semantic colours</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>A semantic name for a colour defines how a base (primitive) color will be used throughout a design system. e.g., background.primary.</span>
+<div style={{ height: '48px'}}/>
+---
+
+
 {/* TEXT/CONTENT */}
-<br />
-# Text/Content
+<div style={{ height: '48px'}}/>
+<span id="text-content" className='heading-2'>Text / Content</span>
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '32px'}}/>
+
 <div>
   <table>
     <thead>
@@ -327,10 +397,16 @@ import { Meta } from '@storybook/addon-docs';
     </tbody>
   </table>
 </div>
+<div style={{ height: '48px'}}/>
+---
 
 {/* BACKGROUND */}
-<br />
-# Background
+<div style={{ height: '48px'}}/>
+<span id="background" className='heading-2'>Background</span>
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '32px'}}/>
+
 <div>
   <table>
     <thead>
@@ -445,10 +521,16 @@ import { Meta } from '@storybook/addon-docs';
     </tbody>
   </table>
 </div>
+<div style={{ height: '48px'}}/>
+---
 
 {/* SURFACE */}
-<br />
-# Surface
+<div style={{ height: '48px'}}/>
+<span id="surface" className='heading-2'>Surface</span>
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '32px'}}/>
+
 <div>
   <table>
     <thead>
@@ -808,10 +890,16 @@ import { Meta } from '@storybook/addon-docs';
     </tbody>
   </table>
 </div>
+<div style={{ height: '48px'}}/>
+---
 
 {/* BORDER */}
-<br />
-# Border
+<div style={{ height: '48px'}}/>
+<span id="border" className='heading-2'>Border</span>
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '32px'}}/>
+
 <div>
   <table>
     <thead>
@@ -904,10 +992,16 @@ import { Meta } from '@storybook/addon-docs';
     </tbody>
   </table>
 </div>
+<div style={{ height: '48px'}}/>
+---
 
 {/* DIVIDER */}
-<br />
-# Divider
+<div style={{ height: '48px'}}/>
+<span id="divider" className='heading-2'>Divider</span>
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '32px'}}/>
+
 <div>
   <table>
     <thead>
@@ -978,10 +1072,16 @@ import { Meta } from '@storybook/addon-docs';
     </tbody>
   </table>
 </div>
+<div style={{ height: '48px'}}/>
+---
 
 {/* FEEDBACK */}
-<br />
-# Feeback
+<div style={{ height: '48px'}}/>
+<span id="feedback" className='heading-2'>Feedback</span>
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '32px'}}/>
+
 <div>
   <table>
     <thead>
@@ -1162,10 +1262,16 @@ import { Meta } from '@storybook/addon-docs';
     </tbody>
   </table>
 </div>
+<div style={{ height: '48px'}}/>
+---
 
 {/* STATES - MISSING COLOUR SWATCHES ON FIGMA FOR WHOLE TABLE */}
-<br />
-# States
+<div style={{ height: '48px'}}/>
+<span id="states" className='heading-2'>States</span>
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '32px'}}/>
+
 <div>
   <table>
     <thead>
@@ -1390,10 +1496,21 @@ import { Meta } from '@storybook/addon-docs';
     </tbody>
   </table>
 </div>
+<div style={{ height: '144px'}}/>
+
+<span id="component-colours" className='heading-1'> Component colours</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>A component name for a colour defines the individual colour assigned to a specific component within a design system.</span>
+<div style={{ height: '48px'}}/>
+---
 
 {/* PRIMARY BUTTON */}
-<br />
-# Primary Button
+<div style={{ height: '48px'}}/>
+<span id="primary-button" className='heading-2'>Primary Button</span>
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '32px'}}/>
+
 <div>
   <table>
     <thead>
@@ -1596,10 +1713,16 @@ import { Meta } from '@storybook/addon-docs';
     </tbody>
   </table>
 </div>
+<div style={{ height: '48px'}}/>
+---
 
 {/* SECONDARY BUTTON */}
-<br />
-# Secondary Button
+<div style={{ height: '48px'}}/>
+<span id="secondary-button" className='heading-2'>Secondary Button</span>
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '32px'}}/>
+
 <div>
   <table>
     <thead>
@@ -1802,10 +1925,16 @@ import { Meta } from '@storybook/addon-docs';
     </tbody>
   </table>
 </div>
+<div style={{ height: '48px'}}/>
+---
 
 {/* TERTIARY BUTTON */}
-<br />
-# Tertiary Button
+<div style={{ height: '48px'}}/>
+<span id="tertiary-button" className='heading-2'>Tertiary Button</span>
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '32px'}}/>
+
 <div>
   <table>
     <thead>

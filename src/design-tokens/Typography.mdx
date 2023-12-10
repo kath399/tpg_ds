@@ -1,29 +1,129 @@
 import { Meta } from "@storybook/blocks";
-import { DesignTokenDocBlock } from 'storybook-design-token/dist/doc-blocks';
 import { Tokens } from '../tokens.css';
-
-export const RightArrow = () => <svg 
-    viewBox="0 0 14 14" 
-    width="8px" 
-    height="14px" 
-    style={{ 
-      marginLeft: '4px',
-      display: 'inline-block',
-      shapeRendering: 'inherit',
-      verticalAlign: 'middle',
-      fill: 'currentColor',
-      'path fill': 'currentColor'
-    }}
->
-  <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
-</svg>
 
 <Meta title="Foundation/Typography" />
 
-<div className="sb-container">
-  <div className='sb-section-title'>
-    # Typography
+<style>
+  {`
+  @font-face {
+  font-family: 'Vodafone_Bd';
+    src: url('../fonts/Vodafone_Bd_W.eot'); 
+    src: url('../fonts/Vodafone_Bd_W.eot') format('embedded-opentype'), 
+        url('../fonts/Vodafone_Bd_W.woff2') format('woff2'), 
+        url('../fonts/Vodafone_Bd_W.woff') format('woff'), 
+        url('../fonts/Vodafone_Bd.ttf')  format('truetype'); 
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+  font-family: 'Vodafone_Bk';
+    src: url('../fonts/Vodafone_Bk_W.eot'); 
+    src: url('../fonts/Vodafone_Bk_W.eot') format('embedded-opentype'), 
+        url('../fonts/Vodafone_Bk_W.woff2') format('woff2'), 
+        url('../fonts/Vodafone_Bk_W.woff') format('woff'), 
+        url('../fonts/Vodafone_Bk.ttf')  format('truetype'); 
+    font-weight: 350;
+    font-style: normal;
+  }
+  @font-face {
+  font-family: 'Vodafone_Md';
+    src: url('../fonts/Vodafone_Md_W.eot'); 
+    src: url('../fonts/Vodafone_Md_W.eot') format('embedded-opentype'), 
+        url('../fonts/Vodafone_Md_W.woff2') format('woff2'), 
+        url('../fonts/Vodafone_Md_W.woff') format('woff'), 
+        url('../fonts/Vodafone_Md.ttf')  format('truetype'); 
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+  font-family: 'Vodafone_Rg';
+    src: url('../fonts/Vodafone_Rg_W.eot'); 
+    src: url('../fonts/Vodafone_Rg_W.eot') format('embedded-opentype'), 
+        url('../fonts/Vodafone_Rg_W.woff2') format('woff2'), 
+        url('../fonts/Vodafone_Rg_W.woff') format('woff'), 
+        url('../fonts/Vodafone_Rg.ttf')  format('truetype'); 
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+  font-family: 'Vodafone_SBd';
+    src: url('../fonts/Vodafone_SBd_W.eot'); 
+    src: url('../fonts/Vodafone_SBd_W.eot') format('embedded-opentype'), 
+        url('../fonts/Vodafone_SBd_W.woff2') format('woff2'),
+        url('../fonts/Vodafone_SBd_W.woff') format('woff'),
+        url('../fonts/Vodafone_SBd.ttf')  format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  table {
+    border-collapse: collapse;
+    border: none;
+  }
+  tr:first-child {
+    border-top: none;
+  }
+  td {
+    border: none !important;
+  }
+  th {
+    border: none !important;
+  }
+  .title {
+    font-size: 64px;
+    font-weight: 600;
+    font-family: 'Vodafone_Rg';
+    
+  }
+  .layout-contents-button {
+    display: flex;
+    padding: 12px 24px;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+  }
+  .contents-button {
+    border-radius: 25px;
+    background: #FFF;
+    border: 1px solid black;
+    height: 48px;
+    width: 187px;
+    text-align: center; 
+    font-size: 18px;
+    font-family: Vodafone_Rg;
+    color: black;
+    cursor: pointer;
+  }
+  .heading-1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+  }
+  `}
+</style>
 
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-  </div>
+<div className="title">Typography</div>
+
+<div style={{ height: '48px'}}/>
+
+<div className='layout-contents-button'> 
+  <a href="#overview" target="_self"><button className='contents-button'>Overview</button></a>
+  <a href="#font-family" target="_self"><button className='contents-button'>Font family</button></a>
+  <a href="#heading-styles" target="_self"><button className='contents-button'>Heading styles</button></a>
+  <a href="#paragraph-styles" target="_self"><button className='contents-button'>Paragraph styles</button></a>
+  <a href="#component-styles" target="_self"><button className='contents-button'>Component styles</button></a>
 </div>
+
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="overview" className='heading-1'> Overview</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '48px'}}/>
+---

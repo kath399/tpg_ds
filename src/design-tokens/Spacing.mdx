@@ -1,29 +1,696 @@
 import { Meta } from '@storybook/addon-docs';
-import { DesignTokenDocBlock } from "storybook-design-token/dist/doc-blocks";
-import { Tokens } from "../tokens.css";
-
-export const RightArrow = () => <svg 
-    viewBox="0 0 14 14" 
-    width="8px" 
-    height="14px" 
-    style={{ 
-      marginLeft: '4px',
-      display: 'inline-block',
-      shapeRendering: 'inherit',
-      verticalAlign: 'middle',
-      fill: 'currentColor',
-      'path fill': 'currentColor'
-    }}
->
-  <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
-</svg>
 
 <Meta title="Foundation/Spacing" />
 
-<div className="sb-container">
-  <div className='sb-section-title'>
-    # Colors
+<style>
+  {`
+  table {
+    border-collapse: collapse;
+    border: none;
+  }
+  tr:first-child {
+    border-top: none;
+  }
+  td {
+    border: none !important;
+  }
+  th {
+    border: none !important;
+  }
+  .token-column {
+    width: 300px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    background: #FFF;
+    text-align: left;
+  }
+  .usage-column {
+    width: 278px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .base-unit-column {
+    width: 120px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .usage-column-large {
+    width: 398px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .value-column {
+    width: 140px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .sample-column {
+    width: 162px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: centre;
+  }
+  .heading-1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+  }
+  .heading-2 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .contents-button {
+    border-radius: 25px;
+    background: #FFF;
+    border: 1px solid black;
+    height: 48px;
+    width: 323px;
+    text-align: center; 
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+  }
+  .layout-contents-button {
+    display: flex;
+    padding: 12px 24px;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+  }
+  .title {
+    font-size: 64px;
+    font-weight: 600;
+  }
+  .sample-swatch {
+    height: 34px;
+    margin: auto;
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+  `}
+</style>
 
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-  </div>
+<div className="title">Spacing</div>
+
+<div style={{ height: '48px'}}/>
+
+<div className='layout-contents-button'> 
+  <a href="#overview" target="_self"><button className='contents-button'>Overview</button></a>
+  <a href="#spacing" target="_self"><button className='contents-button'>Spacing</button></a>
+  <a href="#semantic-spacing" target="_self"><button className='contents-button'>Semantic spacing</button></a>
+</div>
+
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="overview" className='heading-1'> Overview</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="spacing" className='heading-1'> Spacing</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>The 4px base unit forms the basis of our space token system, as the base unit spacing.100. Every space token is a multiple of this base unit, the number suffix representing the percentage of the base unit.</p>
+<p className='text'>For example, spacing-200 is 200% of the size of the base unit, therefore represents 16px.</p>
+<p className='text'>Each space token should be used in place of the raw pixel or REM values when adding space between components or objects on a page. </p>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column'>
+          Usage
+        </th>
+        <th className='base-unit-column'>
+          Base Unit Multiplier
+        </th>
+        <th className='value-column'>
+          Value
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '84px', textAlign: 'center' }}>
+            spacing-000
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          0x
+        </td>
+        <td className="value-column">
+          0px / 0rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '0px', background: 'none' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '84px', textAlign: 'center' }}>
+            spacing-100
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          1x
+        </td>
+        <td className="value-column">
+          4px / 0.25rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '4px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '84px', textAlign: 'center' }}>
+            spacing-200
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          2x
+        </td>
+        <td className="value-column">
+          8px / 0.5rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '8px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '84px', textAlign: 'center' }}>
+            spacing-300
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          3x
+        </td>
+        <td className="value-column">
+          12px / 0.75rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '12px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '84px', textAlign: 'center' }}>
+            spacing-400
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          4x
+        </td>
+        <td className="value-column">
+          16px / 1rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '16px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '84px', textAlign: 'center' }}>
+            spacing-500
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          5x
+        </td>
+        <td className="value-column">
+          20px / xrem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '20px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '84px', textAlign: 'center' }}>
+            spacing-600
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          6x
+        </td>
+        <td className="value-column">
+          24px / 1.5rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '24px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '84px', textAlign: 'center' }}>
+            spacing-800
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          8x
+        </td>
+        <td className="value-column">
+          32px / 2rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '32px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '88px', textAlign: 'center' }}>
+            spacing-1000
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          10x
+        </td>
+        <td className="value-column">
+          40px / 2.5rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '40px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '88px', textAlign: 'center' }}>
+            spacing-1200
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          12x
+        </td>
+        <td className="value-column">
+          48px / 3rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '48px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '88px', textAlign: 'center' }}>
+            spacing-1600
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          16x
+        </td>
+        <td className="value-column">
+          64px / 4rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '64px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '88px', textAlign: 'center' }}>
+            spacing-2000
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          20x
+        </td>
+        <td className="value-column">
+          80px / 5rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '80px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '88px', textAlign: 'center' }}>
+            spacing-2400
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          24x
+        </td>
+        <td className="value-column">
+          96px / xrem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '96px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '88px', textAlign: 'center' }}>
+            spacing-2800
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          28x
+        </td>
+        <td className="value-column">
+          112px / xrem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '112px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '88px', textAlign: 'center' }}>
+            spacing-3200
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          32x
+        </td>
+        <td className="value-column">
+          128px / 8rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '128px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="semantic-spacing" className='heading-1'> Semantic spacing</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="overview" className='heading-1'> Button</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column-large'>
+          Usage
+        </th>
+        <th className='value-column'>
+          Value
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '128px', textAlign: 'center' }}>
+            button-padding-top
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Text
+        </td>
+        <td className="value-column">
+          12px / 0.75rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '12px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '151px', textAlign: 'center' }}>
+            button-padding-bottom
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Text
+        </td>
+        <td className="value-column">
+          12px / 0.75rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '12px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '129px', textAlign: 'center' }}>
+            button-padding-left
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Text
+        </td>
+        <td className="value-column">
+          24px / 1.5rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '24px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '136px', textAlign: 'center' }}>
+            button-padding-right
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Text
+        </td>
+        <td className="value-column">
+          24px / 1.5rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '24px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '130px', textAlign: 'center' }}>
+            button-padding-gap
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Text
+        </td>
+        <td className="value-column">
+          4px / 0.25rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '4px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="overview" className='heading-1'>Input</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column-large'>
+          Usage
+        </th>
+        <th className='value-column'>
+          Value
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '119px', textAlign: 'center' }}>
+            input-padding-top
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Text
+        </td>
+        <td className="value-column">
+          12px / 0.75rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '12px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '142px', textAlign: 'center' }}>
+            input-padding-bottom
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Text
+        </td>
+        <td className="value-column">
+          12px / 0.75rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '12px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '120px', textAlign: 'center' }}>
+            input-padding-left
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Text
+        </td>
+        <td className="value-column">
+          16px / 1rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '16px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '127px', textAlign: 'center' }}>
+            input-padding-right
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Text
+        </td>
+        <td className="value-column">
+          16px / 1rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '16px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '121px', textAlign: 'center' }}>
+            input-padding-gap
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Text
+        </td>
+        <td className="value-column">
+          12px / 0.75rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ width: '12px', background: 'rgba(230, 0, 0, 0.14)' }}/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
