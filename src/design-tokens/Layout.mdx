@@ -1,0 +1,298 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Foundation/Layout" />
+
+<style>
+  {`
+  table {
+    border-collapse: collapse;
+    border: none;
+  }
+  tr:first-child {
+    border-top: none;
+  }
+  td {
+    border: none !important;
+  }
+  th {
+    border: none !important;
+  }
+  .token-column {
+    width: 300px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    background: #FFF;
+    text-align: left;
+  }
+  .usage-column {
+    width: 278px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .base-unit-column {
+    width: 120px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .usage-column-large {
+    width: 398px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .value-column {
+    width: 140px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .sample-column {
+    width: 162px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: centre;
+  }
+  .heading-1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+  }
+  .heading-2 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .contents-button {
+    border-radius: 25px;
+    background: #FFF;
+    border: 1px solid black;
+    height: 48px;
+    width: 323px;
+    text-align: center; 
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+  }
+  .layout-contents-button {
+    display: flex;
+    padding: 12px 24px;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+  }
+  .title {
+    font-size: 64px;
+    font-weight: 600;
+  }
+  .sample-swatch {
+    height: 76px;
+    width: 168px;
+    margin: auto;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+  }
+  .small-breakpoint-background {
+    width: 440px;
+    height: 980px;
+    padding: 40px;
+    border-radius: 14px;
+    border: 1px solid #BFBFC0
+  }
+  .small-margin {
+    width: 16px;
+    height: 900px;
+    position: absolute;
+    background: rgba(250, 0, 255, 0.10);
+    margin-right: 20x;
+    display: inline-block;
+  }
+  .small-column {
+    flex: 1 0 0;
+    align-self: stretch;
+    background: rgba(0, 148, 255, 0.10);
+    width: 90px;
+    height: 900px;
+    display: inline-block;
+  }
+  `}
+</style>
+
+<div className='small-breakpoint-background'>
+  <div className="small-margin"/>
+  <div className="small-column"/>
+
+</div>
+
+<div className="title">Layout</div>
+
+<div style={{ height: '48px'}}/>
+
+<div style={{fontSize: '28px' }}>Contents</div>
+<div style={{ height: '16px'}}/>
+<p><a href="#overview" target="_self" className='text'>Screensizes</a></p>
+<div style={{ height: '48px'}}/>
+
+---
+
+<div style={{ height: '48px'}}/>
+<span id="overview" className='heading-1'> Overview</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="corner-radius" className='heading-1'>[Insert Title]</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column-large'>
+          Usage
+        </th>
+        <th className='value-column'>
+          Value
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '90px', textAlign: 'center' }}>
+            Small (Phone)
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Text
+        </td>
+        <td className="value-column">
+          4 Fluid
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '0px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '127px', textAlign: 'center' }}>
+            corner-radius-small
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          form fields, dropdowns.
+        </td>
+        <td className="value-column">
+          4px / 0.25rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '4px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '143px', textAlign: 'center' }}>
+            corner-radius-medium
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Buttons
+        </td>
+        <td className="value-column">
+          8px / 0.5rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '8px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '124px', textAlign: 'center' }}>
+            corner-radius-large
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          n/a
+        </td>
+        <td className="value-column">
+          12px / 0.75rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '12px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '130px', textAlign: 'center' }}>
+            corner-radius-xlarge
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Cards, modals
+        </td>
+        <td className="value-column">
+          24px / 1.5rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '24px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '143px', textAlign: 'center' }}>
+            corner-radius-rounded
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          n/a
+        </td>
+        <td className="value-column">
+          999px
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '999px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

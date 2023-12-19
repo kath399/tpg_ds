@@ -104,14 +104,6 @@ import { Meta } from '@storybook/addon-docs';
     color: black;
     cursor: pointer;
   }
-  .layout-contents-button {
-    display: flex;
-    padding: 12px 24px;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    flex: 1 0 0;
-  }
   .title {
     font-size: 64px;
     font-weight: 600;
@@ -131,12 +123,10 @@ import { Meta } from '@storybook/addon-docs';
 
 <div style={{ height: '48px'}}/>
 
-<div className='layout-contents-button'> 
-  <a href="#overview" target="_self"><button className='contents-button'>Overview</button></a>
-  <a href="#spacing" target="_self"><button className='contents-button'>Spacing</button></a>
-  <a href="#semantic-spacing" target="_self"><button className='contents-button'>Semantic spacing</button></a>
-</div>
-
+<div style={{fontSize: '28px' }}>Contents</div>
+<div style={{ height: '16px'}}/>
+<p><a href="#overview" target="_self" className='text'>Overview</a></p>
+<p><a href="#spacing" target="_self" className='text'>Spacing</a></p>
 <div style={{ height: '48px'}}/>
 ---
 
