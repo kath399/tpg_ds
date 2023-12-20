@@ -46,6 +46,7 @@ const enabledRules: Rule[] = getRules(enabledTags).map((ruleMetadata) => ({
 
 const preview: Preview = {
   parameters: {
+    knobs: { disable: true, hidden: true },
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {

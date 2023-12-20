@@ -73,10 +73,6 @@ import { Tokens } from '../tokens.css';
     font-size: 64px;
     font-weight: 600;
   }
-  h1.large {
-    font-size: 48px;
-    font-weight: 600;
-  }
   .token-column {
     width: 474px;
     padding: 12px 16px;
@@ -175,13 +171,13 @@ import { Tokens } from '../tokens.css';
   background: '#F2F2F2', 
   position: 'fixed',
   padding: '10%',
-  paddingRight: '10%',
   margin: 0,
   top: 0,
   left: 0,
   right: 0,
+  bottom: 0,
   width: '80%',
-  height: '100%',
+  height: '64vh',
   overflowY: 'scroll',
 }}>
 
@@ -189,12 +185,13 @@ import { Tokens } from '../tokens.css';
 
 <div style={{ height: '48px'}}/>
 
-<div className='layout-contents-button'> 
-  <a href="#overview" target="_self"><button className='contents-button'>Overview</button></a>
-  <a href="#font-family" target="_self"><button className='contents-button'>Font family</button></a>
-  <a href="#heading-styles" target="_self"><button className='contents-button'>Heading styles</button></a>
-  <a href="#paragraph-styles" target="_self"><button className='contents-button'>Paragraph styles</button></a>
-  <a href="#component-styles" target="_self"><button className='contents-button'>Component styles</button></a>
+<div style={{fontSize: '28px' }}>Contents</div>
+<div>
+  <p><a href="#overview" target="_self" className='text'>Overview</a></p>
+  <p><a href="#font-family" target="_self" className='text'>Font family</a></p>
+  <p><a href="#heading-styles" target="_self" className='text'>Heading styles</a></p>
+  <p><a href="#paragraph-styles" target="_self" className='text'>Paragraph styles</a></p>
+  <p><a href="#component-styles" target="_self" className='text'>Component styles</a></p>
 </div>
 
 <div style={{ height: '48px'}}/>
@@ -208,14 +205,14 @@ import { Tokens } from '../tokens.css';
 ---
 
 <div style={{ height: '48px'}}/>
-<span id="spacing" className='heading-1'> Font Family</span> 
+<span id="font-family" className='heading-1'> Font Family</span> 
 <div style={{ height: '32px'}}/>
 <p className='text'>We are using a unique font family exclusively designed for use by Vodafone. The Vodafone font family is available in a range of different weights (Light, Book, Regular, Medium, SemiBold, Bold, ExtraBold) to give more flexibility and creativity to help differentiate campaigns  and all type of communications. </p>
 <div style={{ height: '32px'}}/>
 ---
 
 <div style={{ height: '48px'}}/>
-<span id="spacing" className='heading-1'> Heading styles</span> 
+<span id="heading-styles" className='heading-1'> Heading styles</span> 
 <div style={{ height: '32px'}}/>
 <p className='text'>Heading styles are a crucial aspect of text formatting, providing a visual hierarchy to content. In Vodafone design system we have range from H1 to H5, with H1 being the largest and most prominent, and H5 the smallest. </p>
 <div style={{ height: '48px'}}/>
@@ -225,7 +222,6 @@ import { Tokens } from '../tokens.css';
 <span id="spacing" className='heading-2'> H1</span> 
 <div style={{ height: '32px'}}/>
 <p className='text'>The H1 font style, or heading 1 is a prominent and large text format commonly used to denote the main title or heading of webpage. </p>
-<p className='text-large'>hkjhkhsdk</p>
 <div style={{ height: '32px'}}/>
 
 <div>
@@ -254,9 +250,7 @@ import { Tokens } from '../tokens.css';
           </div>
         </td>
         <td className='sample-column'>
-          <div style={{ fontSize: '64px' }}>
-            H1
-          </div>
+          <h1 style={{ textAlign: 'center', fontSize: '64px' }}>H1</h1>
         </td>
         <td className="usage-column">
           <p>
@@ -278,9 +272,7 @@ import { Tokens } from '../tokens.css';
           </div>
         </td>
         <td className='sample-column'>
-          <p className='text-large'>
-            H1
-          </p>
+          <h1 style={{ textAlign: 'center', fontSize: '56px' }}>H1</h1>
         </td>
         <td className="usage-column">
           <p>
@@ -301,10 +293,8 @@ import { Tokens } from '../tokens.css';
             typography-small-h1
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H1
-          </text>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '32px' }}>H1</h1>
         </td>
         <td className="usage-column">
           <p>
@@ -356,10 +346,8 @@ import { Tokens } from '../tokens.css';
             typography-large-h2
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H2
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '48px' }}>H2</div>
         </td>
         <td className="usage-column">
           <p>
@@ -380,10 +368,8 @@ import { Tokens } from '../tokens.css';
             typography-medium-h2
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H2
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '40px' }}>H2</div>
         </td>
         <td className="usage-column">
           <p>
@@ -404,10 +390,8 @@ import { Tokens } from '../tokens.css';
             typography-small-h2
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H2
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '28px' }}>H2</div>
         </td>
         <td className="usage-column">
           <p>
@@ -459,10 +443,8 @@ import { Tokens } from '../tokens.css';
             typography-large-h3
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H3
-          </text>
+        <td className='sample-column'>
+          <h3 style={{ textAlign: 'center', fontSize: '36px' }}>H3</h3>
         </td>
         <td className="usage-column">
           <p>
@@ -483,10 +465,8 @@ import { Tokens } from '../tokens.css';
             typography-medium-h3
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H3
-          </text>
+        <td className='sample-column'>
+          <h3 style={{ textAlign: 'center', fontSize: '32px' }}>H3</h3>
         </td>
         <td className="usage-column">
           <p>
@@ -507,10 +487,8 @@ import { Tokens } from '../tokens.css';
             typography-small-h3
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H3
-          </text>
+        <td className='sample-column'>
+          <h3 style={{ textAlign: 'center', fontSize: '24px' }}>H3</h3>
         </td>
         <td className="usage-column">
           <p>
@@ -563,10 +541,8 @@ import { Tokens } from '../tokens.css';
             typography-large-h4
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H4
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '28px' }}>H4</div>
         </td>
         <td className="usage-column">
           <p>
@@ -587,10 +563,10 @@ import { Tokens } from '../tokens.css';
             typography-large-h4-strong
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H4
-          </text>
+        <td className='sample-column'>
+          <div style={{textAlign: 'center'}}>
+            <b style={{ fontSize: '28px' }}>H4</b>
+          </div>
         </td>
         <td className="usage-column">
           <p>
@@ -611,10 +587,8 @@ import { Tokens } from '../tokens.css';
             typography-medium-h4
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H4
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '24px' }}>H4</div>
         </td>
         <td className="usage-column">
           <p>
@@ -635,15 +609,15 @@ import { Tokens } from '../tokens.css';
             typography-medium-h4-strong
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H4
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center' }}>
+            <b style={{ fontSize: '24px'}}>H4</b>
+          </div>
         </td>
         <td className="usage-column">
           <p>
             Font: Vodafone<br/> 
-            Size: 24pxpx <br/>
+            Size: 24px <br/>
             Weight: Bold<br/>
             Line-height: 32px<br/>
             Letter-spacing: 0<br/>
@@ -659,10 +633,8 @@ import { Tokens } from '../tokens.css';
             typography-small-h4
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H4
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '20px' }}>H4</div>
         </td>
         <td className="usage-column">
           <p>
@@ -683,10 +655,10 @@ import { Tokens } from '../tokens.css';
             typography-small-h4-strong
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H4
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center' }}>
+            <b style={{fontSize: '20px'}}>H4</b>
+          </div>
         </td>
         <td className="usage-column">
           <p>
@@ -738,10 +710,8 @@ import { Tokens } from '../tokens.css';
             typography-large-h5
           </div>
         </td>
-        <td>
-          <h1>
-            H5
-          </h1>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '20px' }}>H5</div>
         </td>
         <td className="usage-column">
           <p>
@@ -762,10 +732,10 @@ import { Tokens } from '../tokens.css';
             typography-large-h5-strong
           </div>
         </td>
-        <td>
-          <h1>
-            H5
-          </h1>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center' }}>
+            <b style={{ fontSize: '20px' }}>H5</b>
+          </div>
         </td>
         <td className="usage-column">
           <p>
@@ -786,10 +756,8 @@ import { Tokens } from '../tokens.css';
             typography-medium-h5
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H5
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '20px' }}>H5</div>
         </td>
         <td className="usage-column">
           <p>
@@ -810,10 +778,10 @@ import { Tokens } from '../tokens.css';
             typography-medium-h5-strong
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H5
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center' }}>
+            <b style={{ fontSize: '20px' }}>H5</b>
+          </div>
         </td>
         <td className="usage-column">
           <p>
@@ -834,10 +802,8 @@ import { Tokens } from '../tokens.css';
             typography-small-h5
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H5
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '18px' }}>H5</div>
         </td>
         <td className="usage-column">
           <p>
@@ -858,10 +824,10 @@ import { Tokens } from '../tokens.css';
             typography-small-h5-strong
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H5
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center' }}>
+            <b style={{ fontSize: '18px' }}>H5</b>
+          </div>
         </td>
         <td className="usage-column">
           <p>
@@ -882,7 +848,7 @@ import { Tokens } from '../tokens.css';
 <div style={{ height: '48px'}}/>
 
 
-<span id="spacing" className='heading-1'>Paragraph styles</span> 
+<span id="paragraph-styles" className='heading-1'>Paragraph styles</span> 
 <div style={{ height: '32px'}}/>
 <p className='text'>Paragraph style comes in 3 body sizes and caption. Body 1 (18px), Body 2 (16px) and Body 3 (14px), and in two weights: bold, regular and underlined.  </p>
 <div style={{ height: '48px'}}/>
@@ -919,10 +885,8 @@ import { Tokens } from '../tokens.css';
             typography-body1
           </div>
         </td>
-        <td>
-          <h1>
-            Body copy 1
-          </h1>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '18px' }}>Body copy 1</div>
         </td>
         <td className="usage-column">
           <p>
@@ -943,10 +907,10 @@ import { Tokens } from '../tokens.css';
             typography-body1-underline
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            Body copy 1
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center'}}>
+            <u style={{ fontSize: '18px' }}>Body copy 1</u>
+          </div>
         </td>
         <td className="usage-column">
           <p>
@@ -967,10 +931,10 @@ import { Tokens } from '../tokens.css';
             typography-body1-strong
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            Body copy 1
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center'}}>
+            <b style={{ fontSize: '18px' }}>Body copy 1</b>
+          </div>
         </td>
         <td className="usage-column">
           <p>
@@ -1021,10 +985,8 @@ import { Tokens } from '../tokens.css';
             typography-body2
           </div>
         </td>
-        <td>
-          <h1>
-            Body copy 2
-          </h1>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '16px' }}>Body copy 2</div>
         </td>
         <td className="usage-column">
           <p>
@@ -1045,10 +1007,10 @@ import { Tokens } from '../tokens.css';
             typography-body2-underline
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            Body copy 2
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center' }}>
+            <u style={{ fontSize: '16px' }}>Body copy 2</u>
+          </div>
         </td>
         <td className="usage-column">
           <p>
@@ -1069,10 +1031,10 @@ import { Tokens } from '../tokens.css';
             typography-body2-strong
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            Body copy 2
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center'}}> 
+            <b style={{ fontSize: '16px' }}>Body copy 2</b>
+          </div>
         </td>
         <td className="usage-column">
           <p>
@@ -1123,10 +1085,8 @@ import { Tokens } from '../tokens.css';
             typography-body3
           </div>
         </td>
-        <td>
-          <h1>
-            Body copy 3
-          </h1>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '14px' }}>Body copy 3</div>
         </td>
         <td className="usage-column">
           <p>
@@ -1147,18 +1107,19 @@ import { Tokens } from '../tokens.css';
             typography-body3-underline
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            Body copy 2
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center' }}>
+            <u style={{ fontSize: '14px' }}>Body copy 3</u>
+          </div>
         </td>
         <td className="usage-column">
           <p>
             Font: Vodafone<br/> 
-            Size: 16x <br/>
+            Size: 14x <br/>
             Weight: Regular<br/>
             Line-height: 24px<br/>
             Letter-spacing: 0<br/>
+            Text-decoration: underline<br/>
           </p>
         </td>
         <td className="light-value-column">
@@ -1171,15 +1132,15 @@ import { Tokens } from '../tokens.css';
             typography-body3-strong
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            Body copy 3
-          </text>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center'}}>
+            <b style={{ fontSize: '14px' }}>Body copy 3</b>
+          </div>
         </td>
         <td className="usage-column">
           <p>
             Font: Vodafone<br/> 
-            Size: 16px <br/>
+            Size: 14px <br/>
             Weight: Bold<br/>
             Line-height: 24px<br/>
             Letter-spacing: 0<br/>
@@ -1227,10 +1188,8 @@ import { Tokens } from '../tokens.css';
             typography-caption
           </div>
         </td>
-        <td>
-          <h1>
-            Caption
-          </h1>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '12px' }}>Caption</div>
         </td>
         <td className="usage-column">
           <p>
@@ -1252,7 +1211,7 @@ import { Tokens } from '../tokens.css';
 ---
 
 <div style={{ height: '48px'}}/>
-<span id="spacing" className='heading-1'>Component styles</span> 
+<span id="component-styles" className='heading-1'>Component styles</span> 
 <div style={{ height: '32px'}}/>
 <p className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</p>
 <div style={{ height: '48px'}}/>
@@ -1289,10 +1248,8 @@ import { Tokens } from '../tokens.css';
             typography-large-button-label
           </div>
         </td>
-        <td>
-          <h1>
-            H1
-          </h1>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '20px' }}>H1</h1>
         </td>
         <td className="usage-column">
           <p>
@@ -1313,10 +1270,8 @@ import { Tokens } from '../tokens.css';
             typography-large-button-label-underline
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H1
-          </text>
+        <td className='sample-column'>
+          <u><h1 style={{ textAlign: 'center', fontSize: '20px'}}>H1</h1></u>
         </td>
         <td className="usage-column">
           <p>
@@ -1338,10 +1293,8 @@ import { Tokens } from '../tokens.css';
             typography-small-button-label
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H1
-          </text>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '16px'}}>H1</h1>
         </td>
         <td className="usage-column">
           <p>
@@ -1362,10 +1315,8 @@ import { Tokens } from '../tokens.css';
             typography-small-button-label-underline
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H1
-          </text>
+        <td className='sample-column'>
+          <u><h1 style={{ textAlign: 'center', fontSize: '16px'}}>H1</h1></u>
         </td>
         <td className="usage-column">
           <p>
@@ -1418,10 +1369,8 @@ import { Tokens } from '../tokens.css';
             typography-large-form-label
           </div>
         </td>
-        <td>
-          <h1>
-            H1
-          </h1>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '18px'}}>H1</h1>
         </td>
         <td className="usage-column">
           <p>
@@ -1442,10 +1391,8 @@ import { Tokens } from '../tokens.css';
             typography-small-form-label
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H1
-          </text>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '16px'}}>H1</h1>
         </td>
         <td className="usage-column">
           <p>
@@ -1468,7 +1415,7 @@ import { Tokens } from '../tokens.css';
 
 
 <div style={{ height: '48px'}}/>
-<span id="spacing" className='heading-2'>Form</span> 
+<span id="spacing" className='heading-2'>Link</span> 
 <div style={{ height: '32px'}}/>
 <p className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</p>
 <div style={{ height: '48px'}}/>
@@ -1498,10 +1445,8 @@ import { Tokens } from '../tokens.css';
             typography-large-link-label
           </div>
         </td>
-        <td>
-          <h1>
-            H1
-          </h1>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '18px'}}>H1</h1>
         </td>
         <td className="usage-column">
           <p>
@@ -1522,10 +1467,8 @@ import { Tokens } from '../tokens.css';
             typography-large-link-label-underline
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H1
-          </text>
+        <td className='sample-column'>
+          <u><h1 style={{ textAlign: 'center', fontSize: '18px'}}>H1</h1></u>
         </td>
         <td className="usage-column">
           <p>
@@ -1547,10 +1490,8 @@ import { Tokens } from '../tokens.css';
             typography-small-link-label-default
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H1
-          </text>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '16px'}}>H1</h1>
         </td>
         <td className="usage-column">
           <p>
@@ -1571,10 +1512,8 @@ import { Tokens } from '../tokens.css';
             typography-small-link-label-underline
           </div>
         </td>
-        <td className='large-column'>
-          <text className='text-large'>
-            H1
-          </text>
+        <td className='sample-column'>
+          <u><h1 style={{ textAlign: 'center', fontSize: '16px'}}>H1</h1></u>
         </td>
         <td className="usage-column">
           <p>
@@ -1627,10 +1566,8 @@ import { Tokens } from '../tokens.css';
             typography-large-supporting-text
           </div>
         </td>
-        <td>
-          <h1>
-            Caption
-          </h1>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '14px'}}>H1</h1>
         </td>
         <td className="usage-column">
           <p>
@@ -1649,5 +1586,6 @@ import { Tokens } from '../tokens.css';
   </table>
 </div>
 <div style={{ height: '48px'}}/>
+---
 
 </div>

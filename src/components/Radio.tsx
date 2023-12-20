@@ -2,50 +2,64 @@ import React from 'react';
 import './radio.css';
 
 interface RadioProps {
-  id: string;
-  name: string;
-  label: string[];
-  value: string;
-  checked?: boolean;
+  Label: string[];
+  Checked?: boolean;
+  Status?: 'enable' | 'hover' | 'focus' | 'disabled';
   numberOfBtns: number;
+  Inverse?: boolean;
+  Inline?: boolean;
+  value: string;
   onChange: (value: string) => void;
-  inline?: boolean;
-  disabled?: boolean;
 }
 
 export const Radio: React.FC<RadioProps> = ({ 
-  id, 
-  name,
-  label, 
+  Label, 
   value, 
-  checked,
+  Checked,
+  Status = 'enable',
   numberOfBtns = 5, 
   onChange,
-  inline = false,
-  disabled = false,
+  Inverse = false,
+  Inline = false,
 }) => {
   const radioButtons = [];
 
   const containerStyle: React.CSSProperties = {
-    display: inline ? 'inline-block' : 'block',
-    marginRight: inline ? '16px' : '0',
+    display: Inline ? 'inline-block' : 'block',
+    marginRight: Inline ? '16px' : '0',
+  }
+
+  let Disabled:boolean = false;
+  if(Status == 'disabled') {
+    Disabled = true
+  }
+
+  let labelColor:string = 'black';
+  if(Inverse == true) {
+    labelColor = 'white'
+  } else if(Disabled == true) {
+    labelColor = '#0D0D0D61'
   }
 
   for (let i = 0; i < numberOfBtns; i++) {
-    const uniqueId = `${id}_${i}`;
+    const uniqueId = `${i}`;
 
     radioButtons.push(      
       <label id={uniqueId} className='container' style={containerStyle}>
         <input
           type="radio"
-          name={name}
+          name='Button'
           value={value}
-          checked={checked}
+          checked={Checked}
           onChange={() => onChange(value)}
-          disabled={disabled}
+          disabled={Disabled}
         />
-        <span className="checkmark"></span>
-        {label[i]}
+        <span className={[
+          'checkmark',
+          `checkmark--${Status}`,
+          Inverse ? 'checkmarkInverse' : ''
+        ].join(' ')}></span>
+        <text style={{ color: labelColor }}>{Label[i]}</text>
       </label>
     );
   }
@@ -55,4 +69,4 @@ export const Radio: React.FC<RadioProps> = ({
       {radioButtons}
     </div>
   );
-};
+}; 

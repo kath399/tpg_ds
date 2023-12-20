@@ -10,7 +10,8 @@
   }
 
 .container {
-    display: block;
+    display: flex;
+    align-items: center;
     position: relative;
     padding-left: 35px;
     padding-top: 4px;
@@ -27,18 +28,20 @@
     margin-right: 10px;
 }
   
-  /* Hide the browser's default radio button */
+  /* HIDE THE BROWSER'S DEFAULT RADIO BUTTON */
 .container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
-/* Create a custom radio button */
+/* CREATE A CUSTOM RADIO BUTTON */
 .checkmark {
     position: absolute;
-    top: 2px;
-    left: 2px;
+    top: 0;
+    left: 0;
+    margin-left: 2px;
+    margin-top: 2px;
     height: 24px;
     width: 24px;
     background-color: white;
@@ -46,21 +49,53 @@
     border: 1px solid #BEBEBE;
 }
 
-/* On mouse-over, add a grey background color */
+.checkmarkInverse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 2px;
+    margin-top: 2px;
+    height: 24px;
+    width: 24px;
+    background-color: black;
+    border-radius: 100%;
+    border: 1px solid white;
+}
+
+/* ON MOUSE-OVER, ADD A GREY BACKGROUND COLOR */
 .container:hover input ~ .checkmark {
     background-color: white;
     top: 0;
     left: 0;
+    margin-top: 0px;
+    margin-left: 0px;
     width: 26px;
     height: 26px;
     opacity: 0.2;
-    border: 4px solid #0D0D0D26;
-  }
+    border: 4px solid #BEBEBE;
+}
 
-  /* When the radio button is checked, add a blue background */
+.checkmark--hover {
+    background-color: white;
+    top: 0;
+    left: 0;
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 26px;
+    height: 26px;
+    opacity: 0.2;
+    border: 4px solid #BEBEBE;
+}
+
+  /* WHEN THE RADIO BUTTON IS CHECKED, ADD A BLUE BACKGROUND */
 .container input:checked ~ .checkmark {
     background-color: white;
     border-color: #00697C;
+}
+
+.container input:checked ~ .checkmarkInverse {
+    border-color: #0096AD;
+    background-color: black;
 }
 
 .checkmark:after {
@@ -68,16 +103,37 @@
     position: absolute;
     display: none;
 }
+
+.checkmarkInverse:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
   
-/* Show the indicator (dot/circle) when checked */
+/* SHOW THE INDICATOR (DOT/CIRCLE) WHEN CHECKED */
 .container input:checked ~ .checkmark:after {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Style the indicator (dot/circle) */
+.container input:checked ~ .checkmarkInverse:after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* STYLE THE INDICATOR (DOT/CIRCLE) */
 .container .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: #0096AD;
+}
+
+.container .checkmarkInverse:after {
     top: 4px;
     left: 4px;
     width: 16px;
@@ -86,6 +142,29 @@
     background: #00697C;
 }
 
-.container input:disabled + .checkmark + span {
-    opacity: 1;
-  }
+/* STYLE FOR FOCUS STATE */
+.container input:focus + .checkmark {
+    top: 0;
+    left: 0;
+    border: 3px solid #0096AD;
+}
+
+.checkmark--focus {
+    top: 0;
+    left: 0;
+    border: 3px solid #0096AD;
+}
+
+/* STYLE FOR DISABLED STATE */
+.container input:disabled ~ .checkmark {
+    background-color: transparent;
+    border-color: #BEBEBE61;
+    cursor: not-allowed;
+}
+.container input:disabled:checked ~ .checkmark {
+    background-color: transparent;
+    border-color: #BEBEBE61;
+}
+.container input:disabled ~ .checkmark:after {
+    display: none;
+}
