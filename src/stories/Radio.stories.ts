@@ -26,8 +26,7 @@ export const Checked: Story = {
         Label: ['Button Label'],
         Checked: true,
         numberOfBtns: 1,
-        value: '',
-        Status: 'enable',
+        State: 'enable',
     },
     parameters: {
       design: {
@@ -46,8 +45,7 @@ export const Unchecked: Story = {
   args: {
       Label: ['Button Label'],
       numberOfBtns: 1,
-      value: '',
-      Status: 'enable',
+      State: 'enable',
   },
   parameters: {
     design: {
@@ -67,10 +65,9 @@ export const Unchecked: Story = {
 export const Inline: Story = {
   args: {
       Label: ['Button Label 1', 'Button Label 2', 'Button Label 3', 'Button Label 4', 'Button Label 5'],
-      value: '',
       numberOfBtns: 5,
       Inline: true,
-      Status: 'enable',
+      State: 'enable',
   },
   parameters: {
     design: {
@@ -88,9 +85,8 @@ export const Inline: Story = {
 export const Stacked: Story = {
   args: {
       Label: ['Button Label 1', 'Button Label 2', 'Button Label 3', 'Button Label 4', 'Button Label 5'],
-      value: '',
       numberOfBtns: 5,
-      Status: 'enable',
+      State: 'enable',
   },
   parameters: {
     design: {

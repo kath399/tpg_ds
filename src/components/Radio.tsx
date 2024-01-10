@@ -4,19 +4,17 @@ import './radio.css';
 interface RadioProps {
   Label: string[];
   Checked?: boolean;
-  Status?: 'enable' | 'hover' | 'focus' | 'disabled';
-  numberOfBtns: number;
+  State?: 'enable' | 'hover' | 'focus' | 'disabled';
+  numberOfBtns?: number;
   Inverse?: boolean;
   Inline?: boolean;
-  value: string;
   onChange: (value: string) => void;
 }
 
 export const Radio: React.FC<RadioProps> = ({ 
   Label, 
-  value, 
   Checked,
-  Status = 'enable',
+  State = 'enable',
   numberOfBtns = 5, 
   onChange,
   Inverse = false,
@@ -30,7 +28,7 @@ export const Radio: React.FC<RadioProps> = ({
   }
 
   let Disabled:boolean = false;
-  if(Status == 'disabled') {
+  if(State == 'disabled') {
     Disabled = true
   }
 
@@ -49,14 +47,13 @@ export const Radio: React.FC<RadioProps> = ({
         <input
           type="radio"
           name='Button'
-          value={value}
           checked={Checked}
-          onChange={() => onChange(value)}
+          onChange={() => onChange('')}
           disabled={Disabled}
         />
         <span className={[
           'checkmark',
-          `checkmark--${Status}`,
+          `checkmark--${State}`,
           Inverse ? 'checkmarkInverse' : ''
         ].join(' ')}></span>
         <text style={{ color: labelColor }}>{Label[i]}</text>
