@@ -1,29 +1,343 @@
 import { Meta } from '@storybook/addon-docs';
-import { DesignTokenDocBlock } from "storybook-design-token/dist/doc-blocks";
-import { Tokens } from "../tokens.css";
-
-export const RightArrow = () => <svg 
-    viewBox="0 0 14 14" 
-    width="8px" 
-    height="14px" 
-    style={{ 
-      marginLeft: '4px',
-      display: 'inline-block',
-      shapeRendering: 'inherit',
-      verticalAlign: 'middle',
-      fill: 'currentColor',
-      'path fill': 'currentColor'
-    }}
->
-  <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
-</svg>
+import ColMarGut from './assets/Columns, gutters, and margins.png';
+import Columns from './assets/Columns.png';
+import Gutters from './assets/Gutters.png';
+import Margins from './assets/Margins.png';
+import ApplyGrid from './assets/Applying the Grid.png';
+import Fixed from './assets/Fixed.png';
+import Fluid from './assets/Fluid.png';
 
 <Meta title="Foundation/Grid" />
 
-<div className="sb-container">
-  <div className='sb-section-title'>
-    # Grid
+<style>
+  {`
+  table {
+    border-collapse: collapse;
+    border: none;
+  }
+  tr:first-child {
+    border-top: none;
+  }
+  td {
+    border: none !important;
+  }
+  th {
+    border: none !important;
+    font-size: 36px;
+  }
+  .token-column {
+    width: 270px;
+    text-align: left;
+  }
+  .device-column {
+    width: 140px;
+    text-align: left;
+  }
+  .breakpoint-column {
+    width: 170px;
+    text-align: left;
+  }
+  .token-fit {
+    background: #eeeeee; 
+    border-radius: 8px; 
+    padding: 8px;
+    text-align: left;
+    display: inline-block;
+  }
+  .grid {
+    border-radius: 16px;
+    height: 900px;
+    width: 800px;
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.10), 0px 16px 16px 0px rgba(0, 0, 0, 0.09), 0px 36px 22px 0px rgba(0, 0, 0, 0.05), 0px 64px 26px 0px rgba(0, 0, 0, 0.01), 0px 100px 28px 0px rgba(0, 0, 0, 0.00);
+  }
+  .margin-left {
+    width: 24px;
+    height: 900px;
+    float: left;
+    background: rgba(250, 0, 255, 0.1);
+    border-radius: 16px 0 0 16px;
+    display: inline-block;
+  }
+  .margin-right {
+    width: 24px;
+    height: 900px;
+    float: right;
+    background: rgba(250, 0, 255, 0.1);
+    border-radius: 0 16px 16px 0;
+    display: inline-block;
+  }
+  .top-row {
+    width: 800px;
+    height: 120px;
+    flex-shrink: 0;
+    background-color: white;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.12), 0px 2px 2px 0px rgba(0, 0, 0, 0.10), 0px 3px 2px 0px rgba(0, 0, 0, 0.06), 0px 6px 2px 0px rgba(0, 0, 0, 0.02), 0px 10px 3px 0px rgba(0, 0, 0, 0.00);
+  }
+  .box {
+    display: inline-block;
+    width: 170px;
+    height: 170px;
+    border-radius: 16px;
+    background-color: white;
+    border-bottom: 1px solid rgba(190, 190, 190, 1); 
+    margin-top: 24px;
+    margin-right: 24px;
+  }
+  .box-right {
+    display: inline-block;
+    width: 170px;
+    height: 170px;
+    border-radius: 16px;
+    background-color: white;
+    border-bottom: 1px solid rgba(190, 190, 190, 1); 
+    margin-top: 24px;
+  }
+  .title {
+    font-size: 64px;
+    font-weight: 600;
+  }
+  .heading-1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+  }
+  `}
 
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-  </div>
+</style>
+
+<div className="title">Grid</div>
+
+<div style={{ height: '48px'}}/>
+
+<div style={{fontSize: '28px' }}>Contents</div>
+<div style={{ height: '16px'}}/>
+<p><a href="#overview" target="_self" className='text'>Overview</a></p>
+<p><a href="#columnsguttersmargins" target="_self" className='text'>Columns, gutters, and margins</a></p>
+<p><a href="#columns" target="_self" className='text'>Columns</a></p>
+<p><a href="#gutters" target="_self" className='text'>Gutters</a></p>
+<p><a href="#margins" target="_self" className='text'>Margins</a></p>
+<p><a href="#applythegrid" target="_self" className='text'>Apply the grid</a></p>
+<p><a href="#fixedwidth" target="_self" className='text'>Fixed-width or fluid grid</a></p>
+<p><a href="#layout" target="_self" className='text'>Layout (Coming soon)</a></p>
+<p><a href="#breakpoints" target="_self" className='text'>Breakpoints</a></p>
+<div style={{ height: '48px'}}/>
+
+---
+
+<div style={{ height: '48px'}}/>
+<span id="overview" className='heading-1'> Overview</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="columnsguttersmargins" className='heading-1'>Columns, gutters, and margins</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>The responsive layout grid is made up of three elements: columns, gutters, and margins.</span>
+<div style={{ height: '48px'}}/>
+
+<img src={ColMarGut} alt='' />
+
+<div>
+  <p>1 Columns</p>
+  <p>2 Gutters</p>
+  <p>3 Margins</p>
 </div>
+
+<div style={{ height: '48px'}}/>
+<span id="columns" className='heading-1'>Columns</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>The responsive grid is primarily used to organise content and components in a layout’s body region.</span>
+<div style={{ height: '48px'}}/>
+
+<img src={Columns} alt='' />
+
+<div style={{ height: '48px'}}/>
+
+---
+<div style={{ height: '48px'}}/>
+<span id="gutters" className='heading-1'>Gutters</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Gutters are fixed-width spacing between columns that separate content.</span>
+<div style={{ height: '48px'}}/>
+
+<img src={Gutters} alt='' />
+
+<div style={{ height: '48px'}}/>
+
+---
+<div style={{ height: '48px'}}/>
+<span id="margins" className='heading-1'>Margins</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Margins separate content from the left and right edges of the grid. Margins are fixed-width and defined by using our space tokens. In general, wider margins are more suited for larger screens. Margins should either be the same width, or wider than the gutter width.</span>
+<div style={{ height: '48px'}}/>
+
+<img src={Margins} alt='' />
+
+<div style={{ height: '48px'}}/>
+
+---
+<div style={{ height: '48px'}}/>
+<span id="applyingthegrid" className='heading-1'>Applying the Grid</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>We support up to 12 column layouts that can be fixed or fluid.</span>
+<div style={{ height: '48px'}}/>
+
+<img src={ApplyGrid} alt='' />
+
+<div style={{ height: '48px'}}/>
+
+---
+<div style={{ height: '48px'}}/>
+<span id="fixedwidth" className='heading-1'>Fixed-width or fluid grid</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>You can apply a fixed-width or a fluid grid to your design.</span>
+<div style={{ height: '48px'}}/>
+
+<img src={Fixed} alt='' />
+
+<div style={{ height: '32px'}}/>
+<span className='text'>Use the fluid grid at 1227px and below</span>
+<div style={{ height: '32px'}}/>
+
+<img src={Fluid} alt='' />
+
+<div style={{ height: '48px'}}/>
+
+---
+<div style={{ height: '48px'}}/>
+<span id="layout" className='heading-1'>Layout</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Coming soon</span>
+<div style={{ height: '48px'}}/>
+
+<div style={{ height: '48px'}}/>
+
+---
+<div style={{ height: '48px'}}/>
+<span id="breakpoints" className='heading-1'>Breakpoints</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>The responsive grid is primarily used to organise content and components in a layout’s body region.</span>
+<div style={{ height: '48px'}}/>
+
+<table>
+  <thead>
+    <tr style={{height: '70px'}}>
+      <th className='token-column'>
+        Token Name
+      </th>
+      <th className='device-column'>
+        Device
+      </th>
+      <th className='breakpoint-column'>
+        Breakpoint
+      </th>
+      <th className='device-column'>
+        Cols
+      </th>
+      <th className='device-column'>
+        Gutter
+      </th>
+      <th className='device-column'>
+        Margin
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style={{height: '100px', backgroundColor: 'transparent'}}>
+      <td className='token-column'>
+        <div className='token-fit'>
+          breakpoint-small
+        </div>
+      </td>
+      <td className='device-column'>
+        Phone
+      </td>
+      <td className='breakpoint-column'>
+        &lt;767px
+      </td>
+      <td className='device-column'>
+        4 Fluid
+      </td>
+      <td className='device-column'>
+        16px
+      </td>
+      <td className='device-column'>
+        16px
+      </td>
+    </tr>
+    <tr style={{height: '100px', backgroundColor: 'transparent'}}>
+      <td className='token-column'>
+        <div className='token-fit'>
+          breakpoint-medium
+        </div>
+      </td>
+      <td className='device-column'>
+        Tablet
+      </td>
+      <td className='breakpoint-column'>
+        &ge;768px
+      </td>
+      <td className='device-column'>
+        12 Fluid
+      </td>
+      <td className='device-column'>
+        20px
+      </td>
+      <td className='device-column'>
+        24px
+      </td>
+    </tr>
+    <tr style={{height: '100px', backgroundColor: 'transparent'}}>
+      <td className='token-column'>
+        <div className='token-fit'>
+          breakpoint-large
+        </div>
+      </td>
+      <td className='device-column'>
+        Laptop
+      </td>
+      <td className='breakpoint-column'>
+        &ge;992px
+      </td>
+      <td className='device-column'>
+        12 Fluid
+      </td>
+      <td className='device-column'>
+        20px
+      </td>
+      <td className='device-column'>
+        24px
+      </td>
+    </tr>
+    <tr style={{height: '100px', backgroundColor: 'transparent'}}>
+      <td className='token-column'>
+        <div className='token-fit'>
+          breakpoint-xlarge
+        </div>
+      </td>
+      <td className='device-column'>
+        Desktop
+      </td>
+      <td className='breakpoint-column'>
+        &ge;1228px <br />
+        Max Content Width
+      </td>
+      <td className='device-column'>
+        12
+      </td>
+      <td className='device-column'>
+        20px
+      </td>
+      <td className='device-column'>
+        24px
+      </td>
+    </tr>
+  </tbody>
+</table>

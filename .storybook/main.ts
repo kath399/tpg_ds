@@ -32,6 +32,7 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
     "@storybook/addon-designs",
+    "@storybook/addon-themes",
     "storybook-multilevel-sort",
     "@storybook/addon-knobs",
     { name: 'storybook-design-token', options: {preserveCSSVars: true} }, 

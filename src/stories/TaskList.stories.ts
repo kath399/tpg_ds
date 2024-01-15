@@ -4,7 +4,7 @@ import * as TaskStories from './Task.stories';
 
 export default {
   component: TaskList,
-  title: 'Core/Other/Task List',
+  title: 'Core/Deprecated/Task List',
   
   tags: ['autodocs'],
 };

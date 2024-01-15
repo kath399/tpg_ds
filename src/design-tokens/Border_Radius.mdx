@@ -1,0 +1,467 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Foundation/Border Radius" />
+
+<style>
+  {`
+  table {
+    border-collapse: collapse;
+    border: none;
+  }
+  tr:first-child {
+    border-top: none;
+  }
+  td {
+    border: none !important;
+  }
+  th {
+    border: none !important;
+  }
+  .token-column {
+    width: 300px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    background: #FFF;
+    text-align: left;
+  }
+  .usage-column {
+    width: 278px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .base-unit-column {
+    width: 120px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .usage-column-large {
+    width: 398px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .value-column {
+    width: 140px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .sample-column {
+    width: 162px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: centre;
+  }
+  .heading-1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+  }
+  .heading-2 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .contents-button {
+    border-radius: 25px;
+    background: #FFF;
+    border: 1px solid black;
+    height: 48px;
+    width: 323px;
+    text-align: center; 
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+  }
+  .title {
+    font-size: 64px;
+    font-weight: 600;
+  }
+  .sample-swatch {
+    height: 76px;
+    width: 168px;
+    margin: auto;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+  }
+  `}
+</style>
+
+<div className="title">Border Radius</div>
+
+<div style={{ height: '48px'}}/>
+
+<div style={{fontSize: '28px' }}>Contents</div>
+<div style={{ height: '16px'}}/>
+<p><a href="#overview" target="_self" className='text'>Overview</a></p>
+<p><a href="#corner-radius" target="_self" className='text'>Corner radius</a></p>
+<div style={{ height: '48px'}}/>
+
+---
+
+<div style={{ height: '48px'}}/>
+<span id="overview" className='heading-1'> Overview</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="corner-radius" className='heading-1'> Corner radius</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column'>
+          Usage
+        </th>
+        <th className='base-unit-column'>
+          Base Unit Multiplier
+        </th>
+        <th className='value-column'>
+          Value
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '118px', textAlign: 'center' }}>
+            corner-radius-000
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          0x
+        </td>
+        <td className="value-column">
+          0px / 0rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '0px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '118px', textAlign: 'center' }}>
+            corner-radius-100
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          1x
+        </td>
+        <td className="value-column">
+          4px / 0.25rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '4px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '118px', textAlign: 'center' }}>
+            corner-radius-200
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          2x
+        </td>
+        <td className="value-column">
+          8px / 0.5rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '8px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '118px', textAlign: 'center' }}>
+            corner-radius-300
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          3x
+        </td>
+        <td className="value-column">
+          12px / 0.75rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '12px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '118px', textAlign: 'center' }}>
+            corner-radius-400
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          4x
+        </td>
+        <td className="value-column">
+          16px / 1rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '16px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '118px', textAlign: 'center' }}>
+            corner-radius-600
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          6x
+        </td>
+        <td className="value-column">
+          24px / 1.5rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '24px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '118px', textAlign: 'center' }}>
+            corner-radius-800
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          8x
+        </td>
+        <td className="value-column">
+          32px / 2rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '32px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '126px', textAlign: 'center' }}>
+            corner-radius-1000
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          10x
+        </td>
+        <td className="value-column">
+          40px / 2.5rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '40px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '143px', textAlign: 'center' }}>
+            corner-radius-rounded
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="base-unit-column">
+          -
+        </td>
+        <td className="value-column">
+          999px
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '999px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="semantic-corner-radius" className='heading-1'> Semantic corner radius</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column-large'>
+          Usage
+        </th>
+        <th className='value-column'>
+          Value
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '125px', textAlign: 'center' }}>
+            corner-radius-none
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Text
+        </td>
+        <td className="value-column">
+          0px / 0rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '0px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '127px', textAlign: 'center' }}>
+            corner-radius-small
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          form fields, dropdowns.
+        </td>
+        <td className="value-column">
+          4px / 0.25rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '4px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '143px', textAlign: 'center' }}>
+            corner-radius-medium
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Buttons
+        </td>
+        <td className="value-column">
+          8px / 0.5rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '8px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '124px', textAlign: 'center' }}>
+            corner-radius-large
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          n/a
+        </td>
+        <td className="value-column">
+          12px / 0.75rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '12px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '130px', textAlign: 'center' }}>
+            corner-radius-xlarge
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          Cards, modals
+        </td>
+        <td className="value-column">
+          24px / 1.5rem
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '24px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '143px', textAlign: 'center' }}>
+            corner-radius-rounded
+          </div>
+        </td>
+        <td className='usage-column-large'>
+          n/a
+        </td>
+        <td className="value-column">
+          999px
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '999px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

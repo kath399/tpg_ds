@@ -1,29 +1,1591 @@
-import { Meta } from "@storybook/blocks";
-import { DesignTokenDocBlock } from 'storybook-design-token/dist/doc-blocks';
+import { Meta, Canvas } from "@storybook/blocks";
 import { Tokens } from '../tokens.css';
-
-export const RightArrow = () => <svg 
-    viewBox="0 0 14 14" 
-    width="8px" 
-    height="14px" 
-    style={{ 
-      marginLeft: '4px',
-      display: 'inline-block',
-      shapeRendering: 'inherit',
-      verticalAlign: 'middle',
-      fill: 'currentColor',
-      'path fill': 'currentColor'
-    }}
->
-  <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
-</svg>
 
 <Meta title="Foundation/Typography" />
 
-<div className="sb-container">
-  <div className='sb-section-title'>
-    # Typography
+<style>
+  {`
+  @font-face {
+  font-family: 'Vodafone_Bd';
+    src: url('../fonts/Vodafone_Bd_W.eot'); 
+    src: url('../fonts/Vodafone_Bd_W.eot') format('embedded-opentype'), 
+        url('../fonts/Vodafone_Bd_W.woff2') format('woff2'), 
+        url('../fonts/Vodafone_Bd_W.woff') format('woff'), 
+        url('../fonts/Vodafone_Bd.ttf')  format('truetype'); 
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+  font-family: 'Vodafone_Bk';
+    src: url('../fonts/Vodafone_Bk_W.eot'); 
+    src: url('../fonts/Vodafone_Bk_W.eot') format('embedded-opentype'), 
+        url('../fonts/Vodafone_Bk_W.woff2') format('woff2'), 
+        url('../fonts/Vodafone_Bk_W.woff') format('woff'), 
+        url('../fonts/Vodafone_Bk.ttf')  format('truetype'); 
+    font-weight: 350;
+    font-style: normal;
+  }
+  @font-face {
+  font-family: 'Vodafone_Md';
+    src: url('../fonts/Vodafone_Md_W.eot'); 
+    src: url('../fonts/Vodafone_Md_W.eot') format('embedded-opentype'), 
+        url('../fonts/Vodafone_Md_W.woff2') format('woff2'), 
+        url('../fonts/Vodafone_Md_W.woff') format('woff'), 
+        url('../fonts/Vodafone_Md.ttf')  format('truetype'); 
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+  font-family: 'Vodafone_Rg';
+    src: url('../fonts/Vodafone_Rg_W.eot'); 
+    src: url('../fonts/Vodafone_Rg_W.eot') format('embedded-opentype'), 
+        url('../fonts/Vodafone_Rg_W.woff2') format('woff2'), 
+        url('../fonts/Vodafone_Rg_W.woff') format('woff'), 
+        url('../fonts/Vodafone_Rg.ttf')  format('truetype'); 
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+  font-family: 'Vodafone_SBd';
+    src: url('../fonts/Vodafone_SBd_W.eot'); 
+    src: url('../fonts/Vodafone_SBd_W.eot') format('embedded-opentype'), 
+        url('../fonts/Vodafone_SBd_W.woff2') format('woff2'),
+        url('../fonts/Vodafone_SBd_W.woff') format('woff'),
+        url('../fonts/Vodafone_SBd.ttf')  format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  table {
+    border-collapse: collapse;
+    border: none;
+  }
+  tr:first-child {
+    border-top: none;
+  }
+  td {
+    border: none !important;
+  }
+  th {
+    border: none !important;
+    font-size: 36px;
+  }
+  h1 {
+    font-size: 64px;
+    font-weight: 600;
+  }
+  .token-column {
+    width: 474px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    background: #FFF;
+    text-align: left;
+  }
+  .sample-column {
+    width: 208px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: centre;
+  }
+  .usage-column {
+    width: 208px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .light-value-column {
+    width: 110px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: centre;
+  }
+  .title {
+    font-size: 64px;
+    font-weight: 600;
+    font-family: 'Vodafone_Rg';
+    
+  }
+  .layout-contents-button {
+    display: flex;
+    padding: 12px 24px;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+  }
+  .contents-button {
+    border-radius: 25px;
+    background: #FFF;
+    border: 1px solid black;
+    height: 48px;
+    width: 187px;
+    text-align: center; 
+    font-size: 18px;
+    font-family: Vodafone_Rg;
+    color: black;
+    cursor: pointer;
+  }
+  .token-fit {
+    background: #eeeeee; 
+    border-radius: 8px; 
+    padding: 8px;
+    text-align: left;
+    display: inline-block;
+  }
+  .heading-1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .heading-2 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+  }
+  .large-column {
+    height: 168px;
+  }
+  .text-large {
+    font-size: 64px;
+  }
+  `}
+</style>
 
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-  </div>
+<div style={{
+  background: '#F2F2F2', 
+  position: 'fixed',
+  padding: '10%',
+  margin: 0,
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  width: '80%',
+  height: '64vh',
+  overflowY: 'scroll',
+}}>
+
+<div className="title">Typography</div>
+
+<div style={{ height: '48px'}}/>
+
+<div style={{fontSize: '28px' }}>Contents</div>
+<div>
+  <p><a href="#overview" target="_self" className='text'>Overview</a></p>
+  <p><a href="#font-family" target="_self" className='text'>Font family</a></p>
+  <p><a href="#heading-styles" target="_self" className='text'>Heading styles</a></p>
+  <p><a href="#paragraph-styles" target="_self" className='text'>Paragraph styles</a></p>
+  <p><a href="#component-styles" target="_self" className='text'>Component styles</a></p>
+</div>
+
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="overview" className='heading-1'> Overview</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="font-family" className='heading-1'> Font Family</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>We are using a unique font family exclusively designed for use by Vodafone. The Vodafone font family is available in a range of different weights (Light, Book, Regular, Medium, SemiBold, Bold, ExtraBold) to give more flexibility and creativity to help differentiate campaigns  and all type of communications. </p>
+<div style={{ height: '32px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="heading-styles" className='heading-1'> Heading styles</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>Heading styles are a crucial aspect of text formatting, providing a visual hierarchy to content. In Vodafone design system we have range from H1 to H5, with H1 being the largest and most prominent, and H5 the smallest. </p>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="spacing" className='heading-2'> H1</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>The H1 font style, or heading 1 is a prominent and large text format commonly used to denote the main title or heading of webpage. </p>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr style={{height: '70px'}}>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+        <th className='usage-column'>
+          Specs
+        </th>
+        <th className='light-value-column'>
+          Breakpoint
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-large-h1
+          </div>
+        </td>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '64px' }}>H1</h1>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 64px <br/>
+            Weight: Semibold<br/>
+            Line-height: 72px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &gt;1024px
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-medium-h1
+          </div>
+        </td>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '56px' }}>H1</h1>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 56px <br/>
+            Weight: Semibold<br/>
+            Line-height: 64px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;1023px
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-small-h1
+          </div>
+        </td>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '32px' }}>H1</h1>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 32px <br/>
+            Weight: Semibold<br/>
+            Line-height: 40px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;639px
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="spacing" className='heading-2'> H2</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur. </p>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+        <th className='usage-column'>
+          Specs
+        </th>
+        <th className='light-value-column'>
+          Breakpoint
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-large-h2
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '48px' }}>H2</div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 48px <br/>
+            Weight: Book<br/>
+            Line-height: 56px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &gt;1024px
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-medium-h2
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '40px' }}>H2</div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 40px <br/>
+            Weight: Book<br/>
+            Line-height: 48px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;1024px
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-small-h2
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '28px' }}>H2</div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 28px <br/>
+            Weight: Semibold<br/>
+            Line-height: 36px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;639px
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="spacing" className='heading-2'> H3</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur. </p>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+        <th className='usage-column'>
+          Specs
+        </th>
+        <th className='light-value-column'>
+          Breakpoint
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-large-h3
+          </div>
+        </td>
+        <td className='sample-column'>
+          <h3 style={{ textAlign: 'center', fontSize: '36px' }}>H3</h3>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 36px <br/>
+            Weight: Medium<br/>
+            Line-height: 44px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &gt;1024px
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-medium-h3
+          </div>
+        </td>
+        <td className='sample-column'>
+          <h3 style={{ textAlign: 'center', fontSize: '32px' }}>H3</h3>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 32px <br/>
+            Weight: Medium<br/>
+            Line-height: 40px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;1024px
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-small-h3
+          </div>
+        </td>
+        <td className='sample-column'>
+          <h3 style={{ textAlign: 'center', fontSize: '24px' }}>H3</h3>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 24px <br/>
+            Weight: Medium<br/>
+            Line-height: 32px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;639px
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+---
+
+
+<div style={{ height: '48px'}}/>
+<span id="spacing" className='heading-2'> H4</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur. </p>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+        <th className='usage-column'>
+          Specs
+        </th>
+        <th className='light-value-column'>
+          Breakpoint
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-large-h4
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '28px' }}>H4</div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 28px <br/>
+            Weight: Regular<br/>
+            Line-height: 32px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &gt;1024px
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-large-h4-strong
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{textAlign: 'center'}}>
+            <b style={{ fontSize: '28px' }}>H4</b>
+          </div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 28px <br/>
+            Weight: Bold<br/>
+            Line-height: 32px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &gt;1024px
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-medium-h4
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '24px' }}>H4</div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 24px <br/>
+            Weight: Regular<br/>
+            Line-height: 32px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;1024px
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-medium-h4-strong
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center' }}>
+            <b style={{ fontSize: '24px'}}>H4</b>
+          </div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 24px <br/>
+            Weight: Bold<br/>
+            Line-height: 32px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;1024px
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-small-h4
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '20px' }}>H4</div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 20px <br/>
+            Weight: Regular<br/>
+            Line-height: 28px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;639px
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-small-h4-strong
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center' }}>
+            <b style={{fontSize: '20px'}}>H4</b>
+          </div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 20px <br/>
+            Weight: Bold<br/>
+            Line-height: 28px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;639px
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="spacing" className='heading-2'> H5</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur. </p>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr style={{height: '70px'}}>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+        <th className='usage-column'>
+          Specs
+        </th>
+        <th className='light-value-column'>
+          Breakpoint
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-large-h5
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '20px' }}>H5</div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 20px <br/>
+            Weight: Regular<br/>
+            Line-height: 28px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &gt;1024px
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-large-h5-strong
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center' }}>
+            <b style={{ fontSize: '20px' }}>H5</b>
+          </div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 20px <br/>
+            Weight: Bold<br/>
+            Line-height: 28px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &gt;1024px
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-medium-h5
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '20px' }}>H5</div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 20px <br/>
+            Weight: Regular<br/>
+            Line-height: 28px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;1023px
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-medium-h5-strong
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center' }}>
+            <b style={{ fontSize: '20px' }}>H5</b>
+          </div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 20px <br/>
+            Weight: Bold<br/>
+            Line-height: 28px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;1023px
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-small-h5
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '18px' }}>H5</div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 18px <br/>
+            Weight: Regular<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;639px
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-small-h5-strong
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center' }}>
+            <b style={{ fontSize: '18px' }}>H5</b>
+          </div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 18px <br/>
+            Weight: Bold<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;639px
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+
+
+<span id="paragraph-styles" className='heading-1'>Paragraph styles</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>Paragraph style comes in 3 body sizes and caption. Body 1 (18px), Body 2 (16px) and Body 3 (14px), and in two weights: bold, regular and underlined.  </p>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="spacing" className='heading-2'>Body 1</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>Body 1 is typically used for desktop & tablet long-form writing. </p>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr style={{height: '70px'}}>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+        <th className='usage-column'>
+          Specs
+        </th>
+        <th className='light-value-column'>
+          Breakpoint
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-body1
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '18px' }}>Body copy 1</div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 18px <br/>
+            Weight: Regular<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          All
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-body1-underline
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center'}}>
+            <u style={{ fontSize: '18px' }}>Body copy 1</u>
+          </div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 18x <br/>
+            Weight: Regular<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          All
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-body1-strong
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center'}}>
+            <b style={{ fontSize: '18px' }}>Body copy 1</b>
+          </div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 18px <br/>
+            Weight: Bold<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          All
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+
+
+<span id="spacing" className='heading-2'>Body 2</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>Body 2 is typically used for mobile long-form writing. </p>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr style={{height: '70px'}}>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+        <th className='usage-column'>
+          Specs
+        </th>
+        <th className='light-value-column'>
+          Breakpoint
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-body2
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '16px' }}>Body copy 2</div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 16px <br/>
+            Weight: Regular<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          All
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-body2-underline
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center' }}>
+            <u style={{ fontSize: '16px' }}>Body copy 2</u>
+          </div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 16x <br/>
+            Weight: Regular<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          All
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-body2-strong
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center'}}> 
+            <b style={{ fontSize: '16px' }}>Body copy 2</b>
+          </div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 16px <br/>
+            Weight: Bold<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          All
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+
+
+<span id="spacing" className='heading-2'>Body 3</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>Body 3 is used mainly for supporting text for example in Text fields, Plan card inclusions etc... </p>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr style={{height: '70px'}}>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+        <th className='usage-column'>
+          Specs
+        </th>
+        <th className='light-value-column'>
+          Breakpoint
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-body3
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '14px' }}>Body copy 3</div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 14px <br/>
+            Weight: Regular<br/>
+            Line-height: 20px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          All
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-body3-underline
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center' }}>
+            <u style={{ fontSize: '14px' }}>Body copy 3</u>
+          </div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 14x <br/>
+            Weight: Regular<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+            Text-decoration: underline<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          All
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-body3-strong
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center'}}>
+            <b style={{ fontSize: '14px' }}>Body copy 3</b>
+          </div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 14px <br/>
+            Weight: Bold<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          All
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+---
+
+
+<div style={{ height: '48px'}}/>
+<span id="spacing" className='heading-2'>Caption</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>Caption is the smallest font sizes. It's used to annotate T&Cs. </p>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr style={{height: '70px'}}>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+        <th className='usage-column'>
+          Specs
+        </th>
+        <th className='light-value-column'>
+          Breakpoint
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-caption
+          </div>
+        </td>
+        <td className='sample-column'>
+          <div style={{ textAlign: 'center', fontSize: '12px' }}>Caption</div>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 12px <br/>
+            Weight: Regular<br/>
+            Line-height: 16px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          All
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="component-styles" className='heading-1'>Component styles</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</p>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="spacing" className='heading-2'>Button</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</p>
+<div style={{ height: '48px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr style={{height: '70px'}}>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+        <th className='usage-column'>
+          Specs
+        </th>
+        <th className='light-value-column'>
+          Breakpoint
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-large-button-label
+          </div>
+        </td>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '20px' }}>H1</h1>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 20px <br/>
+            Weight: Bold<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &gt;640px
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-large-button-label-underline
+          </div>
+        </td>
+        <td className='sample-column'>
+          <u><h1 style={{ textAlign: 'center', fontSize: '20px'}}>H1</h1></u>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 20x <br/>
+            Weight: Bold<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+            Text-decoration: underline<br />
+          </p>
+        </td>
+        <td className="light-value-column">
+          &gt;640px
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-small-button-label
+          </div>
+        </td>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '16px'}}>H1</h1>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 16px <br/>
+            Weight: Bold<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;639px
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-small-button-label-underline
+          </div>
+        </td>
+        <td className='sample-column'>
+          <u><h1 style={{ textAlign: 'center', fontSize: '16px'}}>H1</h1></u>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 16px <br/>
+            Weight: Bold<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+            Text-decoration: underline<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &gt;640px
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="spacing" className='heading-2'>Form</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</p>
+<div style={{ height: '48px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr style={{height: '70px'}}>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+        <th className='usage-column'>
+          Specs
+        </th>
+        <th className='light-value-column'>
+          Breakpoint
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-large-form-label
+          </div>
+        </td>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '18px'}}>H1</h1>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 18px <br/>
+            Weight: Regular<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &gt;640px
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-small-form-label
+          </div>
+        </td>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '16px'}}>H1</h1>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 16px <br/>
+            Weight: Bold<br/>
+            Line-height: 20px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &gt;640px
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+---
+
+
+<div style={{ height: '48px'}}/>
+<span id="spacing" className='heading-2'>Link</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</p>
+<div style={{ height: '48px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr style={{height: '70px'}}>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+        <th className='usage-column'>
+          Specs
+        </th>
+        <th className='light-value-column'>
+          Breakpoint
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-large-link-label
+          </div>
+        </td>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '18px'}}>H1</h1>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 18px <br/>
+            Weight: Regular<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &gt;640px
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-large-link-label-underline
+          </div>
+        </td>
+        <td className='sample-column'>
+          <u><h1 style={{ textAlign: 'center', fontSize: '18px'}}>H1</h1></u>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 18px <br/>
+            Weight: Regular<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+            Text-decoration: underline<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &gt;640px
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-small-link-label-default
+          </div>
+        </td>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '16px'}}>H1</h1>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 16px <br/>
+            Weight: Regular<br/>
+            Line-height: 20px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;639px
+        </td>
+      </tr>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-small-link-label-underline
+          </div>
+        </td>
+        <td className='sample-column'>
+          <u><h1 style={{ textAlign: 'center', fontSize: '16px'}}>H1</h1></u>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 16px <br/>
+            Weight: Regular<br/>
+            Line-height: 20px<br/>
+            Letter-spacing: 0<br/>
+            Text-decoration: underline<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          &lt;639px
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="spacing" className='heading-2'>Supporting text</span> 
+<div style={{ height: '32px'}}/>
+<p className='text'>Caption is the smallest font sizes. It's used to annotate T&Cs. </p>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr style={{height: '70px'}}>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+        <th className='usage-column'>
+          Specs
+        </th>
+        <th className='light-value-column'>
+          Breakpoint
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style={{height: '168px'}}>
+        <td className='token-column'>
+          <div className='token-fit'>
+            typography-large-supporting-text
+          </div>
+        </td>
+        <td className='sample-column'>
+          <h1 style={{ textAlign: 'center', fontSize: '14px'}}>H1</h1>
+        </td>
+        <td className="usage-column">
+          <p>
+            Font: Vodafone<br/> 
+            Size: 18px <br/>
+            Weight: Regular<br/>
+            Line-height: 24px<br/>
+            Letter-spacing: 0<br/>
+          </p>
+        </td>
+        <td className="light-value-column">
+          All
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+---
+
 </div>

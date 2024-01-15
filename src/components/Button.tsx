@@ -1,28 +1,33 @@
+
 import React from 'react';
 import './button.css';
 
+
 interface ButtonProps {
+  
+  /**
+   * How large should the button be? 
+   */
+  Breakpoint?: 'large' | 'small';
   /**
    * Is this the principal call to action on the page?
    */
   //primary?: boolean;
-  mode?: string;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be? 
-   */
-  size?: 'small' | 'large';
-  /**
-   * Button contents
-   */
-  label: string;
+  Type?: 'primary' | 'secondary' | 'tertiary' | 'link';
   /**
    * Optional click handler
    */
-  state?: 'default' | 'hover' | 'pressed' | 'disabled' | 'focused';
+  Status?: 'default' | 'hover' | 'pressed' | 'disabled' | 'focused';
+  
+  Inverse?: boolean;
+  /**
+   * Button contents
+   */
+  Text: string;
+  /**
+   * What background color to use
+   */
+  //backgroundColor?: string;
 
   onClick?: () => void;
 }
@@ -32,22 +37,29 @@ interface ButtonProps {
  */
 export const Button = ({
   //primary = false,
-  mode,
-  size = 'small',
-  backgroundColor,
-  label,
-  state = 'default',
+  Breakpoint = 'large',
+  Type,
+  Status = 'default',
+  Inverse = false, 
+  Text,
+  //backgroundColor,
   ...props
 }: ButtonProps) => {
-  //const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  //const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary'
+
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, `storybook-button--${mode}`, `storybook-button--${mode}--${state}`].join(' ')}
-      style={{ backgroundColor }}
+      className={[
+        'storybook-button', 
+        `storybook-button--${Breakpoint}`, 
+        `storybook-button--${Type}`, 
+        `storybook-button--${Type}--${Status}`,
+        Inverse ? 'button-inverse' : '', // Apply the inverse class only when inverse is true 
+      ].join(' ')}
       {...props}
     >
-      {label}
+      {Text}
     </button>
-  );
+  );  
 };
