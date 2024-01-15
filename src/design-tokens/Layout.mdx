@@ -171,23 +171,23 @@ import { Meta } from '@storybook/addon-docs';
 <div>
   <table>
     <thead>
-      <tr className='variant-column-heading'>
-        <th>
+      <tr>
+        <th className='variant-column'>
           Variant
         </th>
-        <th>
+        <th className='token-large'>
           Token
         </th>
-        <th>
+        <th className='breakpoint-column'>
           Breakpoint
         </th>
-        <th>
+        <th className='cols-column'>
           Cols
         </th>
-        <th>
+        <th className='gutter-column'>
           Gutter
         </th>
-        <th>
+        <th className='margin-column'>
           Margin
         </th>
       </tr>
@@ -195,14 +195,14 @@ import { Meta } from '@storybook/addon-docs';
     <tbody>
       <tr>
         <td className='variant-column'>
-          <div style={{  }}>
-            <text style={{size: '32px'}}>Small (Phone)</text>
+          Small (Phone)
+        </td>
+        <td className='token-large'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '20px', width: '90px', textAlign: 'center' }}>
+            layout-small
           </div>
         </td>
-        <td className='usage-column-large'>
-          Text
-        </td>
-        <td className="value-column">
+        <td className="breakpoint-column">
           4 Fluid
         </td>
         <td className="sample-column">
