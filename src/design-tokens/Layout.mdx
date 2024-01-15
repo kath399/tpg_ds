@@ -17,9 +17,24 @@ import { Meta } from '@storybook/addon-docs';
   th {
     border: none !important;
   }
+  .variant-column {
+    width: 227px;
+    height: 162px;
+    gap: 8px;
+    align-self: flex-start;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    background: #FFF;
+    text-align: left;
+  }
+
+  .variant-column-heading {
+    height: 16px;
+    padding-bottom: 24px;
+    font-size: 14px;
+  }
+
   .token-column {
-    width: 300px;
-    height: 70px;
+    width: 200px;
     padding: 12px 16px;
     align-items: center;
     gap: 8px;
@@ -148,35 +163,10 @@ import { Meta } from '@storybook/addon-docs';
   `}
 </style>
 
-<div className='small-breakpoint-background'>
-  <div className="small-margin"/>
-  <div className="small-column"/>
-
-</div>
-
 <div className="title">Layout</div>
 
 <div style={{ height: '48px'}}/>
-
-<div style={{fontSize: '28px' }}>Contents</div>
-<div style={{ height: '16px'}}/>
-<p><a href="#overview" target="_self" className='text'>Screensizes</a></p>
-<div style={{ height: '48px'}}/>
-
 ---
-
-<div style={{ height: '48px'}}/>
-<span id="overview" className='heading-1'> Overview</span> 
-<div style={{ height: '32px'}}/>
-<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
-<div style={{ height: '48px'}}/>
----
-
-<div style={{ height: '48px'}}/>
-<span id="corner-radius" className='heading-1'>[Insert Title]</span> 
-<div style={{ height: '32px'}}/>
-<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
-<div style={{ height: '32px'}}/>
 
 <div>
   <table>
@@ -301,4 +291,10 @@ import { Meta } from '@storybook/addon-docs';
       </tr>
     </tbody>
   </table>
+</div>
+
+<div className='small-breakpoint-background'>
+  <div className="small-margin"/>
+  <div className="small-column"/>
+
 </div>
