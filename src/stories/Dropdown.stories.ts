@@ -11,7 +11,14 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
-    
+    Size: {
+      options: ['Large', 'Small'],
+      control: 'radio'
+    },
+    State: { 
+      options: ['Enable', 'Filled', 'Active', 'Error'],
+      control: 'radio'
+    }
   },
 } satisfies Meta<typeof Dropdown>;
 
@@ -20,15 +27,18 @@ type Story = StoryObj<typeof meta>;
 
 export const Main: Story = {
   args: {
-    label: 'Label',
-    options: ['Option 1', 'Option 2', 'Option 3', 'Option 4'],
-    error: false,
+    Size: 'Large',
+    State: 'Enabled',
+    ShowTooltipIcon: true,
+    Label: 'Label',
+    ShowErrorText: false,
+    ErrorText: 'Error Text'
   },
 
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/BtunVVjUyt3jJvT40IYBg5/Vodafone-Components?type=design&node-id=1625-43135&mode=design&t=akqgfJpMVbhZwpO0-4"
+      url: "https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?type=design&node-id=5594-90640&mode=dev"
     }
   },
 

@@ -1,98 +1,120 @@
-.container {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  padding-top: 3px;
-  margin-bottom: 5px;
-  font-size: 16px;
-  color: #333;
-  cursor: pointer;
-  
+@font-face {
+  font-family: 'Vodafone';
+    src: url('../fonts/Vodafone_Rg_W.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Vodafone_Rg_W.eot') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/Vodafone_Rg_W.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../fonts/Vodafone_Rg_W.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../fonts/Vodafone_Rg.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: 600;
+    font-style: normal;
 }
 
-/* Hide the browser's default radio button */
-.container input {
+/* CREATE CHECK CONTAINER */
+.checkContainer {
+  font-family: 'Vodafone';
+  font-size: 16px;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  display: block;
+  position: relative;
+  align-items: center;
+  padding-left: 35px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkText {
+  font-family: 'Vodafone';
+  font-size: 16px;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* HIDE BROWSER'S DEFAULT CHECKBOX */
+.checkContainer input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
+/* CREATE CUSTOM CHECKBOX */
 .checkmark {
   position: absolute;
-  top: 1px;
-  left: 1px;
+  top: 0;
+  left: 0;
   height: 20px;
   width: 20px;
   background-color: white;
-  border-radius: 10%;
-  border: 1px solid #999999;
+  border-radius: 4px;
+  border: 1px solid #BEBEBE;
 }
 
-/* DYNAMIC ENABLE STATE */
-.checkmark--unselected--enable:hover {
-  background-color: #f4f4f4 ;
-  width: 22px;
-  height: 22px;
-  opacity: 0.2;
+/* STYLE FOR HOVER STATE */
+.checkContainer:hover input ~ .checkmark {
+  outline-width: 4px;
+  outline-style: solid;
+  outline-color: rgba(13, 13, 13, 0.15);
 }
 
-.storybook-checkbox {
+.checkmark--Hover {
+  outline-width: 4px;
+  outline-style: solid;
+  outline-color: rgba(13, 13, 13, 0.15);
+}
+
+/* STYLE FOR CHECKED STATE */
+.checkContainer input:Checked ~ .checkmark {
+  background-color: rgba(0, 105, 124, 1);
+  border: 1px solid rgba(0, 105, 124, 1);
+}
+
+/* STYLE FOR FOCUS STATE */
+.checkContainer input:focus ~ .checkmark {
+  outline-width: 4px;
+  outline-style: solid;
+  outline-color: rgba(0, 150, 173, 1);
+}
+
+.checkmark--Focus {
+  outline-width: 4px;
+  outline-style: solid;
+  outline-color: rgba(0, 150, 173, 1);
+}
+
+/* STYLE FOR DISABLED STATE */
+.checkContainer input:disabled ~ .checkmark {
+  opacity: 0.38;
+}
+
+/* STYLE FOR ERROR STATE */
+.checkmark--Error {
+  border: 1px solid rgba(189, 0, 0, 1);
+}
+
+/* CREATE CHECKMARK/INDICATOR (HIDDEN WHEN NOT CHECKED) */
+.checkmark:after {
+  content: "";
   position: absolute;
-  top: 212px;
-  left: 532px;
-  height: 20px;
-  width: 20px;
-  accent-color: #007c92;
+  display: none;
 }
 
-/* SELECTED CHECKBOX */
-/*.storybook-checkbox--selected--enable {
-  
-}*/
-
-
-.storybook-checkbox--selected--disabled {
-  accent-color: #cccccc;
+/* SHOW CHECKMARK WHEN CHECKED */
+.checkContainer input:checked ~ .checkmark:after {
+  display: block;
 }
 
-.storybook-checkbox--selected--hover {
-  outline: 3px solid #cceff4;
-  accent-color: #178fa5;
+/* STYLE CHECKMARK/INDICATOR */
+.image-icon {
+  display: block;
+  margin: auto;
+  margin-top: 25%;
 }
-
-.storybook-checkbox--selected--focus {
-  accent-color: #0391a8;
-  outline: 3px solid #95d8e3;
-}
-
-.storybook-checkbox--selected--pressed {
-  outline: 3px solid #4dc8d9;
-}
-
-
-/* UNSELECTED CHECKBOX - STYLING NEEDS TO BE ADJUSTED */
-.storybook-checkbox--unselected--enable {
-  outline: solid #929292;
-}
-
-.storybook-checkbox--unselected--disabled {
-  outline: solid #999999;
-  color: #999999;
-}
-
-.storybook-checkbox--unselected--hover {
-  background-color: #eaeaea;
-  outline: solid #999999;
-}
-
-.storybook-checkbox--unselected--focus {
-  background-color: #ebebeb;
-  outline: solid #999999;
-}
-
-.storybook-checkbox--unselected--pressed {
-  background-color: #c6c6c6;
-  outline: solid #999999;
-}
-

@@ -41,10 +41,7 @@ export const AddressLookup =({
                 suggestions={addresses}
             />
             <br/>
-            <Checkbox 
-                checked = {false}
-                label = 'Enter address manually'
-            />
+            
         </div>
     )
 }

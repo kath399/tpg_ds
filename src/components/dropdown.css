@@ -1,97 +1,169 @@
-.dropdown-container {
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    display: inline-block;
-    position: relative;
+@font-face {
+  font-family: 'Vodafone';
+    src: url('../fonts/Vodafone_Rg_W.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Vodafone_Rg_W.eot') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/Vodafone_Rg_W.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../fonts/Vodafone_Rg_W.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../fonts/Vodafone_Rg.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: 600;
+    font-style: normal;
+}
+
+.dropContainer {
+  font-family: 'Vodafone';
+  font-size: 18px;
+  display: inline-block;
+  position: relative;
+  width: 480px;
+}
+
+@media screen and (max-width: 767px) {
+  .dropContainer {
+    width: 328px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .dropContainer {
     width: 480px;
   }
-
-  @media screen and (max-width: 767px) {
-    .dropdown-container {
-      width: 328px;
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    .dropdown-container {
-      width: 480px;
-    }
-  }
+}
   
-  .dropdown-select {
-    background-color: transparent;
-    border: 1px solid #999999;
-    border-radius: 6px;
-    padding: 0px 16px 0px 16px;
-    width: fill;
-    height: 50px;
-    outline: none;
-    cursor: pointer;
-    display: inline-block;
-    margin-top: 12px;
-      /* Remove default arrow and style a custom one */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+.dropTextfield {
+  font-family: 'Vodafone';
+  font-size: 18px;
+  line-height: 24px;
+  background-color: white;
+  border: 1px solid #999999;
+  border-radius: 6px;
+  padding: 0px 16px 0px 16px;
+  width: fill;
+  height: 48px;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 12px;
+  margin-bottom: 0;
+    /* Remove default arrow and style a custom one */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 
-    /* Add a custom arrow 
-    background-image: url('./Chevrondown.svg'); /* You can use an arrow image
-    background-position: right 16px center;
-    background-repeat: no-repeat;
-    */
-  }
+.selectedOption {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
 
-  .dropdown-select:focus {
-    border: 2px solid #00B0CA;
-  }
+.dropTextfield-Active {
+  border: 2px solid #00B0CA;
+  background-color: white;
+  border-radius: 6px;
+  padding: 0px 16px 0px 16px;
+  width: fill;
+  height: 50px;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 12px;
+    /* Remove default arrow and style a custom one */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 
-  .dropdown-select::-ms-expand {
-    display: none;
-  }
+.dropTextfield::-ms-expand {
+  display: none;
+}
+
+.tooltip-icon {
+  position: absolute;
+  right: 16px;
+  top: 70%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.icon {
+  position: absolute;
+  justify-self: end;
+  right: 56px;
+  top: 70%;
+  transform: translateY(-50%);
+}
+
+.icon-HideTooltip {
+  position: absolute;
+  justify-self: end;
+  right: 16px;
+  top: 70%;
+  transform: translateY(-50%);
+}
 
   /* Style the dropdown options */
-  .dropdown-options {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
-    background-color: #FFFFFF;
-    border: 1px solid #ccc;
-    border-top: none;
-    border-radius: 0 0 6px 6px;
-    z-index: 1;
-    margin: 16px;
-  }
+.dropOptions {
+  position: absolute;
+  display: none;
+  width: fill;
+  background-color: #FFFFFF;
+  border-radius: 0 0 4px 4px;
+  padding-bottom: 16px;
+  margin-top: 0;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.12), 0px 2px 2px 0px rgba(0, 0, 0, 0.10), 0px 3px 2px 0px rgba(0, 0, 0, 0.06), 0px 6px 2px 0px rgba(0, 0, 0, 0.02), 0px 10px 3px 0px rgba(0, 0, 0, 0.00);
+}
   
   /* Style the individual options */
-  .dropdown-options option {
-    padding: 16px;
-  }
+.dropOption {
+  font-family: 'Vodafone';
+  font-size: 18px;
+  color: rgba(13, 13, 13, 1);
+  font-size: 16px;
+  margin-left: -40px;
+  padding-left: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  line-height: 20px;
+  display: block;
+}
   
   /* Style the options on hover */
-  .dropdown-options option:hover {
-    background-color: #EBEBEB;
-    color: #fff;
-  }
+.dropOption:hover {
+  background-color: rgba(13, 13, 13, 0.15);
+}
 
-  .dropdown-select-error {
-    background-color: transparent;
-    border: 2px solid #BD0000;
-    border-radius: 6px;
-    padding: 0px 16px 0px 16px;
-    width: fill;
-    height: 50px;
-    outline: none;
-    cursor: pointer;
-    display: inline-block;
-    margin-top: 12px;
-      /* Remove default arrow and style a custom one */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+.dropTextfield:focus .dropdown-options {
+  position: absolute;
+  display: none;
+  background-color: #FFFFFF;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  z-index: 1;
+  margin: 16px;
+}
 
-    /* Add a custom arrow */
-    background-image: url('./Chevrondown.svg'); /* You can use an arrow image */
-    background-position: right 16px center;
-    background-repeat: no-repeat;
-   
-  }
+.dropTextfield-Error {
+  background-color: white;
+  border: 2px solid #BD0000;
+  border-radius: 6px;
+  padding: 0px 16px 0px 16px;
+  width: fill;
+  height: 50px;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 12px;
+  /* Remove default arrow and style a custom one */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.errorText {
+  color: rgba(189, 0, 0, 1);
+  font-family: 'Vodafone';
+  font-size: 14px;
+  margin-top: 12px;
+  line-height: 20px;
+}
