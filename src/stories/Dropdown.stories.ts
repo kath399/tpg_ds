@@ -30,6 +30,8 @@ export const Main: Story = {
     Size: 'Large',
     State: 'Enabled',
     ShowTooltipIcon: true,
+    ShowSupportingText: false,
+    SupportText: 'Support Text',
     Label: 'Label',
     ShowErrorText: false,
     ErrorText: 'Error Text'

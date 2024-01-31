@@ -7,6 +7,8 @@ interface DropdownProps {
     Size?: 'Large' | 'Small',
     State: 'Enabled' | 'Filled' | 'Active' | 'Error',
     ShowTooltipIcon?: boolean,
+    ShowSupportingText?: boolean,
+    SupportText?: string,
     Label?: string,
     ShowErrorText: boolean,
     ErrorText: string
@@ -17,6 +19,8 @@ export const Dropdown = ({
   Size = 'Large',
   State = 'Enabled',
   ShowTooltipIcon = true,
+  ShowSupportingText = false,
+  SupportText = 'Support Text',
   ShowErrorText = false,
   ErrorText = 'Error Text',
 }: DropdownProps) => {
@@ -54,27 +58,39 @@ export const Dropdown = ({
 
   const options = ['List item 1', 'List item 2', 'List item 3', 'List item 4'];
 
-  let sizeSmall: boolean = false;
-  if (Size === 'Small') {
-    sizeSmall = true;
-  } else {
-    sizeSmall = false;
-  }
-
   return (
-    <div id="dropdown-container" className={"dropContainer"} style={{ width: sizeSmall ? '328px' : '480px' }}>
+    <div id="dropdown-container" className={"dropContainer"}>
       <label htmlFor="label">{Label}</label>
       <div>
         <div
-          className={['dropTextfield', `dropTextfield-${State}`, `dropTextfield-${dropdownState}`, isDropdownOpen && 'open'].join(' ')}
+          className={[
+            `dropTextfield`, `dropTextfield-${State}`, 
+            `dropTextfield-${dropdownState}`, 
+            isDropdownOpen && 'open'
+          ].join(' ')}
           onClick={() => {
             toggleDropdown();
             setDropdownState('Active');
           }}
+          style={{
+            width: ((Size==='Small') || (window.innerWidth < 768)) ? '328px' : '480px', 
+            height: ((Size==='Small') || (window.innerWidth < 768)) ? '44px' : '48px'
+          }}
         >
-          <div className='selectedOption'>{selectedOption || ''}</div>
+          <div className='selectedOption'>
+            {(State === 'Enabled') ? ' ' : (State === 'Filled') ? 'Selected' : (selectedOption)}
+            <div style={{ marginLeft: 'auto', marginRight: 0, paddingTop: '6px' }}>
+              <img style={{ marginRight: ShowTooltipIcon ? '12px' : 0}} src={Icon} alt="Icon" />
+              {ShowTooltipIcon && <img style={{}} src={TooltipIcon} alt="Tooltip" />}
+            </div>
+          </div>
         </div>
-        <ul className="dropOptions" style={{ display: isDropdownOpen ? 'block' : 'none' }}>
+        <ul 
+          className="dropOptions" 
+          style={{ 
+            display: (isDropdownOpen || (State === 'Active')) ? 'block' : 'none' 
+          }}
+        >
           {options.map((option, index) => (
             <li
               className='dropOption'
@@ -88,10 +104,9 @@ export const Dropdown = ({
             </li>
           ))}
         </ul>
-        {ShowTooltipIcon && <img className="tooltip-icon" style={{ top: ShowErrorText ? '50%' : '60%' }} src={TooltipIcon} alt="Tooltip" />}
-        <img className={ShowTooltipIcon ? 'icon' : 'icon-HideTooltip'} style={{ top: ShowErrorText ? '50%' : '60%' }} src={Icon} alt="Icon" />
       </div>
       <div className='errorText'>{ShowErrorText && ErrorText}</div>
+      <div className='supportText'>{(ShowSupportingText && !ShowErrorText) && SupportText}</div>
     </div>
   );
 };

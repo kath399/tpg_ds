@@ -20,29 +20,42 @@ const StyleDictionary = require('style-dictionary')
       allProperties.map(prop => {
 
         const { attributes, value } = prop
-
         const { category, type, item, subitem, state } = attributes
 
         let classname
-
         if(state !== undefined) {
-          classname = `--${category}-${type}-${item}-${subitem}-${state}: ${value};`
+          classname = `--${category}-${type}-${item}-${subitem}-${state}`
         } else if (subitem !== undefined && state == undefined) {
-          classname = `--${category}-${type}-${item}-${subitem}: ${value};`
+          classname = `--${category}-${type}-${item}-${subitem}`
         } else {
-          classname = `--${category}-${type}-${item}: ${value};`
+          classname = `--${category}-${type}-${item}`
         }
 
-        props[classname] = ''
-
+        let retVal
+        let secVar
+        if(typeof value === "object" && value !== null) {
+          for (variable in value) {
+              if(typeof value[variable] === 'object' && value[variable] !== null) {
+                secVar = value[variable]
+                retVal = classname + `-${variable}: ${secVar.paragraphIndent};`
+                props[retVal] = ''
+              } else {
+                retVal = classname + `-${variable}: ${value[variable]};`
+                props[retVal] = '' 
+              }
+          }
+        } else {
+          retVal = classname + `: ${value};`
+          props[retVal] = ''
+        }
       })
 
       return template({ props })
     }
   })
   .extend({
-    source: ['src/tokens/**/*.json'],
-    include: [],
+    source: ['src/tokens/component.json'],
+    include: ['src/tokens/**/*.json'],
     platforms: {
       css: {
         transformGroup: "css",

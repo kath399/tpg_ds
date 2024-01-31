@@ -14,19 +14,6 @@
   font-size: 18px;
   display: inline-block;
   position: relative;
-  width: 480px;
-}
-
-@media screen and (max-width: 767px) {
-  .dropContainer {
-    width: 328px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .dropContainer {
-    width: 480px;
-  }
 }
   
 .dropTextfield {
@@ -37,17 +24,37 @@
   border: 1px solid #999999;
   border-radius: 6px;
   padding: 0px 16px 0px 16px;
-  width: fill;
+  width: 480px;
   height: 48px;
   outline: none;
   cursor: pointer;
   display: inline-block;
   margin-top: 12px;
-  margin-bottom: 0;
-    /* Remove default arrow and style a custom one */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  margin-bottom: 0px;
+}
+
+.dropTextfield--Large {
+  width: 480px;
+  height: 48px;
+}
+
+.dropTextfield--Small {
+  width: 328px;
+  height: 44px;
+}
+
+@media screen and (max-width: 767px) {
+  .dropTextfield {
+    width: 328px;
+    height: 44px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .dropTextfield {
+    width: 480px;
+    height: 48px;
+  }
 }
 
 .selectedOption {
@@ -59,7 +66,7 @@
 .dropTextfield-Active {
   border: 2px solid #00B0CA;
   background-color: white;
-  border-radius: 6px;
+  border-radius: 6px 6px 0 0;
   padding: 0px 16px 0px 16px;
   width: fill;
   height: 50px;
@@ -71,10 +78,6 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-.dropTextfield::-ms-expand {
-  display: none;
 }
 
 .tooltip-icon {
@@ -162,6 +165,14 @@
 
 .errorText {
   color: rgba(189, 0, 0, 1);
+  font-family: 'Vodafone';
+  font-size: 14px;
+  margin-top: 12px;
+  line-height: 20px;
+}
+
+.supportText {
+  color: #0D0D0D;
   font-family: 'Vodafone';
   font-size: 14px;
   margin-top: 12px;
