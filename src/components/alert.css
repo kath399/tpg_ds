@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Vodafone';
+      src: url('../fonts/Vodafone_Rg_W.eot'); /* IE9 Compat Modes */
+      src: url('../fonts/Vodafone_Rg_W.eot') format('embedded-opentype'), /* IE6-IE8 */
+          url('../fonts/Vodafone_Rg_W.woff2') format('woff2'), /* Super Modern Browsers */
+          url('../fonts/Vodafone_Rg_W.woff') format('woff'), /* Pretty Modern Browsers */
+          url('../fonts/Vodafone_Rg.ttf')  format('truetype'); /* Safari, Android, iOS */
+      font-weight: 600;
+      font-style: normal;
+}
+
+.alert {
+    font-family: 'Vodafone';
+    font-size: 18px;
+    width: 780px;
+    border: 1px solid rgba(189, 0, 0, 1);
+    border-radius: 8px;
+    position: relative;
+}
+
+.alert--Tablet {
+    width: 474px;
+}
+
+.alert--Mobile {
+    width: 328px;
+}
+
+.alert--Inline {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 360px) {
+    .alert {
+        width: 328px;
+    }
+}
+
+@media screen and (min-width: 361px) and (max-width: 768px) {
+    .alert {
+      width: 474px;
+    }
+  }
+  
+  @media screen and (min-width: 769px) {
+    .alert {
+      width: 780px;
+    }
+  }
+
+.block {
+    width: 'fill';
+    height: 44px;
+    border-radius: 6px 6px 0px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.block--Inline {
+    width: 56px;
+    height: 'fill';
+    border-radius: 6px 0px 0px 6px;
+    padding: 0px 16px;
+}
+
+
+/*STYLE FOR DIFFERENT STATES*/
+.block--Error {
+    background-color: rgba(189, 0, 0, 1);
+}
+
+.block--Warning {
+    background-color: rgba(235, 97, 0, 1);
+}
+
+.block--Success {
+    background-color: rgba(0, 138, 0, 1);
+}
+
+.block--Info {
+    background-color: rgba(0, 94, 165, 1);
+}
+
+.alert--Desktop--Warning {
+    border-color: rgba(235, 97, 0, 1);
+}
+
+.alert--Desktop--Success {
+    border-color: rgba(0, 138, 0, 1);
+}
+
+.alert--Desktop--Info {
+    border-color: rgba(0, 94, 165, 1);
+}
+
+.textBox {
+    background-color: white;
+    border-radius: 0px 0px 8px 8px;
+    padding: 24px;
+}
+
+.textBox--Inline {
+    border-radius: 0px 8px 8px 0px;
+    width: 697px;
+}
