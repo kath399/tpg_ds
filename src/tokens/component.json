@@ -1,0 +1,278 @@
+{
+  "button-primary": {
+    "color": {
+      "surface": {
+        "default": {
+          "value": "{vf-global.color.light.brand.500}",
+          "type": "color"
+        },
+        "inverse": {
+          "value": "{vf-global.color.monochrome.white}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{vf-global.color.light.brand.600}",
+          "type": "color"
+        },
+        "hover-inverse": {
+          "value": "{vf-global.color.monochrome.150}",
+          "type": "color"
+        },
+        "pressed": {
+          "value": "{vf-global.color.light.brand.700}",
+          "type": "color"
+        },
+        "pressed-inverse": {
+          "value": "{vf-global.color.monochrome.300}",
+          "type": "color"
+        }
+      },
+      "content": {
+        "default": {
+          "value": "{vf-global.color.monochrome.white}",
+          "type": "color"
+        },
+        "inverse": {
+          "value": "{vf-global.color.monochrome.950}",
+          "type": "color"
+        }
+      }
+    }
+  },
+  "button-secondary": {
+    "border": {
+      "default": {
+        "value": {
+          "color": "{button-secondary.color.border.default}",
+          "width": "{vf-global.border-width.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "inverse": {
+        "value": {
+          "color": "{button-secondary.color.border.inverse}",
+          "width": "{vf-global.border-width.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      }
+    },
+    "color": {
+      "surface": {
+        "hover": {
+          "value": "{color.states.mono.hover}",
+          "type": "color"
+        },
+        "hover-inverse": {
+          "value": "{color.states.white.hover}",
+          "type": "color"
+        },
+        "pressed": {
+          "value": "{color.states.mono.pressed}",
+          "type": "color"
+        },
+        "pressed-inverse": {
+          "value": "{color.states.white.pressed}",
+          "type": "color"
+        }
+      },
+      "content": {
+        "default": {
+          "value": "{vf-global.color.monochrome.950}",
+          "type": "color"
+        },
+        "inverse": {
+          "value": "{vf-global.color.monochrome.white}",
+          "type": "color"
+        }
+      },
+      "border": {
+        "default": {
+          "value": "{vf-global.color.monochrome.950}",
+          "type": "color"
+        },
+        "inverse": {
+          "value": "{vf-global.color.monochrome.white}",
+          "type": "color"
+        }
+      }
+    }
+  },
+  "comp": {
+    "large-display": {
+      "link-label": {
+        "value": {
+          "fontFamily": "{vf-global.font-family.vodafone}",
+          "fontWeight": "{vf-global.font-weight.vodafone-regular}",
+          "lineHeight": "{vf-global.line-heights.600}",
+          "fontSize": "{vf-global.font-size.450}",
+          "letterSpacing": "{vf-global.letter-spacing.0}",
+          "paragraphSpacing": "{vf-global.paragraph-spacing.0}",
+          "paragraphIndent": "{vf-global.paragraph-indent.0}",
+          "textCase": "{vf-global.text-case.none}",
+          "textDecoration": "{vf-global.text-decoration.none}"
+        },
+        "type": "typography"
+      },
+      "link-label-underline": {
+        "value": {
+          "fontFamily": "{vf-global.font-family.vodafone}",
+          "fontWeight": "{vf-global.font-weight.vodafone-regular}",
+          "lineHeight": "{vf-global.line-heights.600}",
+          "fontSize": "{vf-global.font-size.450}",
+          "letterSpacing": "{vf-global.letter-spacing.0}",
+          "paragraphSpacing": "{vf-global.paragraph-spacing.0}",
+          "paragraphIndent": "{vf-global.paragraph-indent.0}",
+          "textCase": "{vf-global.text-case.none}",
+          "textDecoration": "{vf-global.text-decoration.underline}"
+        },
+        "type": "typography"
+      },
+      "button-label": {
+        "value": {
+          "fontFamily": "{vf-global.font-family.vodafone}",
+          "fontWeight": "{vf-global.font-weight.vodafone-semibold}",
+          "lineHeight": "{vf-global.line-heights.600}",
+          "fontSize": "{vf-global.font-size.500}",
+          "letterSpacing": "{vf-global.letter-spacing.0}",
+          "paragraphSpacing": "{vf-global.paragraph-spacing.0}",
+          "paragraphIndent": "{vf-global.paragraph-indent.0}",
+          "textCase": "{vf-global.text-case.none}",
+          "textDecoration": "{vf-global.text-decoration.none}"
+        },
+        "type": "typography"
+      },
+      "button-label-underline": {
+        "value": {
+          "fontFamily": "{vf-global.font-family.vodafone}",
+          "fontWeight": "{vf-global.font-weight.vodafone-semibold}",
+          "lineHeight": "{vf-global.line-heights.600}",
+          "fontSize": "{vf-global.font-size.500}",
+          "letterSpacing": "{vf-global.letter-spacing.0}",
+          "paragraphSpacing": "{vf-global.paragraph-spacing.0}",
+          "paragraphIndent": "{vf-global.paragraph-indent.0}",
+          "textCase": "{vf-global.text-case.none}",
+          "textDecoration": "{vf-global.text-decoration.underline}"
+        },
+        "type": "typography"
+      },
+      "form": {
+        "value": {
+          "fontFamily": "{vf-global.font-family.vodafone}",
+          "fontWeight": "{vf-global.font-weight.vodafone-regular}",
+          "lineHeight": "{vf-global.line-heights.600}",
+          "fontSize": "{vf-global.font-size.450}",
+          "letterSpacing": "{vf-global.letter-spacing.0}",
+          "paragraphSpacing": "{vf-global.paragraph-spacing.0}",
+          "paragraphIndent": "{vf-global.paragraph-indent.0}",
+          "textCase": "{vf-global.text-case.none}",
+          "textDecoration": "{vf-global.text-decoration.none}"
+        },
+        "type": "typography"
+      }
+    },
+    "small-display": {
+      "link-label": {
+        "value": {
+          "fontFamily": "{vf-global.font-family.vodafone}",
+          "fontWeight": "{vf-global.font-weight.vodafone-regular}",
+          "lineHeight": "{vf-global.line-heights.500}",
+          "fontSize": "{vf-global.font-size.400}",
+          "letterSpacing": "{vf-global.letter-spacing.0}",
+          "paragraphSpacing": "{vf-global.paragraph-spacing.0}",
+          "paragraphIndent": "{vf-global.paragraph-indent.0}",
+          "textCase": "{vf-global.text-case.none}",
+          "textDecoration": "{vf-global.text-decoration.none}"
+        },
+        "type": "typography"
+      },
+      "link-label-underline": {
+        "value": {
+          "fontFamily": "{vf-global.font-family.vodafone}",
+          "fontWeight": "{vf-global.font-weight.vodafone-regular}",
+          "lineHeight": "{vf-global.line-heights.500}",
+          "fontSize": "{vf-global.font-size.400}",
+          "letterSpacing": "{vf-global.letter-spacing.0}",
+          "paragraphSpacing": "{vf-global.paragraph-spacing.0}",
+          "paragraphIndent": "{vf-global.paragraph-indent.0}",
+          "textCase": "{vf-global.text-case.none}",
+          "textDecoration": "{vf-global.text-decoration.underline}"
+        },
+        "type": "typography"
+      },
+      "button-label": {
+        "value": {
+          "fontFamily": "{vf-global.font-family.vodafone}",
+          "fontWeight": "{vf-global.font-weight.vodafone-semibold}",
+          "lineHeight": "{vf-global.line-heights.500}",
+          "fontSize": "{vf-global.font-size.450}",
+          "letterSpacing": "{vf-global.letter-spacing.0}",
+          "paragraphSpacing": "{vf-global.paragraph-spacing.0}",
+          "paragraphIndent": "{vf-global.paragraph-indent.0}",
+          "textCase": "{vf-global.text-case.none}",
+          "textDecoration": "{vf-global.text-decoration.none}"
+        },
+        "type": "typography"
+      },
+      "button-label-underline": {
+        "value": {
+          "fontFamily": "{vf-global.font-family.vodafone}",
+          "fontWeight": "{vf-global.font-weight.vodafone-semibold}",
+          "lineHeight": "{vf-global.line-heights.500}",
+          "fontSize": "{vf-global.font-size.450}",
+          "letterSpacing": "{vf-global.letter-spacing.0}",
+          "paragraphSpacing": "{vf-global.paragraph-spacing.0}",
+          "paragraphIndent": "{vf-global.paragraph-indent.0}",
+          "textCase": "{vf-global.text-case.none}",
+          "textDecoration": "{vf-global.text-decoration.underline}"
+        },
+        "type": "typography"
+      },
+      "form": {
+        "value": {
+          "fontFamily": "{vf-global.font-family.vodafone}",
+          "fontWeight": "{vf-global.font-weight.vodafone-regular}",
+          "lineHeight": "{vf-global.line-heights.500}",
+          "fontSize": "{vf-global.font-size.400}",
+          "letterSpacing": "{vf-global.letter-spacing.0}",
+          "paragraphSpacing": "{vf-global.paragraph-spacing.0}",
+          "paragraphIndent": "{vf-global.paragraph-indent.0}",
+          "textCase": "{vf-global.text-case.none}",
+          "textDecoration": "{vf-global.text-decoration.none}"
+        },
+        "type": "typography"
+      }
+    },
+    "all-display": {
+      "supportive-text": {
+        "value": {
+          "fontFamily": "{vf-global.font-family.vodafone}",
+          "fontWeight": "{vf-global.font-weight.vodafone-regular}",
+          "lineHeight": "{vf-global.line-heights.400}",
+          "fontSize": "{vf-global.font-size.350}",
+          "letterSpacing": "{vf-global.letter-spacing.0}",
+          "paragraphSpacing": "{vf-global.paragraph-spacing.0}",
+          "paragraphIndent": "{vf-global.paragraph-indent.0}",
+          "textCase": "{vf-global.text-case.none}",
+          "textDecoration": "{vf-global.text-decoration.none}"
+        },
+        "type": "typography"
+      }
+    }
+  },
+  "button-primary-container": {
+    "default": {
+      "value": {
+        "minWidth": "150",
+        "fill": "{button-primary.color.surface.default}",
+        "paddingTop": "{button.padding.top}",
+        "paddingBottom": "{button.padding.bottom}",
+        "paddingLeft": "{button.padding.left}",
+        "paddingRight": "{button.padding.right}",
+        "borderRadius": "{button.radius.default}"
+      },
+      "type": "composition"
+    }
+  }
+}
