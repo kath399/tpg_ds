@@ -485,3 +485,15 @@
   width: 150px;
   height: 48px;
 }
+
+@media screen and (max-width: 360px) {
+  .storybook-button--large {
+    width: 328px;
+    height: 44px;
+  }
+  .storybook-button--small {
+    width: 328px;
+    height: 44px;
+  }
+}
+  

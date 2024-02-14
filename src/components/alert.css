@@ -1,21 +1,26 @@
 @font-face {
-    font-family: 'Vodafone';
-      src: url('../fonts/Vodafone_Rg_W.eot'); /* IE9 Compat Modes */
-      src: url('../fonts/Vodafone_Rg_W.eot') format('embedded-opentype'), /* IE6-IE8 */
-          url('../fonts/Vodafone_Rg_W.woff2') format('woff2'), /* Super Modern Browsers */
-          url('../fonts/Vodafone_Rg_W.woff') format('woff'), /* Pretty Modern Browsers */
-          url('../fonts/Vodafone_Rg.ttf')  format('truetype'); /* Safari, Android, iOS */
-      font-weight: 600;
-      font-style: normal;
+    font-family: Vodafone;
+    src: url(../fonts/Vodafone_Rg_W.woff);
+}
+
+@font-face {
+    font-family: Vodafone;
+    src: url(../fonts/Vodafone_Bd_W.woff);
+    font-weight: bold;
 }
 
 .alert {
-    font-family: 'Vodafone';
+    font-family: Vodafone;
     font-size: 18px;
     width: 780px;
     border: 1px solid rgba(189, 0, 0, 1);
     border-radius: 8px;
     position: relative;
+}
+
+.alert--Inline {
+    display: flex;
+    width: 753px;
 }
 
 .alert--Tablet {
@@ -26,29 +31,7 @@
     width: 328px;
 }
 
-.alert--Inline {
-    display: flex;
-    flex-direction: row;
-}
-
-@media screen and (max-width: 360px) {
-    .alert {
-        width: 328px;
-    }
-}
-
-@media screen and (min-width: 361px) and (max-width: 768px) {
-    .alert {
-      width: 474px;
-    }
-  }
-  
-  @media screen and (min-width: 769px) {
-    .alert {
-      width: 780px;
-    }
-  }
-
+/* STYLE FOR COLOR BLOCK */
 .block {
     width: 'fill';
     height: 44px;
@@ -58,10 +41,10 @@
 }
 
 .block--Inline {
+    position: absolute;
+    height: 100%;
     width: 56px;
-    height: 'fill';
     border-radius: 6px 0px 0px 6px;
-    padding: 0px 16px;
 }
 
 
@@ -94,13 +77,105 @@
     border-color: rgba(0, 94, 165, 1);
 }
 
+.alert--Tablet--Warning {
+    border-color: rgba(235, 97, 0, 1);
+}
+
+.alert--Tablet--Success {
+    border-color: rgba(0, 138, 0, 1);
+}
+
+.alert--Tablet--Info {
+    border-color: rgba(0, 94, 165, 1);
+}
+
+.alert--Mobile--Warning {
+    border-color: rgba(235, 97, 0, 1);
+}
+
+.alert--Mobile--Success {
+    border-color: rgba(0, 138, 0, 1);
+}
+
+.alert--Mobile--Info {
+    border-color: rgba(0, 94, 165, 1);
+}
+
+/* STYLE FOR CONTENT */
 .textBox {
     background-color: white;
     border-radius: 0px 0px 8px 8px;
-    padding: 24px;
+    padding: 24px 52px 0px 24px;
+    width: fill;
 }
 
 .textBox--Inline {
     border-radius: 0px 8px 8px 0px;
-    width: 697px;
+    margin-left: auto;
+    margin-right: 0;
+    width: 620px;
+}
+
+.textBox--Inline--Tablet {
+    width: 342px;
+}
+
+.textBox--Inline--Mobile {
+    width: 196px;
+}
+
+/* STYLE FOR BUTTON */
+.AlertButton {
+    cursor: pointer;
+    font-family: Vodafone;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid #0D0D0D; 
+    border-radius: 8px;
+    padding: 12px 24px;
+    background-color: transparent;
+    width: 150px;
+    margin-bottom: 24px;
+}
+
+.AlertButton--Mobile {
+    width: fill;
+}
+
+/* RESPONSIVE STYLING */
+@media screen and (max-width: 360px) {
+    .alert {
+        width: 328px;
+    }
+    .alert--Tablet {
+        width: 328px;
+    }
+    .textBox--Inline {
+        width: 196px;
+    }
+    .textBox--Inline--Tablet{
+        width: 196px;
+    }
+    .AlertButton {
+        width: fill;
+    }
+}
+
+@media screen and (min-width: 361px) and (max-width: 768px) {
+    .alert {
+        width: 474px;
+    }
+    .alert--Mobile {
+        width: 328px;
+    }
+    .textBox--Inline {
+        width: 342px;
+    }
+    .textBox--Inline--Tablet {
+        width: 342px;
+    }
+    .textBox--Inline--Mobile {
+        width: 196px;
+    }
 }

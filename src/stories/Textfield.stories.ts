@@ -15,6 +15,10 @@ const meta = {
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     //backgroundColor: { control: 'color' },
+    State: { 
+      options: ['Enabled', 'Focused', 'Active', 'Filled', 'Error', 'Disabled'],
+      control: 'radio'
+    }
   },
 } satisfies Meta<typeof Textfield>;
 
@@ -23,12 +27,19 @@ type Story = StoryObj<typeof meta>;
 
 export const Simple: Story = {
     args: {
-        id: 'Simple',
-        complex: false,
-        state: 'enabled',
-        label: 'Label',
-        error: false,
-        errortext: 'Error',
+      Type: 'Simple',
+      Size: 'Large',
+      State: 'Enabled',
+      ShowLabel: true,
+      LabelText: 'Label',
+      ShowLeftIcon: false,
+      ShowInputText: true,
+      ShowRightIcon: false,
+      InputText: 'User Input Text',
+      ShowSupportingText: false,
+      SupportingText: 'Support Text',
+      ShowErrorText: false,
+      ErrorText: 'Error Text'
     },
     
     parameters: {
@@ -39,81 +50,27 @@ export const Simple: Story = {
     },
 }
 
-export const Active: Story = {
-  args: {
-      id: 'Simple',
-      complex: false,
-      state: 'enabled',
-      label: 'Label',
-      error: false,
-      errortext: 'Error',
-  },
-  
-  parameters: {
-      design: {
-          type: "figma",
-          url: "https://www.figma.com/file/BtunVVjUyt3jJvT40IYBg5/Vodafone-Components?type=design&node-id=896-28676&mode=design&t=Kf2VfR9SgOm0o792-4"
-      }
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-
-    const nameInput = canvas.getByLabelText('Label', {
-      selector: 'input',
-    });
-
-    await userEvent.type(nameInput, 'User Input', {
-      delay: 100
-    });
-
-  },
-}
-
-export const Disabled: Story = {
-  args: {
-      id: 'Simple',
-      complex: false,
-      state: 'disabled',
-      label: 'Label',
-      error: false,
-      errortext: 'Error',
-  },
-  
-  parameters: {
-      design: {
-          type: "figma",
-          url: "https://www.figma.com/file/BtunVVjUyt3jJvT40IYBg5/Vodafone-Components?type=design&node-id=896-28676&mode=design&t=Kf2VfR9SgOm0o792-4"
-      }
-  },
-}
-
 export const Complex: Story = {
-    args: {
-        id: 'Active',
-        complex: true,
-        state: 'enabled',
-        label: 'Label',
-        error: false
-    },
-
-    parameters: {
+  args: {
+    Type: 'Complex',
+    Size: 'Large',
+    State: 'Enabled',
+    ShowLabel: true,
+    LabelText: 'Label',
+    ShowLeftIcon: false,
+    ShowInputText: true,
+    InputText: 'User Input Text',
+    ShowRightIcon: false,
+    ShowSupportingText: false,
+    SupportingText: 'Support Text',
+    ShowErrorText: false,
+    ErrorText: 'Error Text'
+  },
+  
+  parameters: {
       design: {
-        type: 'figma',
-        url:"https://www.figma.com/file/BtunVVjUyt3jJvT40IYBg5/Vodafone-Components?type=design&node-id=894-32414&mode=design&t=Lx4uU7loBvdsJPIU-4"
+          type: "figma",
+          url: "https://www.figma.com/file/BtunVVjUyt3jJvT40IYBg5/Vodafone-Components?type=design&node-id=896-28676&mode=design&t=Kf2VfR9SgOm0o792-4"
       }
-    },
-
-    play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-  
-      const nameInput = canvas.getByLabelText('Label', {
-        selector: 'input',
-      });
-  
-      await userEvent.type(nameInput, 'List item', {
-        delay: 100
-      });
-  
-
-    },
+  },
 }

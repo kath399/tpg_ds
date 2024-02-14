@@ -56,7 +56,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary: Story = {
+export const Stacked: Story = {
   args: { 
     Size: 'Desktop',
     Type: 'Stacked',
@@ -70,7 +70,27 @@ export const Primary: Story = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?type=design&node-id=598-30784&mode=design&t=3NWqu0HHwgcT8cQx-4'
+      url: 'https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?type=design&node-id=5922-4578&mode=design&t=zBMXTRGfyBJApw7n-4'
+    },
+  },
+};
+
+
+export const Inline: Story = {
+  args: { 
+    Size: 'Desktop',
+    Type: 'Inline',
+    State: 'Error',
+    ShowHeading: true,
+    Heading: 'Heading',
+    BodyText: 'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.',
+    CloseButton: false,
+    Button: false,
+  },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?type=design&node-id=5922-4578&mode=design&t=zBMXTRGfyBJApw7n-4'
     },
   },
 };
