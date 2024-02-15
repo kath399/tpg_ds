@@ -23,10 +23,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Checked: Story = {
     args: {
-        Label: ['Button Label'],
-        Checked: true,
-        numberOfBtns: 1,
-        State: 'enable',
+      Checked: true,
+      State: 'Enable',
+      ShowText: true,
+      Text: ['Button Label'],
+      numberOfBtns: 1,
     },
     parameters: {
       design: {
@@ -43,9 +44,11 @@ export const Checked: Story = {
 
 export const Unchecked: Story = {
   args: {
-      Label: ['Button Label'],
-      numberOfBtns: 1,
-      State: 'enable',
+    Checked: false,
+    State: 'Enable',
+    ShowText: true,
+    Text: ['Button Label'],
+    numberOfBtns: 1,
   },
   parameters: {
     design: {
@@ -64,10 +67,12 @@ export const Unchecked: Story = {
 
 export const Inline: Story = {
   args: {
-      Label: ['Button Label 1', 'Button Label 2', 'Button Label 3', 'Button Label 4', 'Button Label 5'],
-      numberOfBtns: 5,
-      Inline: true,
-      State: 'enable',
+    Checked: false,
+    State: 'Enable',
+    ShowText: true,
+    Text: ['Button Label 1', 'Button Label 2', 'Button Label 3', 'Button Label 4', 'Button Label 5'],
+    numberOfBtns: 5,
+    Inline: true,
   },
   parameters: {
     design: {
@@ -84,9 +89,11 @@ export const Inline: Story = {
 
 export const Stacked: Story = {
   args: {
-      Label: ['Button Label 1', 'Button Label 2', 'Button Label 3', 'Button Label 4', 'Button Label 5'],
-      numberOfBtns: 5,
-      State: 'enable',
+    Checked: false,
+    State: 'Enable',
+    ShowText: true,
+    Text: ['Button Label 1', 'Button Label 2', 'Button Label 3', 'Button Label 4', 'Button Label 5'],
+    numberOfBtns: 5,
   },
   parameters: {
     design: {

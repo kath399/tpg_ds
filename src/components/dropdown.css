@@ -43,41 +43,16 @@
   height: 44px;
 }
 
-@media screen and (max-width: 767px) {
-  .dropTextfield {
-    width: 328px;
-    height: 44px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .dropTextfield {
-    width: 480px;
-    height: 48px;
-  }
-}
-
 .selectedOption {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-.dropTextfield-Active {
+.dropTextfield--Active {
   border: 2px solid #00B0CA;
   background-color: white;
   border-radius: 6px 6px 0 0;
-  padding: 0px 16px 0px 16px;
-  width: fill;
-  height: 50px;
-  outline: none;
-  cursor: pointer;
-  display: inline-block;
-  margin-top: 12px;
-    /* Remove default arrow and style a custom one */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 .tooltip-icon {
@@ -146,21 +121,8 @@
   margin: 16px;
 }
 
-.dropTextfield-Error {
-  background-color: white;
+.dropTextfield--Error {
   border: 2px solid #BD0000;
-  border-radius: 6px;
-  padding: 0px 16px 0px 16px;
-  width: fill;
-  height: 50px;
-  outline: none;
-  cursor: pointer;
-  display: inline-block;
-  margin-top: 12px;
-  /* Remove default arrow and style a custom one */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 .errorText {
@@ -177,4 +139,16 @@
   font-size: 14px;
   margin-top: 12px;
   line-height: 20px;
+}
+
+@media screen and (max-width: 360px) {
+  .dropTextfield--Large {
+    width: 328px;
+    height: 44px;
+  }
+  
+  .dropTextfield--Small {
+    width: 328px;
+    height: 44px;
+  }
 }
