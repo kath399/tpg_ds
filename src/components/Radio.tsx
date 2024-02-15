@@ -2,9 +2,10 @@ import React from 'react';
 import './radio.css';
 
 interface RadioProps {
-  Label: string[];
-  Checked?: boolean;
-  State?: 'enable' | 'hover' | 'focus' | 'disabled';
+  Checked: boolean;
+  State: 'Enable' | 'Hover' | 'Focus' | 'Disabled';
+  ShowText?: boolean;
+  Text: string[];
   numberOfBtns?: number;
   Inverse?: boolean;
   Inline?: boolean;
@@ -12,9 +13,10 @@ interface RadioProps {
 }
 
 export const Radio: React.FC<RadioProps> = ({ 
-  Label, 
   Checked,
-  State = 'enable',
+  State = 'Enable',
+  ShowText = true,
+  Text, 
   numberOfBtns = 5, 
   onChange,
   Inverse = false,
@@ -28,36 +30,42 @@ export const Radio: React.FC<RadioProps> = ({
   }
 
   let Disabled:boolean = false;
-  if(State == 'disabled') {
+  if(State == 'Disabled') {
     Disabled = true
   }
 
-  let labelColor:string = 'black';
+  let textColor:string = 'black';
   if(Inverse == true) {
-    labelColor = 'white'
+    textColor = 'white'
   } else if(Disabled == true) {
-    labelColor = '#0D0D0D61'
+    textColor = '#0D0D0D61'
   }
 
   for (let i = 0; i < numberOfBtns; i++) {
     const uniqueId = `${i}`;
 
-    radioButtons.push(      
-      <label id={uniqueId} className='container' style={containerStyle}>
-        <input
-          type="radio"
-          name='Button'
-          checked={Checked}
-          onChange={() => onChange('')}
-          disabled={Disabled}
-        />
-        <span className={[
-          'checkmark',
-          `checkmark--${State}`,
-          Inverse ? 'checkmarkInverse' : ''
-        ].join(' ')}></span>
-        <text style={{ color: labelColor }}>{Label[i]}</text>
-      </label>
+    radioButtons.push(
+      <div style={containerStyle}>
+        <label id={uniqueId} className='container' >
+          <input
+            type="radio"
+            name='Button'
+            checked={Checked}
+            onChange={() => onChange('')}
+            disabled={Disabled}
+          />
+          <span 
+            className={[
+              'checkmark',
+              `checkmark--${State}`,
+              Inverse ? 'checkmarkInverse' : ''
+            ].join(' ')}
+          >
+          </span>
+          {ShowText && <text style={{ color: textColor }}>{Text[i]}</text>}
+          {!ShowText && <div style={{paddingTop: '16px'}}/>}
+        </label>
+      </div>
     );
   }
 

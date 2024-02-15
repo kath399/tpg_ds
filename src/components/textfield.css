@@ -1,58 +1,173 @@
 @import '../tokens.css';
 
-.txtfield {
+@font-face {
+    font-family: Vodafone;
+    src: url(../fonts/Vodafone_Rg_W.woff);
+}
+
+@font-face {
+    font-family: Vodafone;
+    src: url(../fonts/Vodafone_Bd_W.woff);
+    font-weight: bold;
+}
+
+.labelField {
+    font-family: Vodafone;
+    font-size: 18px;
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.labelField--Small {
+    font-size: 16px;
+}
+
+.field {
+    display: inline-flex;
     width: 480px;
-    height: 86px;
-}
-
-.textfield {
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    border: 1;
-    cursor: pointer;
-    display: inline-block;
-    line-height: 1;
-    border-radius: 10;
-}
-
-@media screen and (max-width: 767px) {
-    .txtfield {
-      width: 328px;
-      height: 78px
-    }
-}
-
-
-input[type=text] {
-    width: 100%;
-    height: 50px;
-    padding: 0px var(--spacing-spacing-200) 0px var(--spacing-spacing-200);
-    margin: var(--spacing-spacing-150) 0;
-    display: inline-block;
+    height: 48px;
+    padding: 0px 12px;
+    margin: 0;
+    background-color: white;
     border: 1px solid #999999;
     border-radius: 6px;
     box-sizing: border-box;
 }
 
-input[type=text]:focus {
+.field--Small {
+    width: 328px;
+    height: 44px;
+}
+
+.fieldInput {
+    font-family: Vodafone;
+    font-size: 18px;
+    width: fill;
+    height: fill;
+    border: none;
+    outline: none;
+    line-height: 24px;
+}
+
+.fieldInput--Small {
+    font-size: 16px;
+}
+
+.fieldInput:focus {
+    outline: none;
+}
+
+.fieldInput:disabled {
+    background: #FFF;
+    opacity: 0.38;
+    color: #0D0D0D;
+}
+
+.field--Focused {
     outline: none;
     border: 2px solid #00B0CA;
 }
 
-input[type="text"]:disabled {
-    background: #EBEBEB;
+.field--Active {
+    outline: none;
+    border: 2px solid #00B0CA;
 }
 
-input:required:invalid {
-    border: 2px solid #BD0000; /* Set a red border */
+.field--Disabled {
+    background: #FFF;
+    opacity: 0.38;
+    color: #0D0D0D;
 }
-  
 
+.field--Error {
+    border: 2px solid #BD0000;
+}
+
+.field:disabled {
+    background: #FFF;
+    opacity: 0.38;
+    color: #0D0D0D;
+}
+
+/* STYLE ERROR AND SUPPORT MESSAGE*/
 .error {
     border: 2px solid #BD0000;
 }
 
 .error-message {
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Vodafone;
+    font-size: 14px;
     color: #BD0000;
+    margin-top: 12px;
+}
+
+.supportText {
+    font-family: Vodafone;
+    color: #0D0D0D;
+    font-size: 14px;
+    margin-top: 12px;
+    line-height: 20px;
+}
+
+/* STYLE COMPLEX TYPE */
+.complexField {
+    position: absolute;
+    display: none;
+    width: 440px;
+    font-size: 18px;
+    background-color: #FFFFFF;
+    border-radius: 0 0 4px 4px;
+    padding-bottom: 16px;
+    margin-top: -12px;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.12), 0px 2px 2px 0px rgba(0, 0, 0, 0.10), 0px 3px 2px 0px rgba(0, 0, 0, 0.06), 0px 6px 2px 0px rgba(0, 0, 0, 0.02), 0px 10px 3px 0px rgba(0, 0, 0, 0.00);
+}
+
+.complexField--Small {
+    width: 288px;
+    font-size: 16px;
+}
+
+.complexOption {
+    font-family: Vodafone;
+    font-size: 18px;
+    color: rgba(13, 13, 13, 1);
+    font-size: 16px;
+    margin-left: -18px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    line-height: 20px;
+    display: block;
+}
+
+@media screen and (max-width: 360px) {
+    .labelField {
+        font-size: 16px;
+    }
+    .labelField--Small {
+        font-size: 16px;
+    }
+
+    .field {
+      width: 328px;
+      height: 44px;
+    }
+    .field--Small {
+        width: 328px;
+        height: 44px;
+    }
+    .fieldInput {
+        font-size: 16px;
+    }
+    .fieldInput--Small {
+        font-size: 16px;
+    }
+
+    .complexField {
+        width: 288px;
+        font-size: 16px;
+    }
+    .complexField--Small {
+        width: 288px;
+        font-size: 16px;
+    }
 }

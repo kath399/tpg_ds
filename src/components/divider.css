@@ -1,0 +1,24 @@
+.divider {
+    border-top: 1px solid #BEBEBE61;
+    width: 580px;
+}
+
+.divider--LightGrey {
+    border-top: 1px solid #ECEDED;
+}
+
+.divider--MidGrey {
+    border-top: 1px solid #BEBEBE61;
+}
+
+.divider--DarkGrey {
+    border-top: 1px solid #BEBEBE;
+}
+
+.divider--Success {
+    border-top: 1px solid #008A00;
+}
+
+.divider--Incomplete {
+    border-top: 1px solid #BEBEBE;
+}

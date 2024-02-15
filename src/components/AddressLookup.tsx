@@ -31,15 +31,6 @@ export const AddressLookup =({
 
     return (
         <div>
-            <Textfield
-                id = 'AddressLookup'
-                complex= { true }
-                state= 'enabled'
-                label= 'Home Address'
-                error= {errorAddress}
-                errortext= {errorAddressText}
-                suggestions={addresses}
-            />
             <br/>
             
         </div>

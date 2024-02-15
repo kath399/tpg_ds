@@ -1,21 +1,26 @@
 @font-face {
-    font-family: 'Vodafone';
-      src: url('../fonts/Vodafone_Rg_W.eot'); /* IE9 Compat Modes */
-      src: url('../fonts/Vodafone_Rg_W.eot') format('embedded-opentype'), /* IE6-IE8 */
-          url('../fonts/Vodafone_Rg_W.woff2') format('woff2'), /* Super Modern Browsers */
-          url('../fonts/Vodafone_Rg_W.woff') format('woff'), /* Pretty Modern Browsers */
-          url('../fonts/Vodafone_Rg.ttf')  format('truetype'); /* Safari, Android, iOS */
-      font-weight: 600;
-      font-style: normal;
-  }
+    font-family: Vodafone;
+    src: url(../fonts/Vodafone_Rg_W.woff);
+}
+
+@font-face {
+    font-family: Vodafone;
+    src: url(../fonts/Vodafone_Bd_W.woff);
+    font-weight: bold;
+}
 
 .link {
-    font-family: 'Vodafone';
+    font-family: Vodafone;
     font-size: 18px;
     color: rgba(13, 13, 13, 1);
     display: flex;
     align-items: center;
     border: none;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: rgba(13, 13, 13, 1);
 }
 
 .link:focus {
@@ -23,6 +28,11 @@
     border: 2px solid rgba(0, 150, 173, 1);
     border-radius: 4px;
     padding: 2px;
+}
+
+.link:active {
+    color: rgba(195, 0, 0, 1);
+    border: transparent;
 }
 
 .link--Large {
@@ -47,4 +57,13 @@
 .link--Disabled {
     color: rgba(195, 0, 0, 1);
     opacity: 38%;
+}
+
+@media screen and (max-width: 360px) {
+    .link--Large {
+        font-size: 16px;
+    }
+    .link--Small {
+        font-size: 16px;
+    }
 }

@@ -64,17 +64,15 @@ export const Dropdown = ({
       <div>
         <div
           className={[
-            `dropTextfield`, `dropTextfield-${State}`, 
-            `dropTextfield-${dropdownState}`, 
+            `dropTextfield`, 
+            `dropTextfield--${Size}`,
+            `dropTextfield--${State}`, 
+            `dropTextfield--${dropdownState}`, 
             isDropdownOpen && 'open'
           ].join(' ')}
           onClick={() => {
             toggleDropdown();
             setDropdownState('Active');
-          }}
-          style={{
-            width: ((Size==='Small') || (window.innerWidth < 768)) ? '328px' : '480px', 
-            height: ((Size==='Small') || (window.innerWidth < 768)) ? '44px' : '48px'
           }}
         >
           <div className='selectedOption'>

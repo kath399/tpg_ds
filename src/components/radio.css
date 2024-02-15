@@ -1,24 +1,17 @@
-@font-face {
-    font-family: 'Vodafone';
-      src: url('../fonts/Vodafone_SBd_W.eot'); /* IE9 Compat Modes */
-      src: url('../fonts/Vodafone_SBd_W.eot') format('embedded-opentype'), /* IE6-IE8 */
-          url('../fonts/Vodafone_SBd_W.woff2') format('woff2'), /* Super Modern Browsers */
-          url('../fonts/Vodafone_SBd_W.woff') format('woff'), /* Pretty Modern Browsers */
-          url('../fonts/Vodafone_SBd.ttf')  format('truetype'); /* Safari, Android, iOS */
-      font-weight: 600;
-      font-style: normal;
+font-face {
+    font-family: Vodafone;
+    src: url(../fonts/Vodafone_Rg_W.woff);
   }
-
+  
 .container {
+    font-family: Vodafone;
+    font-size: 18px;
     display: flex;
     align-items: center;
     position: relative;
     padding-left: 35px;
     padding-top: 4px;
     margin-bottom: 16px;
-    cursor: pointer;
-    font-family: 'Vodafone';
-    font-size: 18px;
     cursor: pointer;
     user-select: none;
 }
@@ -47,6 +40,7 @@
     background-color: white;
     border-radius: 100%;
     border: 1px solid #BEBEBE;
+    margin-bottom: 16px;
 }
 
 .checkmarkInverse {
@@ -62,29 +56,17 @@
     border: 1px solid white;
 }
 
-/* ON MOUSE-OVER, ADD A GREY BACKGROUND COLOR */
+/* STYLE FOR HOVER STATE */
 .container:hover input ~ .checkmark {
-    background-color: white;
-    top: 0;
-    left: 0;
-    margin-top: 0px;
-    margin-left: 0px;
-    width: 24px;
-    height: 24px;
-    opacity: 0.2;
-    border: 2px solid #BEBEBE;
+    outline-width: 4px;
+    outline-style: solid;
+    outline-color: rgba(13, 13, 13, 0.15);
 }
 
-.checkmark--hover {
-    background-color: white;
-    top: 0;
-    left: 0;
-    margin-top: 0px;
-    margin-left: 0px;
-    width: 24px;
-    height: 24px;
-    opacity: 0.2;
-    border: 2px solid #BEBEBE;
+.checkmark--Hover {
+    outline-width: 4px;
+    outline-style: solid;
+    outline-color: rgba(13, 13, 13, 0.15);
 }
 
   /* WHEN THE RADIO BUTTON IS CHECKED, ADD A BLUE BACKGROUND */
@@ -144,15 +126,15 @@
 
 /* STYLE FOR FOCUS STATE */
 .container input:focus ~ .checkmark {
-    top: 0;
-    left: 0;
-    border: 2px solid #0096AD;
+    outline-width: 4px;
+    outline-style: solid;
+    outline-color: rgba(0, 150, 173, 1);
 }
 
-.checkmark--focus {
-    top: 0;
-    left: 0;
-    border: 2px solid #0096AD;
+.checkmark--Focus {
+  outline-width: 4px;
+  outline-style: solid;
+  outline-color: rgba(0, 150, 173, 1);
 }
 
 /* STYLE FOR DISABLED STATE */

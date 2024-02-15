@@ -1,0 +1,123 @@
+@font-face {
+    font-family: Vodafone;
+    src: url(../fonts/Vodafone_Rg_W.woff);
+}
+
+@font-face {
+    font-family: Vodafone;
+    src: url(../fonts/Vodafone_Bd_W.woff);
+    font-weight: bold;
+}
+
+
+.footer {
+    font-family: Vodafone;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1440px;
+    height: 172px;
+    background-color: black;
+    color: white;
+}
+
+.content {
+    width: 1180px;
+    font-size: 18px;
+    padding: 32px 0px;
+}
+
+.footerDiv {
+    border-top: 1px solid #ECEDED;
+    width: fill;
+    margin: 32px 0px;
+}
+
+.footer--Tablet {
+    width: 768px;
+    height: 186px;
+}
+
+.content--Tablet {
+    width: 720px;
+    font-size: 16px;
+    padding: 32px 0px;
+}
+
+.footerDiv--Tablet {
+    margin: 32px 0px;
+}
+
+.footer--Mobile {
+    width: 360px;
+    height: 180px;
+}
+
+.content--Mobile {
+    width: 328px;
+    font-size: 16px;
+    padding: 24px 0px;
+    line-height: 20px;
+}
+
+.footerDiv--Mobile {
+    margin: 24px 0px;
+}
+
+
+@media screen and (max-width: 360px) {
+    .footer {
+        width: 360px;
+        height: 180px;
+    }
+    .content {
+        width: 328px;
+        font-size: 16px;
+        padding: 24px 0px;
+        line-height: 20px;
+    }
+    .footerDiv {
+        margin: 24px 0px;
+    }
+    .footer--Tablet {
+        width: 360px;
+        height: 180px;
+    }
+    .content--Tablet {
+        width: 328px;
+        font-size: 16px;
+        padding: 24px 0px;
+        line-height: 20px;
+    }
+    .footerDiv--Tablet {
+        margin: 24px 0px;
+    }
+}
+
+@media screen and (min-width: 361px) and (max-width: 768px) {
+    .footer {
+        width: 768px;
+        height: 186px;
+    }
+    .content {
+        width: 720px;
+        font-size: 16px;
+        padding: 32px 0px;
+    }
+    .footerDiv {
+        margin: 32px 0px;
+    }
+    .footer--Mobile {
+        width: 360px;
+        height: 180px;
+    }
+    .content--Mobile {
+        width: 328px;
+        font-size: 16px;
+        padding: 24px 0px;
+        line-height: 20px;
+    }
+    .footerDiv--Mobile {
+        margin: 24px 0px;
+    }
+}
