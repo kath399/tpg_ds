@@ -41,7 +41,7 @@ font-face {
 }
 
 /* CREATE CUSTOM CHECKBOX */
-.checkmark {
+.checkboxMark {
   position: absolute;
   top: 0;
   left: 0;
@@ -53,60 +53,60 @@ font-face {
 }
 
 /* STYLE FOR HOVER STATE */
-.checkContainer:hover input ~ .checkmark {
+.checkContainer:hover input ~ .checkboxMark {
   outline-width: 4px;
   outline-style: solid;
   outline-color: rgba(13, 13, 13, 0.15);
 }
 
-.checkmark--Hover {
+.checkboxMark--Hover {
   outline-width: 4px;
   outline-style: solid;
   outline-color: rgba(13, 13, 13, 0.15);
 }
 
 /* STYLE FOR CHECKED STATE */
-.checkContainer input:Checked ~ .checkmark {
+.checkContainer input:Checked ~ .checkboxMark {
   background-color: rgba(0, 105, 124, 1);
   border: 1px solid rgba(0, 105, 124, 1);
 }
 
 /* STYLE FOR FOCUS STATE */
-.checkContainer input:focus ~ .checkmark {
+.checkContainer input:focus ~ .checkboxMark {
   outline-width: 4px;
   outline-style: solid;
   outline-color: rgba(0, 150, 173, 1);
 }
 
-.checkmark--Focus {
+.checkboxMark--Focus {
   outline-width: 4px;
   outline-style: solid;
   outline-color: rgba(0, 150, 173, 1);
 }
 
 /* STYLE FOR DISABLED STATE */
-.checkContainer input:disabled ~ .checkmark {
+.checkContainer input:disabled ~ .checkboxMark {
   opacity: 0.38;
 }
 
 /* STYLE FOR ERROR STATE */
-.checkmark--Error {
+.checkboxMark--Error {
   border: 1px solid rgba(189, 0, 0, 1);
 }
 
-/* CREATE CHECKMARK/INDICATOR (HIDDEN WHEN NOT CHECKED) */
-.checkmark:after {
+/* CREATE checkboxMark/INDICATOR (HIDDEN WHEN NOT CHECKED) */
+.checkboxMark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* SHOW CHECKMARK WHEN CHECKED */
-.checkContainer input:checked ~ .checkmark:after {
+/* SHOW checkboxMark WHEN CHECKED */
+.checkContainer input:checked ~ .checkboxMark:after {
   display: block;
 }
 
-/* STYLE CHECKMARK/INDICATOR */
+/* STYLE checkboxMark/INDICATOR */
 .image-icon {
   display: block;
   margin: auto;

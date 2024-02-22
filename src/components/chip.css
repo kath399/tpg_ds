@@ -1,0 +1,60 @@
+font-face {
+    font-family: Vodafone;
+    src: url(../fonts/Vodafone_Rg_W.woff);
+}
+
+.chip {
+    font-family: Vodafone;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 999px;
+}
+
+.chip--Small {
+    font-size: 18px;
+}
+
+.chip--Hover {
+    background-color: #0D0D0D26;
+}
+
+.chip:hover {
+    background-color: #0D0D0D26;
+}
+
+.chip--Focus {
+    background-color: #0D0D0D26;
+    border: 2px solid white;
+    outline: 2px solid #0096AD; 
+}
+
+.chip:focus {
+    background-color: #0D0D0D26;
+    border: 2px solid white;
+    outline: 2px solid #0096AD; 
+}
+
+.chip--Pressed {
+    color: white;
+    background-color: #E60000;
+    width: 125px;
+    background-image: url(./assets/Icon_white2.svg);
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+    background-position-y: 50%;
+}
+
+.chip:active {
+  color: white;
+  background-color: #E60000;
+  width: 125px;
+  background-image: url(./assets/Icon_white2.svg);
+  background-repeat: no-repeat;
+  background-position-x: 85%;
+  background-position-y: 50%;
+}

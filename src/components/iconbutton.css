@@ -1,0 +1,91 @@
+.iconbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E60000;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 999px;
+}
+
+.iconbutton--Small {
+    width: 44px;
+    height: 44px;
+}
+
+.iconbutton--Primary {
+    background-color: #E60000;
+    border: none;
+}
+
+.iconbutton--Tertiary {
+    background-color: transparent;
+    border: 1px solid #0D0D0D;
+}
+
+/* STYLING FOR HOVER STATES */
+.iconbutton--Primary--Hover {
+    background-color: #C30000;
+}
+
+.iconbutton--Primary:hover {
+    background-color: #C30000;
+}
+
+.iconbutton--Tertiary--Hover {
+    background-color: rgba(13, 13, 13, 0.15);
+}
+
+.iconbutton--Tertiary:hover {
+    background-color: rgba(13, 13, 13, 0.15);
+}
+
+/* STYLING FOR FOCUS STATES */
+.iconbutton--Primary--Focus {
+    background-color: #C30000;
+    border: 2px solid white;
+    outline: 2px solid #0096AD; 
+}
+
+.iconbutton--Primary:focus {
+    background-color: #C30000;
+    border: 2px solid white;
+    outline: 2px solid #0096AD; 
+}
+.iconbutton--Tertiary--Focus {
+    background-color: rgba(13, 13, 13, 0.15);
+    border: 2px solid white;
+    outline: 2px solid #0096AD; 
+}
+
+.iconbutton--Tertiary:focus {
+    background-color: rgba(13, 13, 13, 0.15);
+    border: 2px solid white;
+    outline: 2px solid #0096AD; 
+}
+/* STYLING FOR PRESSED STATES */
+.iconbutton--Primary--Pressed {
+    background-color: #A10000;
+}
+
+.iconbutton--Primary:active {
+  background-color: #A10000;
+}
+
+.iconbutton--Tertiary--Pressed {
+    background-color: rgba(13, 13, 13, 0.30);
+}
+
+.iconbutton--Tertiary:active {
+    background-color: rgba(13, 13, 13, 0.30);
+}
+
+/* STYLING FOR DISABLED STATES */
+.iconbutton--Primary--Disabled {
+    opacity: 38%;
+}
+
+.iconbutton--Tertiary--Disabled {
+    opacity: 38%;
+}

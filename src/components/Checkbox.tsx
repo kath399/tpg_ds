@@ -56,18 +56,6 @@ export const Checkbox: React.FC<CheckboxProps> = ({
     marginBottom: Inline ? '0' : '16px',
   }
 
-  let Disabled:boolean = false;
-  if(State == 'Disabled') {
-    Disabled = true
-  } else {
-    Disabled = false
-  }
-
-  let Opacity:string = '1';
-  if(Disabled == true) {
-    Opacity = '0.38'
-  }
-
   let labelColor:string = 'black';
   if(Inverse == true) {
     labelColor = 'white'
@@ -82,15 +70,15 @@ export const Checkbox: React.FC<CheckboxProps> = ({
             <div style={{ display: 'block' }}>
               <label id={uniqueId} className='checkContainer'>
                 <input
-                  type="checkbox"
-                  disabled={Disabled}
+                  type='checkbox'
+                  disabled={(State == 'Disabled')}
                   checked={checkboxStates[i]}
                   onChange={() => handleCheckboxClick(i)}
                 />
-                <span className={['checkmark', `checkmark--${State}`].join(' ')}>
+                <span className={['checkboxMark', `checkboxMark--${State}`].join(' ')}>
                   {checkboxStates[i] && <img src={checkIcon} alt="Check Icon" className="image-icon" />}
                 </span>
-                {ShowText && (<text style={{ color: labelColor, opacity: Opacity }}>{Text}</text>)}
+                {ShowText && (<text style={{ color: labelColor, opacity: (State==='Disabled') ? '0.38' : '1' }}>{Text}</text>)}
               </label>
               {ShowError && (<text style={{ color: 'rgba(189, 0, 0, 1)', fontFamily:'Vodafone', marginTop: '4px', fontSize: '14px' }}>{ErrorText}</text>)}
             </div>

@@ -1,0 +1,112 @@
+
+@font-face {
+  font-family: Vodafone;
+  src: url(../fonts/Vodafone_Rg_W.woff);
+}
+
+.toggleDiv {
+  display: inline-flex;
+  font-family: Vodafone;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.toggleDiv--Disabled {
+  opacity: 0.38;
+}
+
+.switch {
+  font-family: Vodafone;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0D0D0D;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider--WithIcon:before {
+  background-image: url(./assets/Icon_black.svg);
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.toggle:checked + .slider {
+  background-color: #00697C;
+}
+
+.toggle:focus + .slider {
+  outline: 4px solid #BEBEBE;
+}
+
+.toggle:checked:focus + .slider {
+  outline: 4px solid #0096AD;
+}
+
+.toggle--Focus + .slider {
+  outline: 4px solid #BEBEBE;
+}
+
+.toggle--Focus--Checked + .slider {
+  outline: 4px solid #0096AD;
+}
+
+.toggle:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+.toggle:checked + .slider--WithIcon:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+  background-image: url(./assets/IconBlue.svg);
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.toggle:disabled {
+  opacity: 0.38
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
