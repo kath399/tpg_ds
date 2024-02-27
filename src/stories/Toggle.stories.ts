@@ -63,18 +63,18 @@ export const NoIcon: Story = {
 };
 
 export const WithIcon: Story = {
-    args: { 
-        Type: 'With icon',
-        OnOff: true,
-        State: 'Active',
-        ShowLabel: true,
-        Label: 'Toggle label'
+  args: { 
+    Type: 'With icon',
+    OnOff: true,
+    State: 'Active',
+    ShowLabel: true,
+    Label: 'Toggle label'
+  },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?type=design&node-id=6139-2413&mode=dev'
     },
-    parameters: {
-      design: {
-        type: 'figma',
-        url: 'https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?type=design&node-id=6139-2413&mode=dev'
-      },
-    },
-  };
+  },
+};
   

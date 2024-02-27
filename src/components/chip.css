@@ -4,19 +4,25 @@ font-face {
 }
 
 .chip {
+    display: flex;
+    align-items: center;
+    min-width: 100px;
+    background-color: white;
+    padding: 12px 24px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 999px;
     font-family: Vodafone;
     font-weight: bold;
     font-size: 20px;
-    display: flex;
-    align-items: center;
-    background-color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 999px;
+    line-height: 24px;
 }
 
 .chip--Small {
+    min-width: 100px;
     font-size: 18px;
+    line-height: 20px;
 }
 
 .chip--Hover {
@@ -42,11 +48,17 @@ font-face {
 .chip--Pressed {
     color: white;
     background-color: #E60000;
-    width: 125px;
+    min-width: 100px;
     background-image: url(./assets/Icon_white2.svg);
+    background-size: 24px;
     background-repeat: no-repeat;
-    background-position-x: 85%;
-    background-position-y: 50%;
+    background-position: right 24px center;
+}
+
+.chip--Pressed--Small {
+    min-width: 100px;
+    background-size: 20px;
+    background-position: right 24px center;    
 }
 
 .chip:active {
@@ -57,4 +69,23 @@ font-face {
   background-repeat: no-repeat;
   background-position-x: 85%;
   background-position-y: 50%;
+  outline: none;
+}
+
+.chip--Small:active {
+    color: white;
+    background-color: #E60000;
+    background-image: url(./assets/Icon_white2.svg);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position-x: 80%;
+    background-position-y: 50%;
+    width: 117px;
+    outline: none;
+}
+
+.chipHeading {
+    font-family: Vodafone;
+    font-size: 16px;
+    padding-bottom: 16px;
 }

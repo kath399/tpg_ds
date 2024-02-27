@@ -1,0 +1,45 @@
+font-face {
+    font-family: Vodafone;
+    src: url(../fonts/Vodafone_Rg_W.woff);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    height: 72px;
+    width: 1440px;
+    padding: 12px 0px;
+    border: none;
+    font-family: Vodafone;
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.navigation--Tablet {
+    display: flex;
+    width: 768px;
+    padding: 12px, 24px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navigation--Mobile {
+    display: flex;
+    width: 328px;
+    padding: 8px 16px;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 360px) {
+    .navigation {
+        width: 360px;
+        padding: 12px 24px;
+    }
+    .navigation--Mobile {
+        width: 360px;
+        padding: 12px 24px;
+    }
+}

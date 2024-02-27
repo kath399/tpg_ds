@@ -61,15 +61,19 @@
   background-position-y: center;
 }
 
+.toggle:active {
+  outline: none;
+}
+
 .toggle:checked + .slider {
   background-color: #00697C;
 }
 
-.toggle:focus + .slider {
+.toggle:focus-visible + .slider {
   outline: 4px solid #BEBEBE;
 }
 
-.toggle:checked:focus + .slider {
+.toggle:checked:focus-visible + .slider {
   outline: 4px solid #0096AD;
 }
 

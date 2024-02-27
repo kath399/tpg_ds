@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Chip } from '../components/Chip';
+import { within, userEvent } from '@storybook/testing-library';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -36,6 +37,7 @@ const meta = {
         options: ['Default', 'Hover', 'Focus', 'Pressed'],
         control: 'radio'
     },
+    
   },
 } satisfies Meta<typeof Chip>;
 
@@ -43,15 +45,44 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Main: Story = {
+export const ChipSingle: Story = {
   args: { 
     State: 'Default',
-    Size: 'Large'
+    Size: 'Large',
+    LabelText: 'Label'
   },
   parameters: {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?type=design&node-id=5832-8172&mode=dev'
     },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const chip = canvas.getByRole('button');
+    await userEvent.click(chip);
+  },
+};
+
+export const ChipList: Story = {
+  args: { 
+    Size: 'Large',
+    ShowChip02: true,
+    ShowChip03: true,
+    ShowChip04: true,
+    ShowChip05: true,
+    ShowChip06: true,
+    Single: false,
+  },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?type=design&node-id=5832-8288&mode=dev'
+    },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const chip = canvas.getByRole('button');
+    await userEvent.click(chip);
   },
 };

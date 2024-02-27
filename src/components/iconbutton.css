@@ -44,25 +44,25 @@
 /* STYLING FOR FOCUS STATES */
 .iconbutton--Primary--Focus {
     background-color: #C30000;
-    border: 2px solid white;
     outline: 2px solid #0096AD; 
+    outline-offset: 2px;
 }
 
 .iconbutton--Primary:focus {
     background-color: #C30000;
-    border: 2px solid white;
     outline: 2px solid #0096AD; 
+    outline-offset: 2px;
 }
 .iconbutton--Tertiary--Focus {
     background-color: rgba(13, 13, 13, 0.15);
-    border: 2px solid white;
     outline: 2px solid #0096AD; 
+    outline-offset: 2px;
 }
 
 .iconbutton--Tertiary:focus {
     background-color: rgba(13, 13, 13, 0.15);
-    border: 2px solid white;
     outline: 2px solid #0096AD; 
+    outline-offset: 2px;
 }
 /* STYLING FOR PRESSED STATES */
 .iconbutton--Primary--Pressed {
@@ -71,6 +71,7 @@
 
 .iconbutton--Primary:active {
   background-color: #A10000;
+  outline: none;
 }
 
 .iconbutton--Tertiary--Pressed {
@@ -79,6 +80,7 @@
 
 .iconbutton--Tertiary:active {
     background-color: rgba(13, 13, 13, 0.30);
+    outline: none;
 }
 
 /* STYLING FOR DISABLED STATES */

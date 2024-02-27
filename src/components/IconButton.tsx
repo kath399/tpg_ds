@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './iconbutton.css';
 import PrimIcon from './assets/Icon_white2.svg'
-import TertIcon from './assets/Icon_black.svg'
+import TertIcon from './assets/Icon_0D0D0D.svg'
 
 interface IconButtonProps {
     Size: 'Large' | 'Small';

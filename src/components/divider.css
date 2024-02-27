@@ -4,21 +4,25 @@
 }
 
 .divider--LightGrey {
-    border-top: 1px solid #ECEDED;
+    border-top: 1px solid rgba(236, 237, 237, 1);
 }
 
 .divider--MidGrey {
-    border-top: 1px solid #BEBEBE61;
+    border-top: 1px solid rgba(190, 190, 190, 0.38);
 }
 
 .divider--DarkGrey {
-    border-top: 1px solid #BEBEBE;
+    border-top: 1px solid rgba(190, 190, 190, 1);
 }
 
 .divider--Success {
-    border-top: 1px solid #008A00;
+    border-top: 1px solid rgba(0, 138, 0, 1);
 }
 
 .divider--Incomplete {
-    border-top: 1px solid #BEBEBE;
+    border-top: 1px solid rgba(190, 190, 190, 1);
+}
+
+.divider--Dash {
+    border-top: 1px dashed rgba(190, 190, 190, 1);
 }

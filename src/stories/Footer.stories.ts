@@ -50,7 +50,7 @@ export const Main: Story = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?type=design&node-id=5471-36613&mode=dev'
+      url: 'https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?type=design&node-id=1351-51572&mode=design&t=5JmT8VTJQp4A1llb-4'
     },
   },
 };

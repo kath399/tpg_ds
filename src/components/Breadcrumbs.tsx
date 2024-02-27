@@ -6,21 +6,24 @@ import ChevronLeft from './assets/chevron-left.svg'
 interface BreadcrumbsProps {
     Size: 'Large' | 'Small';
     State: 'Default' | 'Focus' | 'Hover' | 'Pressed';
-    Text?: string;
 }
 
 export const Breadcrumbs = ({
     Size = 'Large',
     State = 'Default',
-    Text,
 }: BreadcrumbsProps) => {
-    const [home, setHome] = useState(true)
+    const [p0, setP0] = useState(true)
     const [p1, setP1] = useState(true)
     const [p2, setP2] = useState(true)
     const [p3, setP3] = useState(true)
+    const [s0, setS0] = useState(true)
+
+    const handleBackClick = () => {
+        setS0(false)
+    }
 
     const handleHomeClick = () => {
-        setHome(false)
+        setP0(false)
         setP1(false)
         setP2(false)
         setP3(false)
@@ -40,22 +43,24 @@ export const Breadcrumbs = ({
 
     return(
         <>
-            {(Size==='Large') && <div className={[`breadcrumbs`, `breadcrumbs--${Size}`].join(' ')}>
+            {(Size==='Large') && p0 && <div className={[`breadcrumbs`, `breadcrumbs--${Size}`].join(' ')}>
                 <div style={{display: 'flex', alignItems: 'center', justifyItems:'center', width: '1180px'}}>
-                    <a onClick={handleHomeClick} style={{textDecoration: 'underline'}}>Home</a>
-                    {home && <img src={ChevronRight} style={{width: '16px', height: '16px', margin: '4px'}}/>}
-                    {p1 && <a onClick={handleP1Click} style={{textDecoration: 'underline'}}>Parent</a>}
+                    {p0 && <a onClick={handleHomeClick} style={{textDecoration: 'underline', cursor: 'pointer'}}>Parent</a>}
+                    {p0 && <img src={ChevronRight} style={{width: '16px', height: '16px', margin: '4px'}}/>}
+                    {p1 && <a onClick={handleP1Click} style={{textDecoration: 'underline', cursor: 'pointer'}}>Parent</a>}
                     {p1 && <img src={ChevronRight} style={{width: '16px', height: '16px', margin: '4px'}}/>}
-                    {p2 && <a onClick={handleP2Click} style={{textDecoration: 'underline'}}>Parent</a>}
+                    {p2 && <a onClick={handleP2Click} style={{textDecoration: 'underline', cursor: 'pointer'}}>Parent</a>}
                     {p2 && <img src={ChevronRight} style={{width: '16px', height: '16px', margin: '4px'}}/>}
-                    {p3 && <a onClick={handleP3Click} style={{textDecoration: 'underline'}}>Parent</a>}
+                    {p3 && <a onClick={handleP3Click} style={{textDecoration: 'underline', cursor: 'pointer'}}>Parent</a>}
                     {p3 && <img src={ChevronRight} style={{width: '16px', height: '16px', margin: '4px'}}/>}
-                    {home && <text>Current page</text>}
+                    {p0 && <text>Current page</text>}
                 </div>
             </div>}
-            {(Size==='Small') && <div className={[`breadcrumbs`, `breadcrumbs--${Size}`].join(' ')}>
-                <img src={ChevronLeft} style={{width: '20px', height: '20px', margin: '4px'}}/>
-                <text>Back button</text>
+            {(Size==='Small') && s0 && <div className={[`breadcrumbs`, `breadcrumbs--Small`].join(' ')}>
+                <a style={{cursor: 'pointer', display: 'flex', alignItems: 'center'}} onClick={handleBackClick}>
+                    <img src={ChevronLeft} style={{width: '20px', height: '20px', margin: '4px'}}/>
+                    Back button
+                </a>
             </div>}
         </>
     )

@@ -22,18 +22,18 @@ export const Toggle = ({
     setIsChecked(OnOff);
   }, [OnOff]);
 
-  let ToggleType = 'NoIcon';
-  if (Type === 'With icon') {
-    ToggleType = 'WithIcon';
-  }
-
   const handleToggleChange = () => {
     if (State !== 'Disabled') {
       setIsChecked(!isChecked);
     }
   };
 
-  let Checked = 'Checked'
+  let ToggleType = 'NoIcon';
+  if (Type === 'With icon') {
+    ToggleType = 'WithIcon';
+  }
+
+  let Checked
   if(isChecked) {
     Checked = 'Checked'
   } else {
@@ -41,8 +41,8 @@ export const Toggle = ({
   }
 
   return (
-    <div className={['toggleDiv', `toggleDiv--${State}`].join(' ')}>
-      <label className="switch">
+    <label className={['toggleDiv', `toggleDiv--${State}`].join(' ')}>
+      <div className="switch">
         <input
           type="checkbox"
           className={[
@@ -60,8 +60,8 @@ export const Toggle = ({
             `slider--${ToggleType} round`,
           ].join(' ')}
         ></span>
-      </label>
-      {ShowLabel && <span style={{ marginLeft: '8px' }}>{Label}</span>}
-    </div>
+      </div>
+      {ShowLabel && <text style={{ marginLeft: '8px' }}>{Label}</text>}
+    </label>
   );
 };

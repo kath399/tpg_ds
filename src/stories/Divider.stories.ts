@@ -33,7 +33,7 @@ const meta = {
   argTypes: {
     //backgroundColor: { control: 'color' }, 
     Colour: {
-        options: ['LightGrey', 'MidGrey', 'DarkGrey', 'Success', 'Incomplete'],
+        options: ['LightGrey', 'MidGrey', 'Success', 'Incomplete', 'Dash', 'DarkGrey'],
         control: 'radio'
     },
   },

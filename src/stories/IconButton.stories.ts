@@ -46,9 +46,9 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: { 
-    State: 'Default',
+    Size: 'Large',
     Type: 'Primary',
-    Size: 'Large'
+    State: 'Default',
   },
   parameters: {
     design: {
@@ -65,9 +65,9 @@ export const Primary: Story = {
 
 export const Tertiary: Story = {
     args: { 
-      State: 'Default',
+      Size: 'Large',
       Type: 'Tertiary',
-      Size: 'Large'
+      State: 'Default',
     },
     parameters: {
       design: {
