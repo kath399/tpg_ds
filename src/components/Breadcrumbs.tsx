@@ -44,7 +44,7 @@ export const Breadcrumbs = ({
     return(
         <>
             {(Size==='Large') && p0 && <div className={[`breadcrumbs`, `breadcrumbs--${Size}`].join(' ')}>
-                <div style={{display: 'flex', alignItems: 'center', justifyItems:'center', width: '1180px'}}>
+                <div style={{display: 'flex', alignItems: 'center'}}>
                     {p0 && <a onClick={handleHomeClick} style={{textDecoration: 'underline', cursor: 'pointer'}}>Parent</a>}
                     {p0 && <img src={ChevronRight} style={{width: '16px', height: '16px', margin: '4px'}}/>}
                     {p1 && <a onClick={handleP1Click} style={{textDecoration: 'underline', cursor: 'pointer'}}>Parent</a>}

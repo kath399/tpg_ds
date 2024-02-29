@@ -8,12 +8,12 @@ font-face {
     font-size: 16px;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #F2F2F2;
-    width: fill;
+    width: auto;
     height: 48px;
     padding: 12px 24px;
     border: none;
-    justify-content: center;
 }
 
 .breadcrumbs--Small {

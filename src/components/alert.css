@@ -9,6 +9,18 @@
     font-weight: bold;
 }
 
+.containerSize {
+    width: 780px;
+}
+
+.containerSize--Tablet {
+    width: 474px;
+}
+
+.containerSize--Mobile {
+    width: 328px;
+}
+
 .alert {
     font-family: Vodafone;
     font-size: 18px;
@@ -145,6 +157,12 @@
 
 /* RESPONSIVE STYLING */
 @media screen and (max-width: 360px) {
+    .containerSize {
+        width: 328px;
+    }
+    .containerSize--Tablet {
+        width: 328px;
+    }
     .alert {
         width: 328px;
     }
@@ -163,6 +181,12 @@
 }
 
 @media screen and (min-width: 361px) and (max-width: 768px) {
+    .containerSize {
+        width: 474px;
+    }
+    .containerSize--Mobile {
+        width: 328px;
+    }
     .alert {
         width: 474px;
     }

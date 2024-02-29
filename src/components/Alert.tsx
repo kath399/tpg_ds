@@ -28,47 +28,54 @@ export const Alert = ({
     return(
         <div 
             className={[
-                'alert', 
-                `alert--${Type}`, 
-                `alert--${Size}`, 
-                `alert--${Size}--${State}`
-            ].join(' ')} 
-            style={{ 
-                display: (Type==='Inline') ? 'flex' : 'block' 
-            }}
+                `containerSize`, 
+                `containerSize--${Size}`
+            ].join(' ')}
         >
-            {CloseButton && 
-                <img 
-                    src={(Type==='Stacked') ? IconWhite : Icon} 
-                    alt='Icon' 
-                    style={{
-                        position: 'absolute', 
-                        right:'16px', 
-                        top: (Type==='Inline') ? '20px' : '11px'
-                    }}
-                />
-            }
-            <div className={[`block`, `block--${Type}`, `block--${State}`].join(' ')}>
-                <img src={IconWhite} alt='Icon' style={{ marginLeft:'auto', marginRight: 'auto' }}/> 
-            </div>
             <div 
                 className={[
-                    'textBox', 
-                    `textBox--${Type}`, 
-                    `textBox--${Type}--${Size}`
+                    'alert', 
+                    `alert--${Type}`, 
+                    `alert--${Size}`, 
+                    `alert--${Size}--${State}`
                 ].join(' ')} 
+                style={{ 
+                    display: (Type==='Inline') ? 'flex' : 'block' 
+                }}
             >
-                <div 
-                    style={{ 
-                        marginBottom: '16px', 
-                        fontWeight: 'bold' 
-                    }}
-                >
-                    {ShowHeading && Heading}
+                {CloseButton && 
+                    <img 
+                        src={(Type==='Stacked') ? IconWhite : Icon} 
+                        alt='Icon' 
+                        style={{
+                            position: 'absolute', 
+                            right:'16px', 
+                            top: (Type==='Inline') ? '20px' : '11px'
+                        }}
+                    />
+                }
+                <div className={[`block`, `block--${Type}`, `block--${State}`].join(' ')}>
+                    <img src={IconWhite} alt='Icon' style={{ marginLeft:'auto', marginRight: 'auto' }}/> 
                 </div>
-                {BodyText}
-                <div style={{paddingTop: '24px'}}>
-                    {Button && <button className={['AlertButton', `AlertButton--${Size}`].join(' ')}>Button</button>}
+                <div 
+                    className={[
+                        'textBox', 
+                        `textBox--${Type}`, 
+                        `textBox--${Type}--${Size}`
+                    ].join(' ')} 
+                >
+                    <div 
+                        style={{ 
+                            marginBottom: '16px', 
+                            fontWeight: 'bold' 
+                        }}
+                    >
+                        {ShowHeading && Heading}
+                    </div>
+                    {BodyText}
+                    <div style={{paddingTop: '24px'}}>
+                        {Button && <button className={['AlertButton', `AlertButton--${Size}`].join(' ')}>Button</button>}
+                    </div>
                 </div>
             </div>
         </div>

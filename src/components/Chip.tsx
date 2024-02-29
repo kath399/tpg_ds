@@ -39,7 +39,7 @@ export const Chip = ({
             >
                 <div 
                     style={{
-                        marginRight: (State==='Pressed') ? '32px' : '0px'
+                        marginRight: (State==='Pressed') ? '32px' : '0px',
                     }}
                 >
                     {LabelText}
