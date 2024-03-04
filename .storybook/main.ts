@@ -35,7 +35,7 @@ const config: StorybookConfig = {
     "@storybook/addon-themes",
     "storybook-multilevel-sort",
     "@storybook/addon-knobs",
-    { name: 'storybook-design-token', options: {preserveCSSVars: true} }, 
+    { name: 'storybook-design-token', options: {preserveCSSVars: true} },
     '@storybook/addon-a11y',
     {
       name: '@storybook/addon-docs',
@@ -46,6 +46,7 @@ const config: StorybookConfig = {
         configureJSX: true,
       },
     },
+    "@storybook/addon-styling-webpack"
   ],
   framework: {
     name: "@storybook/react-webpack5",
