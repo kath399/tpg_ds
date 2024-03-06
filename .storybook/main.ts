@@ -46,7 +46,8 @@ const config: StorybookConfig = {
         configureJSX: true,
       },
     },
-    "@storybook/addon-styling-webpack"
+    "@storybook/addon-styling-webpack",
+    "@storybook/addon-postcss",
   ],
   framework: {
     name: "@storybook/react-webpack5",
@@ -58,6 +59,6 @@ const config: StorybookConfig = {
 
   //staticDirs: ["..\\public"],
   // currently ommitted and will prevent Storybook from serving any static assets
-  staticDirs: [],
+  staticDirs: ['../public'],
 };
 export default config;

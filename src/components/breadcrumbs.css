@@ -25,10 +25,10 @@ font-face {
 @media screen and (max-width: 360px) {
     .breadcrumbs {
         width: 360px;
-        padding: 12px 24px;
+        padding: 12px 16px;
     }
     .breadcrumbs--Small {
         width: 360px;
-        padding: 12px 24px;
+        padding: 12px 16px;
     }
 }

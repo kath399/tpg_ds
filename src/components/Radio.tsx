@@ -49,7 +49,7 @@ export const Radio: React.FC<RadioProps> = ({
         <label id={uniqueId} className='container' >
           <input
             type="radio"
-            name='Button'
+            name='Radio'
             checked={Checked}
             onChange={() => onChange('')}
             disabled={Disabled}

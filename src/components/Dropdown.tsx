@@ -77,7 +77,7 @@ export const Dropdown = ({
         >
           <div className='selectedOption'>
             {(State === 'Enabled') ? ' ' : (State === 'Filled') ? 'Selected' : (selectedOption)}
-            <div style={{ marginLeft: 'auto', marginRight: 0, paddingTop: '6px' }}>
+            <div style={{ display: 'flex', marginLeft: 'auto', marginRight: 0 }}>
               <img style={{ marginRight: ShowTooltipIcon ? '12px' : 0}} src={Icon} alt="Icon" />
               {ShowTooltipIcon && <img style={{}} src={TooltipIcon} alt="Tooltip" />}
             </div>

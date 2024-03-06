@@ -3,6 +3,7 @@ import { Title, Subtitle, Description, Primary, Controls, Stories } from '@story
 import { withThemeByClassName, withThemeFromJSXProvider } from "@storybook/addon-themes";
 import type { A11yParameters } from "@storybook/addon-a11y";
 import { Rule, getRules } from "axe-core";
+import '../src/styles.css';
 
 // import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 

@@ -125,15 +125,15 @@
     border-radius: 0px 8px 8px 0px;
     margin-left: auto;
     margin-right: 0;
-    width: 620px;
+    width: 697px;
 }
 
 .textBox--Inline--Tablet {
-    width: 342px;
+    width: 418px;
 }
 
 .textBox--Inline--Mobile {
-    width: 196px;
+    width: 272px;
 }
 
 /* STYLE FOR BUTTON */
@@ -170,10 +170,10 @@
         width: 328px;
     }
     .textBox--Inline {
-        width: 196px;
+        width: 272px;
     }
     .textBox--Inline--Tablet{
-        width: 196px;
+        width: 272px;
     }
     .AlertButton {
         width: fill;
@@ -194,12 +194,12 @@
         width: 328px;
     }
     .textBox--Inline {
-        width: 342px;
+        width: 418px;
     }
     .textBox--Inline--Tablet {
-        width: 342px;
+        width: 418px;
     }
     .textBox--Inline--Mobile {
-        width: 196px;
+        width: 272px;
     }
 }
