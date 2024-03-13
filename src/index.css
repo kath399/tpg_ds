@@ -1,6 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ 
+@layer{
+  @font-face {
+    font-family: 'Vodafone';
+    src: url('./fonts/Vodafone_SBd_W.eot'); /* IE9 Compat Modes */
+    src: url('./fonts/Vodafone_SBd_W.eot') format('embedded-opentype'), /* IE6-IE8 */
+        url('./fonts/Vodafone_SBd_W.woff2') format('woff2'), /* Super Modern Browsers */
+        url('./fonts/Vodafone_SBd_W.woff') format('woff'), /* Pretty Modern Browsers */
+        url('./fonts/Vodafone_SBd.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: 600;
+    font-style: normal;
+  }
+}
 
 body {
   margin: 0;
