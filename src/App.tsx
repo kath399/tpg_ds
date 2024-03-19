@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { Theme, Flex, Text, Button } from '@radix-ui/themes'
+import { Text } from '@radix-ui/themes'
 import * as Popover from '@radix-ui/react-popover';
 import * as RadixCheckbox from '@radix-ui/react-checkbox';
 import { CheckIcon } from '@radix-ui/react-icons';
