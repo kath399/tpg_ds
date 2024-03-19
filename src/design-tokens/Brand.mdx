@@ -1,0 +1,96 @@
+import { Meta } from '@storybook/addon-docs';
+import RedOnWhite from './assets/Red on white.png';
+import WhiteOnRed from './assets/White on red.png';
+import WhiteOnBlack from './assets/White on black.png';
+import BlackOnWhite from './assets/Black on white.png';
+
+<Meta title="Foundation/Brand" />
+
+<style>
+  {`
+  .title {
+    font-size: 64px;
+    font-weight: 600;
+  }
+  .heading-1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .heading-2 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+  }
+  `}
+
+</style>
+
+<div className="title">Brand Logo</div>
+
+<div style={{ height: '48px'}}/>
+
+<div style={{fontSize: '28px' }}>Contents</div>
+<div style={{ height: '16px'}}/>
+<p><a href="#overview" target="_self" className='text'><u>Overview</u></a></p>
+<p><a href="#columnsguttersmargins" target="_self" className='text'><u>Logo Colours</u></a></p>
+<div style={{ height: '48px'}}/>
+
+---
+
+<div style={{ height: '48px'}}/>
+<span id="overview" className='heading-1'> Overview</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="columnsguttersmargins" className='heading-1'>Logo colours</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>The Vodafone logo is available in three colour schemes: red, black, and white. The red version works best on a white or light background. The white version should be used on dark backgrounds. </span>
+<div style={{ height: '32px'}}/>
+<span id="columns" className='heading-2'>Red on white</span> 
+<div style={{ height: '48px'}}/>
+
+<img src={RedOnWhite} alt='' />
+
+<div style={{ height: '32px' }}/>
+
+<div>
+  <text>1 Primary</text>
+  <br/>
+  <text>2 Secondary</text>
+  <br/>
+  <text>3 Icon only</text>
+</div>
+
+<div style={{ height: '48px'}}/>
+---
+<div style={{ height: '48px'}}/>
+<span id="columns" className='heading-2'>White on red</span> 
+<div style={{ height: '32px'}}/>
+
+<img src={WhiteOnRed} alt='' />
+
+<div style={{ height: '48px'}}/>
+
+---
+<div style={{ height: '48px'}}/>
+<span id="columns" className='heading-2'>White on black</span> 
+<div style={{ height: '32px'}}/>
+
+<img src={WhiteOnBlack} alt='' />
+
+<div style={{ height: '48px'}}/>
+---
+<div style={{ height: '48px'}}/>
+<span id="columns" className='heading-2'>Black on white</span> 
+<div style={{ height: '32px'}}/>
+
+<img src={BlackOnWhite} alt='' />
+
+<div style={{ height: '48px'}}/>

@@ -52,18 +52,17 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   let style = (Inline) ? 'inline-block mr-[16px]' : 'block mb-[16px]'
 
   let labelColor = (Inverse) ? 'white' : 'black';
-  if(Inverse == true) {
-    labelColor = 'white'
-  }
 
+  // DYNAMIC STATES
   let hoverState = 'outline-none outline-offset-0 hover:outline-4 hover:outline-[color:var(--transparency-monochrome-150)]'
-  let hover = (State==='Hover') ? 'outline-4 outline-[color:var(--transparency-monochrome-150)]' : ''
   let focusState = 'focus: outline-4 focus:outline-[color:var(--color-dark-aqua-blue-400)]'
-  let focus = (State==='Focus') ? 'outline-4 outline-[color:var(--color-dark-aqua-blue-400)]' : ''
-  let disabledState = (State==='Disabled') ? 'opacity-[.38]' : 'opacity-100'
-  let errorState = (State==='Error') ? 'border-[color:var(--color-light-red-600)]' : 'border-[color:var(--color-monochrome-250)]'
 
-  let checkedState = 'checked:bg-[color:var(--color-light-turquoise-600)]'
+  // STATIC STATES
+  let StaticStates = (State==='Hover') ? 'outline-4 outline-[color:var(--transparency-monochrome-150)]'
+    : (State==='Focus') ? 'outline-4 outline-[color:var(--color-dark-aqua-blue-400)]'
+    : ''
+  let ErrorState = (State==='Error') ? 'border-[color:var(--color-light-red-600)]' : 'border-[color:var(--color-monochrome-250)]'
+  let DisabledState = (State==='Disabled') ? 'opacity-[.38]' : 'opacity-100'
 
   return (
     <div>
@@ -72,9 +71,9 @@ export const Checkbox: React.FC<CheckboxProps> = ({
         return (
           <div className={`${style}`}>
             <div className='block'>
-              <div className={`flex items-center ${disabledState}`}>
+              <div className={`flex items-center ${DisabledState}`}>
                 <RadixCheckbox.Root
-                  className={`flex h-[20px] w-[20px] relative box-border appearance-none items-stretch justify-center rounded-[4px] bg-white border border-1 ${errorState} ${hoverState} ${hover} ${focusState} ${focus}`}
+                  className={`flex h-[20px] w-[20px] relative box-border appearance-none items-stretch justify-center rounded-[4px] bg-white border border-1 ${ErrorState} ${hoverState} ${StaticStates} ${focusState}`}
                   checked={checkboxStates[i]}
                   id={`c${i}`}
                   disabled={(State==='Disabled')}

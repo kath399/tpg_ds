@@ -29,23 +29,4 @@ export const Simple: Story = {
             url: "https://www.figma.com/file/BtunVVjUyt3jJvT40IYBg5/Vodafone-Components?type=design&node-id=896-28676&mode=design&t=Kf2VfR9SgOm0o792-4"
         }
     },
-    play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-  
-      const nameInput = canvas.getByLabelText('Home Address', {
-        selector: 'input',
-      });
-  
-      await userEvent.type(nameInput, '12 ouhouahenj', {
-        delay: 100,
-      });
-
-      /*
-      await expect(
-        canvas.getByText(
-          'Unfortunately'
-        )
-      ).toBeInTheDocument();*/
-
-    },
 }
