@@ -20,7 +20,7 @@ export const Modal = ({
 }: ModalProps) => {
 
     // BREAKPOINTS
-    let modalSize = (Size==='Small') ? 'pb-[24px] pl-[16px] pr-[16px]'
+    let modalSize = (Size==='Small') ? 'h-[480px] absolute bottom-0 pb-[24px] pl-[16px] pr-[16px] rounded-[16px_16px_0px_0px]'
         : 'w-[780px] h-[384px] rounded-[32px] pt-[32px] pl-[64px] pr-[64px]';
     let headSize = (Size==='Small') ? 'text-[28px]' : 'text-[48px]';
     let btnSize = (Size==='Small') ? 'inline-block' : 'flex justify-end';

@@ -47,7 +47,7 @@ const config: StorybookConfig = {
       },
     },
     "@storybook/addon-styling-webpack",
-    "@storybook/addon-postcss",
+    
   ],
   framework: {
     name: "@storybook/react-webpack5",
