@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './accordion.css';
 import Chevron from './Chevrondown.svg';
 
+import * as RadixAccordion from '@radix-ui/react-accordion';
+
 interface AccordionProps {
   Size?: 'Desktop' | 'Tablet' | 'Mobile';
   State?: 'Collapsed' | 'Expanded';
@@ -24,16 +26,24 @@ export const Accordion = ({
   };
 
   return (
-    <div className="accordion">
-      <div className="accordion-header" onClick={toggleAccordion}>
-        <h3>{LabelText}</h3>
-        <img src={Chevron} style={{display: 'flex', alignSelf: 'flex-end'}} alt='Chevron'/>
-      </div>
-      {isOpen && (
-        <div className="accordion-content">
-          {Children}
+    <div>
+      <RadixAccordion.Root 
+        className='bg-white' 
+        type='single' 
+        defaultValue="item-1"
+        collapsible>
+      </RadixAccordion.Root>
+      <div className="accordion">
+        <div className="accordion-header" onClick={toggleAccordion}>
+          <h3>{LabelText}</h3>
+          <img src={Chevron} style={{display: 'flex', alignSelf: 'flex-end'}} alt='Chevron'/>
         </div>
-      )}
+        {isOpen && (
+          <div className="accordion-content">
+            {Children}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
