@@ -24,7 +24,7 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const NoBase: Story = {
   args: {
-    
+    ShowLabelIcon: true
   },
   parameters: {
     design: {
@@ -36,7 +36,7 @@ export const NoBase: Story = {
 
 export const WithBase: Story = {
   args: {
-
+    ShowLabelIcon: true
   },
   parameters: {
     design: {
@@ -48,7 +48,7 @@ export const WithBase: Story = {
 
 export const List: Story = {
   args: {
-
+    ShowLabelIcon: true
   },
   parameters: {
     design: {
@@ -60,7 +60,7 @@ export const List: Story = {
 
 export const PlanCard: Story = {
   args: {
-
+    ShowLabelIcon: true
   },
   parameters: {
     design: {
