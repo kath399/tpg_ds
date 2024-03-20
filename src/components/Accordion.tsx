@@ -28,6 +28,37 @@ export const Accordion = ({
   Children = [['Title', 'Lorem Ipsum'], ['Title', 'Lorem Ipsum']]
 }: AccordionProps) => {
 
+  // BREAKPOINTS
+  let accordionSize = (Size==='Desktop') ? 'w-[1180px]' 
+    : (Size==='Tablet') ? 'w-[720px]'
+    : 'w-[328px]';
+  
+  // ACCORDION GROUP
+  const accordionGroup = []
+  let numberOfAccordions = 4
+  for(let i = 0; i < numberOfAccordions; i++) {
+    accordionGroup.push(          
+      <RadixAccordion.Item value={`item-${i}`}>
+        <RadixAccordion.Header>
+          <RadixAccordion.Trigger className='flex w-[100%]'>
+              {ShowLabelIcon && <img src={BlackIcon} alt='' style={{marginRight: '12px'}}/>}
+              {LabelText}
+              <img src={RedIcon} alt='' style={{marginLeft: 'auto', marginRight: '0'}}/>
+          </RadixAccordion.Trigger>
+        </RadixAccordion.Header>
+        <RadixAccordion.Content>
+          <div className='flex pt-[16px]'>
+            <img src={BlackIcon} alt='' style={{marginRight: '12px'}}/>
+            {TitleText}
+          </div>
+          <div className='mt-[8px]'>
+            {BodyCopy}
+          </div>
+        </RadixAccordion.Content>
+      </RadixAccordion.Item>
+    )
+  }
+
   return (
     <div>
       <RadixAccordion.Root 
@@ -35,24 +66,7 @@ export const Accordion = ({
         type='single' 
         defaultValue="item-1"
         collapsible>
-          <RadixAccordion.Item value='item-1'>
-            <RadixAccordion.Header>
-              <RadixAccordion.Trigger className='flex w-[100%]'>
-                  {ShowLabelIcon && <img src={BlackIcon} alt='' style={{marginRight: '12px'}}/>}
-                  {LabelText}
-                  <img src={RedIcon} alt='' style={{marginLeft: 'auto', marginRight: '0'}}/>
-              </RadixAccordion.Trigger>
-            </RadixAccordion.Header>
-            <RadixAccordion.Content>
-              <div className='flex pt-[16px]'>
-                <img src={BlackIcon} alt='' style={{marginRight: '12px'}}/>
-                {TitleText}
-              </div>
-              <div className='mt-[8px]'>
-                {BodyCopy}
-              </div>
-            </RadixAccordion.Content>
-          </RadixAccordion.Item>
+          {accordionGroup}
       </RadixAccordion.Root>
     </div>
   );

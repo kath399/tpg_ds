@@ -59,6 +59,14 @@
       "plugin:storybook/recommended"
     ]
   },
+  "cssnano": {
+    "preset": [
+      "default",
+      {
+        "calc": false
+      }
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -95,7 +103,7 @@
     "babel-plugin-named-exports-order": "^0.0.2",
     "chromatic": "^6.21.0",
     "eslint-plugin-storybook": "^0.6.13",
-    "postcss": "^8.4.35",
+    
     "prop-types": "^15.8.1",
     "storybook": "^7.6.17",
     "storybook-addon-designs": "^6.3.1",
