@@ -117,7 +117,8 @@ export const Textfield = ({
             disabled={State === 'Disabled'}
             required={(State === 'Error')}
             list="suggestions"
-            value={(State==='Focused') ? '' : inputValue}
+            placeholder='User Input Text'
+            value={inputValue}
           />
         }
         {ShowRightIcon && <img src={TooltipIcon} alt='Icon' style={{padding: '8px 0', marginLeft: 'auto', marginRight: '0px', width: '24px'}}/>}

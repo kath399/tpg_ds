@@ -1,0 +1,478 @@
+import { Meta } from '@storybook/addon-docs';
+import Vector from './assets/Vector.svg';
+import Icon from './assets/Placeholder.svg';
+import Payment from './assets/payment-placeholder-03.svg';
+
+<Meta title="Foundation/Size" />
+
+<style>
+  {`
+  table {
+    border-collapse: collapse;
+    border: none;
+  }
+  tr:first-child {
+    border-top: none;
+  }
+  td {
+    border: none !important;
+  }
+  th {
+    border: none !important;
+  }
+  .token-column {
+    width: 628px;
+    height: 100px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    background: #FFF;
+    text-align: left;
+  }
+  .usage-column {
+    width: 278px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .base-unit-column {
+    width: 120px;
+    height: 70px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .usage-column-large {
+    width: 398px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .value-column {
+    width: 140px;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: left;
+  }
+  .sample-column {
+    width: 162px;
+    height: 100px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #FFF;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+    text-align: centre;
+  }
+  .heading-1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+  }
+  .heading-2 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .contents-button {
+    border-radius: 25px;
+    background: #FFF;
+    border: 1px solid black;
+    height: 48px;
+    width: 323px;
+    text-align: center; 
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+  }
+  .title {
+    font-size: 64px;
+    font-weight: 600;
+  }
+  .sample-swatch {
+    height: 76px;
+    width: 168px;
+    margin: auto;
+    box-shadow: 0px -1px 0px 0px #E4E8F3 inset;
+  }
+  `}
+</style>
+
+<div className="title">Size</div>
+
+<div style={{ height: '48px'}}/>
+
+<div style={{fontSize: '28px' }}>Contents</div>
+<div style={{ height: '16px'}}/>
+<p><a href="#overview" target="_self" className='text'><u>Overview</u></a></p>
+<p><a href="#base-size" target="_self" className='text'><u>Base size</u></a></p>
+<p><a href="#system-icon" target="_self" className='text'><u>System icon</u></a></p>
+<p><a href="#payment-logo" target="_self" className='text'><u>Payment logo</u></a></p>
+<div style={{ height: '48px'}}/>
+
+---
+
+<div style={{ height: '48px'}}/>
+<span id="overview" className='heading-1'>Overview</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum eros metus, ut porta sapien volutpat nec. Sed ultrices facilisis efficitur.</span>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="base-size" className='heading-1'>Size</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Every size token is a multiple a 4px base unit, the number suffix represents the percentage of the base unit.</span>
+<br/>
+<span className='text'>For example, size-400 is 400% of the size of the base unit, therefore represents 16px.</span>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='base-unit-column'>
+          Base Unit Multiplier
+        </th>
+        <th className='value-column'>
+          Value
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            size-400
+          </div>
+        </td>
+        <td className="base-unit-column">
+          4x
+        </td>
+        <td className="value-column">
+          16px / 1rem
+        </td>
+        <td className="sample-column">
+            <img src={Vector} style={{width: '16px'}}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            size-500
+          </div>
+        </td>
+        <td className="base-unit-column">
+          5x
+        </td>
+        <td className="value-column">
+          20px / 1.25rem
+        </td>
+        <td className="sample-column">
+          <img src={Vector} style={{width: '20px'}}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            size-600
+          </div>
+        </td>
+        <td className="base-unit-column">
+          6x
+        </td>
+        <td className="value-column">
+          24px / 1.5rem
+        </td>
+        <td className="sample-column">
+          <img src={Vector} style={{width: '24px'}}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            size-800
+          </div>
+        </td>
+        <td className="base-unit-column">
+          8x
+        </td>
+        <td className="value-column">
+          32px / 2rem
+        </td>
+        <td className="sample-column">
+          <img src={Icon} style={{width: '32px'}}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            size-1000
+          </div>
+        </td>
+        <td className="base-unit-column">
+          10x
+        </td>
+        <td className="value-column">
+          40px / 2.5rem
+        </td>
+        <td className="sample-column">
+          <img src={Icon} style={{width: '40px', height: '40px'}}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            size-1200
+          </div>
+        </td>
+        <td className="base-unit-column">
+          12x
+        </td>
+        <td className="value-column">
+          48px / 3rem
+        </td>
+        <td className="sample-column">
+          <img src={Icon} style={{width: '48px'}}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            size-1600
+          </div>
+        </td>
+        <td className="base-unit-column">
+          16x
+        </td>
+        <td className="value-column">
+          64px / 4rem
+        </td>
+        <td className="sample-column">
+          <img src={Icon} style={{width: '64px'}}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            size-2020
+          </div>
+        </td>
+        <td className="base-unit-column">
+          20x
+        </td>
+        <td className="value-column">
+          80px / 5rem
+        </td>
+        <td className="sample-column">
+          <img src={Icon} style={{width: '80px'}}/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="system-icon" className='heading-1'>Icon system size</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Every size token is a multiple a 4px base unit, the number suffix represents the percentage of the base unit.</span>
+<br/>
+<span className='text'>For example, size-400 is 400% of the size of the base unit, therefore represents 16px.</span>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='base-unit-column'>
+          Base Unit Multiplier
+        </th>
+        <th className='value-column'>
+          Value
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            icon-system-size-400
+          </div>
+        </td>
+        <td className="base-unit-column">
+          4x
+        </td>
+        <td className="value-column">
+          16px / 1rem
+        </td>
+        <td className="sample-column">
+          <img src={Vector} style={{width: '16px'}}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            icon-system-size-500
+          </div>
+        </td>
+        <td className="base-unit-column">
+          5x
+        </td>
+        <td className="value-column">
+          20px / 1.25rem
+        </td>
+        <td className="sample-column">
+          <img src={Vector} style={{width: '20px'}}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            icon-system-size-600
+          </div>
+        </td>
+        <td className="base-unit-column">
+          6x
+        </td>
+        <td className="value-column">
+          24px / 1.5rem
+        </td>
+        <td className="sample-column">
+          <img src={Vector} style={{width: '24px'}}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            icon-system-size-800
+          </div>
+        </td>
+        <td className="base-unit-column">
+          8x
+        </td>
+        <td className="value-column">
+          32px / 2rem
+        </td>
+        <td className="sample-column">
+          <img src={Vector} style={{width: '32px'}}/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="payment-logo" className='heading-1'> Logo payment size</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Every size token is a multiple a 4px base unit, the number suffix represents the percentage of the base unit.</span>
+<br/>
+<span className='text'>For example, size-400 is 400% of the size of the base unit, therefore represents 16px.</span>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='base-unit-column'>
+          Base Unit Multiplier
+        </th>
+        <th className='value-column'>
+          Value
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            logo-payment-size-400
+          </div>
+        </td>
+        <td className="base-unit-column">
+          4x
+        </td>
+        <td className="value-column">
+          16px / 1rem
+        </td>
+        <td className="sample-column">
+          <img src={Payment} style={{width: '16x', height: '16px'}}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            logo-payment-size-600
+          </div>
+        </td>
+        <td className="base-unit-column">
+          6x
+        </td>
+        <td className="value-column">
+          24px / 1.5rem
+        </td>
+        <td className="sample-column">
+          <img src={Payment} style={{width: '20x', height: '20px'}}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            logo-payment-size-800
+          </div>
+        </td>
+        <td className="base-unit-column">
+          8x
+        </td>
+        <td className="value-column">
+          32px / 2rem
+        </td>
+        <td className="sample-column">
+          <img src={Payment} style={{width: '32x'}}/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

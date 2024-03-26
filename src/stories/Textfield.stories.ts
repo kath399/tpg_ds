@@ -59,7 +59,7 @@ export const Complex: Story = {
     LabelText: 'Label',
     ShowLeftIcon: false,
     ShowInputText: true,
-    InputText: 'User Input Text',
+    InputText: '',
     ShowRightIcon: false,
     ShowSupportingText: false,
     SupportingText: 'Support Text',

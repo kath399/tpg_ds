@@ -58,11 +58,14 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
-    Breakpoint: 'large',
-    Type: 'primary', 
-    Status: 'default', 
+    Size: 'Large',
+    Colour: 'Primary', 
+    State: 'Enabled', 
     Inverse: false,
     Text: 'Button', 
+    ShowLeftIcon: false,
+    ShowRightIcon: false,
+    ShowLoadingIcon: false,
   },
   parameters: {
     design: {
@@ -76,18 +79,21 @@ export const Primary: Story = {
 
     //conditionally trigger click event after a delay (for demonstration purposes) -- CHECK WITH TEAM 
     //await new Promise((resolve) => setTimeout(resolve, 1000));
-    //await userEvent.click(primarybutton);
+    //await userEvent.click(Primarybutton);
     await userEvent.click(primarybutton);
   },
 };
 
 export const Secondary: Story = {
   args: {
-    Breakpoint: 'large',
-    Type: 'secondary', 
-    Status: 'default', 
+    Size: 'Large',
+    Colour: 'Secondary', 
+    State: 'Enabled', 
     Inverse: false,
     Text: 'Button', 
+    ShowLeftIcon: false,
+    ShowRightIcon: false,
+    ShowLoadingIcon: false,
   },
   parameters: {
     design: {
@@ -98,17 +104,20 @@ export const Secondary: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const secondarybutton = canvas.getByRole('button');
-    await userEvent.click(secondarybutton);
+    
   },
 };
 
 export const Tertiary: Story = {
   args: {
-    Breakpoint: 'large',
-    Type: 'tertiary', 
-    Status: 'default', 
+    Size: 'Large',
+    Colour: 'Tertiary', 
+    State: 'Enabled', 
     Inverse: false,
     Text: 'Button', 
+    ShowLeftIcon: false,
+    ShowRightIcon: false,
+    ShowLoadingIcon: false,
   },
   parameters: {
     design: {
@@ -125,11 +134,14 @@ export const Tertiary: Story = {
 
 export const Link: Story = {
   args: {
-    Breakpoint: 'large',
-    Type: 'link', 
-    Status: 'default', 
+    Size: 'Large',
+    Colour: 'Link', 
+    State: 'Enabled', 
     Inverse: false,
     Text: 'Button', 
+    ShowLeftIcon: false,
+    ShowRightIcon: false,
+    ShowLoadingIcon: false,
   },
   parameters: {
     design: {

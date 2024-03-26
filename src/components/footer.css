@@ -15,8 +15,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;
-    bottom: 0;
     width: 1440px;
     height: 172px;
     background-color: #0D0D0D;
@@ -71,6 +69,9 @@
     .footer {
         width: 360px;
         height: 180px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
     }
     .content {
         width: 328px;
@@ -84,6 +85,9 @@
     .footer--Tablet {
         width: 360px;
         height: 180px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
     }
     .content--Tablet {
         width: 328px;
@@ -100,6 +104,9 @@
     .footer {
         width: 768px;
         height: 186px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
     }
     .content {
         width: 720px;
@@ -107,6 +114,51 @@
         padding: 32px 0px;
     }
     .footerDiv {
+        margin: 32px 0px;
+    }
+    .footer--Mobile {
+        width: 360px;
+        height: 180px;
+    }
+    .content--Mobile {
+        width: 328px;
+        font-size: 16px;
+        padding: 24px 0px;
+        line-height: 20px;
+    }
+    .footerDiv--Mobile {
+        margin: 24px 0px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+    .footer {
+        width: 1440px;
+        height: 172px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+    .content {
+        width: 1180px;
+        font-size: 18px;
+        padding: 32px 0px;
+    }
+    .footerDiv {
+        border-top: 1px solid #ECEDED;
+        width: fill;
+        margin: 32px 0px;
+    }
+    .footer--Tablet {
+        width: 768px;
+        height: 186px;
+    }
+    .content--Tablet {
+        width: 720px;
+        font-size: 16px;
+        padding: 32px 0px;
+    }
+    .footerDiv--Tablet {
         margin: 32px 0px;
     }
     .footer--Mobile {

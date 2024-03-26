@@ -6,7 +6,7 @@ import Icon from './assets/Icon.svg';
 
 interface LinkProps {
     Size: 'Large' | 'Small';
-    State: 'Default' | 'Hover' | 'Pressed' | 'Focused' | 'Disabled';
+    State: 'Enabled' | 'Hovered' | 'Focused' | 'Pressed' | 'Disabled';
     Text: string;
     ShowRightIcon: boolean;
     ShowLeftIcon: boolean;
@@ -15,7 +15,7 @@ interface LinkProps {
 
 export const Link = ({
     Size = 'Large',
-    State = 'Default',
+    State = 'Enabled',
     Text = 'Link',
     ShowRightIcon = true,
     ShowLeftIcon = false,
@@ -31,11 +31,20 @@ export const Link = ({
         setIsFocused(false);
     };
     return(
-        <button className={['link', `link--${Size}`, `link--${State}`].join(' ')} {...props} onFocus={handleFocus} onBlur={handleBlur}>
-            {(ShowLeftIcon && (State==='Default' || State==='Hover')) && !isFocused && <img src={ChevronLeft} alt='Chevron_left' style={{paddingRight: '7px'}}/>}
+        <button 
+            className={[
+                'link', 
+                `link--${Size}`, 
+                `link--${State}`
+            ].join(' ')} 
+            {...props} 
+            onFocus={handleFocus} 
+            onBlur={handleBlur}
+        >
+            {(ShowLeftIcon && (State==='Enabled' || State==='Hovered' || State==='Disabled')) && !isFocused && <img src={ChevronLeft} alt='Chevron_left' style={{paddingRight: '7px'}}/>}
             {(ShowLeftIcon && (State==='Pressed' || State==='Focused' || isFocused)) && <img src={Icon} alt='Chevron_left' style={{paddingRight: '7px'}}/>}
             {Text}
-            {(ShowRightIcon && (State==='Default' || State==='Hover')) && !isFocused && <img src={ChevronRight} alt='Chevron_right' style={{paddingLeft: '7px'}}/>}
+            {(ShowRightIcon && (State==='Enabled' || State==='Hovered' || State==='Disabled')) && !isFocused && <img src={ChevronRight} alt='Chevron_right' style={{paddingLeft: '7px'}}/>}
             {(ShowRightIcon && (State==='Pressed' || State==='Focused' || isFocused)) && <img src={Icon} alt='Chevron_right' style={{paddingLeft: '7px'}}/>}
         </button>
     )

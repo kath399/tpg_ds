@@ -7,7 +7,7 @@ const meta = {
   component: Footer,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
-    layout: 'fullscreen',
+    layout: 'centered',
     backgrounds: {
       default: 'Default',
       values: [

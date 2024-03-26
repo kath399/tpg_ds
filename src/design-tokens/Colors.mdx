@@ -169,8 +169,6 @@ import { Meta } from '@storybook/addon-docs';
 <div style={{ height: '48px'}}/>
 <span id="text-content" className='heading-2'>Text / Content</span>
 <div style={{ height: '32px'}}/>
-<span className='text'></span>
-<div style={{ height: '32px'}}/>
 
 <div>
   <table>
@@ -309,7 +307,7 @@ import { Meta } from '@storybook/addon-docs';
       <tr>
         <td className='token-column'>
           <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            color-content-interactive
+            color-content-interactive-enabled
           </div>
         </td>
         <td className='usage-column'>
@@ -394,6 +392,28 @@ import { Meta } from '@storybook/addon-docs';
           <span style={{ color: '#FFF' }}>#FFFFFF</span>
         </td>
       </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            color-content-offer
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="light-text-column">
+          #008A00
+        </td>
+        <td className="light-swatch-column">
+          <div className='light-colour-swatch' style={{ backgroundColor: '#008A00' }} />
+        </td>
+        <td className="dark-swatch-column">
+          <div className='dark-colour-swatch' style={{ backgroundColor: '#B7BF10' }} />
+        </td>
+        <td className='dark-text-column'>
+          <span style={{ color: '#FFF' }}>#B7BF10</span>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -403,8 +423,6 @@ import { Meta } from '@storybook/addon-docs';
 {/* BACKGROUND */}
 <div style={{ height: '48px'}}/>
 <span id="background" className='heading-2'>Background</span>
-<div style={{ height: '32px'}}/>
-<span className='text'></span>
 <div style={{ height: '32px'}}/>
 
 <div>
@@ -528,8 +546,6 @@ import { Meta } from '@storybook/addon-docs';
 <div style={{ height: '48px'}}/>
 <span id="surface" className='heading-2'>Surface</span>
 <div style={{ height: '32px'}}/>
-<span className='text'></span>
-<div style={{ height: '32px'}}/>
 
 <div>
   <table>
@@ -601,7 +617,7 @@ import { Meta } from '@storybook/addon-docs';
       <tr>
         <td className='token-column'>
           <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            color-surface-focus
+            color-surface-focused
           </div>
         </td>
         <td className='usage-column'>
@@ -640,51 +656,6 @@ import { Meta } from '@storybook/addon-docs';
         </td>
         <td className='dark-text-column'>
           <span style={{ color: '#FFF' }}>#0D0D0D</span>
-        </td>
-      </tr>
-      <tr>
-        <td className='token-column'>
-          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            color-surface-primary-hover
-          </div>
-        </td>
-        <td className='usage-column'>
-          Text
-        </td>
-        <td className="light-text-column">
-          #C5C7CB
-        </td>
-        <td className="light-swatch-column">
-          <div className='light-colour-swatch' style={{ backgroundColor: '#C5C7CB' }} />
-        </td>
-        <td className="dark-swatch-column">
-          <div className='dark-colour-swatch' style={{ backgroundColor: '#EAEBF0' }} />
-        </td>
-        <td className='dark-text-column'>
-          <span style={{ color: '#FFF' }}>#EAEBF0</span>
-        </td>
-      </tr>
-      {/* MISSING COLOUR SWATCH FROM FIGMA*/}
-      <tr>
-        <td className='token-column'>
-          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            color-surface-primary-disabled
-          </div>
-        </td>
-        <td className='usage-column'>
-          Text
-        </td>
-        <td className="light-text-column">
-          #FFFFFF61
-        </td>
-        <td className="light-swatch-column">
-          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF61' }} />
-        </td>
-        <td className="dark-swatch-column">
-          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF61' }} />
-        </td>
-        <td className='dark-text-column'>
-          <span style={{ color: '#FFF' }}>#FFFFFF61</span>
         </td>
       </tr>
       <tr>
@@ -775,33 +746,10 @@ import { Meta } from '@storybook/addon-docs';
           <span style={{ color: '#FFF' }}>#0D0D0D</span>
         </td>
       </tr>
-      {/* MISSING COLOUR SWATCH FROM FIGMA*/}
       <tr>
         <td className='token-column'>
           <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            color-surface-input-disabled
-          </div>
-        </td>
-        <td className='usage-column'>
-          Text
-        </td>
-        <td className="light-text-column">
-          #FFFFFF61
-        </td>
-        <td className="light-swatch-column">
-          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFFF61' }} />
-        </td>
-        <td className="dark-swatch-column">
-          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF61' }} />
-        </td>
-        <td className='dark-text-column'>
-          <span style={{ color: '#FFF' }}>#FFFFFF61</span>
-        </td>
-      </tr>
-      <tr>
-        <td className='token-column'>
-          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            color-surface-input-unchecked
+            color-surface-unchecked
           </div>
         </td>
         <td className='usage-column'>
@@ -818,29 +766,6 @@ import { Meta } from '@storybook/addon-docs';
         </td>
         <td className='dark-text-column'>
           <span style={{ color: '#FFF' }}>#0D0D0D</span>
-        </td>
-      </tr>
-      {/* MISSING COLOUR SWATCH FROM FIGMA*/}
-      <tr>
-        <td className='token-column'>
-          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            color-surface-input-unchecked-disabled
-          </div>
-        </td>
-        <td className='usage-column'>
-          Text
-        </td>
-        <td className="light-text-column">
-          #FFFFFF61
-        </td>
-        <td className="light-swatch-column">
-          <div className='light-colour-swatch' style={{ backgroundColor: '#FFFFFF61' }} />
-        </td>
-        <td className="dark-swatch-column">
-          <div className='dark-colour-swatch' style={{ backgroundColor: '#FFFFFF61' }} />
-        </td>
-        <td className='dark-text-column'>
-          <span style={{ color: '#FFF' }}>#FFFFFF61</span>
         </td>
       </tr>
       <tr>

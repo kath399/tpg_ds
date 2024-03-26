@@ -37,7 +37,7 @@ const meta = {
         control: 'radio'
     },
     State: {
-        options: ['Default', 'Hover', 'Pressed', 'Focused', 'Disabled'],
+        options: ['Enabled', 'Hovered', 'Pressed', 'Focused', 'Disabled'],
         control: 'radio'
     }
   },
@@ -50,7 +50,7 @@ type Story = StoryObj<typeof meta>;
 export const Main: Story = {
   args: { 
     Size: 'Large',
-    State: 'Default',
+    State: 'Enabled',
     Text: 'Link',
     ShowLeftIcon: false,
     ShowRightIcon: false,
