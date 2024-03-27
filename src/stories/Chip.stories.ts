@@ -45,7 +45,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const ChipSingle: Story = {
+export const Single: Story = {
   args: { 
     State: 'Default',
     Size: 'Large',
@@ -64,7 +64,7 @@ export const ChipSingle: Story = {
   },
 };
 
-export const ChipList: Story = {
+export const Group: Story = {
   args: { 
     Size: 'Large',
     ShowChip02: true,

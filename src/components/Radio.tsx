@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './radio.css';
 
 interface RadioProps {
   Checked: boolean;
-  State: 'Enable' | 'Hover' | 'Focus' | 'Disabled';
+  State: 'Enabled' | 'Hovered' | 'Focused' | 'Disabled';
   ShowText?: boolean;
   Text: string[];
   numberOfBtns?: number;
@@ -14,7 +14,7 @@ interface RadioProps {
 
 export const Radio: React.FC<RadioProps> = ({ 
   Checked,
-  State = 'Enable',
+  State = 'Enabled',
   ShowText = true,
   Text, 
   numberOfBtns = 5, 
@@ -27,18 +27,7 @@ export const Radio: React.FC<RadioProps> = ({
   const containerStyle: React.CSSProperties = {
     display: Inline ? 'inline-block' : 'block',
     marginRight: Inline ? '16px' : '0',
-  }
-
-  let Disabled:boolean = false;
-  if(State == 'Disabled') {
-    Disabled = true
-  }
-
-  let textColor:string = 'black';
-  if(Inverse == true) {
-    textColor = 'white'
-  } else if(Disabled == true) {
-    textColor = '#0D0D0D61'
+    opacity: (State==='Disabled') ? '0.38' : ''
   }
 
   for (let i = 0; i < numberOfBtns; i++) {
@@ -52,7 +41,6 @@ export const Radio: React.FC<RadioProps> = ({
             name='Radio'
             checked={Checked}
             onChange={() => onChange('')}
-            disabled={Disabled}
           />
           <span 
             className={[
@@ -62,7 +50,7 @@ export const Radio: React.FC<RadioProps> = ({
             ].join(' ')}
           >
           </span>
-          {ShowText && <text style={{ color: textColor }}>{Text[i]}</text>}
+          {ShowText && <text>{Text[i]}</text>}
           {!ShowText && <div style={{paddingTop: '16px'}}/>}
         </label>
       </div>

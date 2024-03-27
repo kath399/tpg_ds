@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './toggle.css';
+import './switch.css';
 
-interface ToggleProps {
+interface SwitchProps {
   Type: 'No icon' | 'With icon';
   OnOff: boolean;
   State: 'Active' | 'Focus' | 'Disabled';
@@ -9,13 +9,13 @@ interface ToggleProps {
   Label?: string;
 }
 
-export const Toggle = ({
+export const Switch = ({
   Type,
   OnOff,
   State,
   ShowLabel = true,
   Label,
-}: ToggleProps) => {
+}: SwitchProps) => {
   const [isChecked, setIsChecked] = useState(OnOff);
 
   useEffect(() => {

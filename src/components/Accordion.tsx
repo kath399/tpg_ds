@@ -13,6 +13,7 @@ interface AccordionProps {
   LabelText: string;
   ShowTitle: boolean;
   TitleText: string;
+  ShowTitleIcon: boolean;
   BodyCopy: string;
   TopDivider: boolean;
   BottomDivider: boolean;
@@ -26,6 +27,7 @@ export const Accordion = ({
   ShowTitle = true,
   ShowLabelIcon = true,
   TitleText = 'Title',
+  ShowTitleIcon = true,
   BodyCopy = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   TopDivider = true,
   BottomDivider = true,
@@ -35,7 +37,7 @@ export const Accordion = ({
   let accordionSize = (Size==='Large') ? 'w-[1180px]' 
     : (Size==='Medium') ? 'w-[720px]'
     : 'w-[328px]';
-
+  let textSize = (Size==='Small') ? 'text-[16px]' : 'text-[18px]'
   // BORDERS
   let topBorder = (TopDivider) ? 'border-t-solid border-t-[1px] border-t-white' : ''
   let botBorder = (BottomDivider) ? 'border-b-solid border-b-[1px] border-b-white' : ''
@@ -70,18 +72,21 @@ export const Accordion = ({
         data-state={accordionStates[i]}
       >
         <RadixAccordion.Header>
-          <RadixAccordion.Trigger className='flex w-[100%]  p-[16px]' onClick={() => handleAccordionClick(i)}>
+          <RadixAccordion.Trigger 
+            className={`flex w-[100%]  p-[16px] font-vodafone font-bold ${textSize} text-left`} 
+            onClick={() => handleAccordionClick(i)}
+          >
               {ShowLabelIcon && <img src={BlackIcon} alt='' style={{marginRight: '12px'}}/>}
               {LabelText}
               <img src={RedIcon} alt='' style={{marginLeft: 'auto', marginRight: '0'}}/>
           </RadixAccordion.Trigger>
         </RadixAccordion.Header>
         <RadixAccordion.Content>
-          {ShowTitle && <div className='flex p-[8px_16px]'>
-            <img src={BlackIcon} alt='' style={{marginRight: '12px'}}/>
+          {ShowTitle && <div className={`flex p-[8px_16px] font-vodafone font-bold ${textSize} text-left`}>
+            {ShowTitleIcon && <img src={BlackIcon} alt='' style={{marginRight: '12px'}}/>}
             {TitleText}
           </div>}
-          <div className='pl-[16px] pr-[16px] pt-[8px] pb-[16px]'>
+          <div className={`pl-[16px] pr-[16px] pt-[8px] pb-[16px] font-vodafone ${textSize} text-left`}>
             {BodyCopy}
           </div>
         </RadixAccordion.Content>

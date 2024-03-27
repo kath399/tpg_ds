@@ -47,7 +47,7 @@ export const Main: Story = {
     ShowBodyText: true,
     BodyText: 'Body text',
     ShowButtons: true,
-    ShowButton02: true,
+    ShowSecondaryButton: true,
   },
   parameters: {
     design: {

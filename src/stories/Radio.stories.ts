@@ -14,17 +14,20 @@ const meta = {
   tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    //backgroundColor: { control: 'color' },
+    State: {
+      control: 'radio',
+      options: ['Enable', 'Hover', 'Focus', 'Disabled']
+    }
   },
 } satisfies Meta<typeof Radio>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Checked: Story = {
+export const Single: Story = {
     args: {
-      Checked: true,
-      State: 'Enable',
+      Checked: false,
+      State: 'Enabled',
       ShowText: true,
       Text: ['Button Label'],
       numberOfBtns: 1,
@@ -42,33 +45,10 @@ export const Checked: Story = {
     }
 }
 
-export const Unchecked: Story = {
+export const Group: Story = {
   args: {
     Checked: false,
-    State: 'Enable',
-    ShowText: true,
-    Text: ['Button Label'],
-    numberOfBtns: 1,
-  },
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?type=design&node-id=5915-721&mode=design&t=tMCJiBlFOTqX0r9d-4"
-    },
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const uncheckedRadioButton = canvas.getByRole('radio', {checked: false});
-    const nameInput = canvas.getByLabelText('Button Label', {
-      selector: 'input',
-    });
-  }
-}
-
-export const Inline: Story = {
-  args: {
-    Checked: false,
-    State: 'Enable',
+    State: 'Enabled',
     ShowText: true,
     Text: ['Button Label 1', 'Button Label 2', 'Button Label 3', 'Button Label 4', 'Button Label 5'],
     numberOfBtns: 5,
@@ -84,28 +64,5 @@ export const Inline: Story = {
     const canvas = within(canvasElement);
     const checkedRadioButton = canvas.getByLabelText('Button Label 1');
     await userEvent.click(checkedRadioButton);
-  }
-}
-
-export const Stacked: Story = {
-  args: {
-    Checked: false,
-    State: 'Enable',
-    ShowText: true,
-    Text: ['Button Label 1', 'Button Label 2', 'Button Label 3', 'Button Label 4', 'Button Label 5'],
-    numberOfBtns: 5,
-  },
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?type=design&node-id=5945-3820&mode=design&t=tMCJiBlFOTqX0r9d-4"
-    },
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const checkedRadioButton = canvas.getByLabelText('Button Label 1');
-    const uncheckedRadioButton = canvas.getByLabelText('Button Label 2');
-    await userEvent.click(checkedRadioButton);
-    await userEvent.click(uncheckedRadioButton, {delay: 1000});
   }
 }

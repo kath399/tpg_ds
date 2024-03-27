@@ -34,6 +34,7 @@ export const Single: Story = {
     LabelText: 'Accordion Label',
     ShowTitle: true,
     TitleText: 'Title',
+    ShowTitleIcon: true,
     BodyCopy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     TopDivider: true,
     BottomDivider: true,
@@ -46,7 +47,7 @@ export const Single: Story = {
   }
 };
 
-export const Multiple: Story = {
+export const Group: Story = {
   args: {
     Size: 'Large',
     Type: 'Multiple',
@@ -55,6 +56,7 @@ export const Multiple: Story = {
     LabelText: 'Accordion Label',
     ShowTitle: true,
     TitleText: 'Title',
+    ShowTitleIcon: true,
     BodyCopy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     TopDivider: true,
     BottomDivider: true,

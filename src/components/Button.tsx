@@ -45,7 +45,7 @@ export const Button = ({
     ? (State==='Hovered') ? 'bg-[color:var(--color-light-brand-600)]'
     : (State==='Focused') ? 'bg-red-700 outline-teal-600'
     : (State==='Pressed') ? 'bg-[color:var(--color-light-brand-700)]'
-    : 'bg-[color:var(--color-light-brand-500)]' :
+    : 'bg-background-brand' :
   
     // Secondary STATIC STATES
   (Colour==='Secondary')

@@ -48,6 +48,10 @@ const meta = {
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     //backgroundColor: { control: 'color' }, 
+    Colour: {
+      control: 'radio',
+      options: ['Primary', 'Secondary', 'Tertiary', 'Link']
+    },
     Inverse: { control: 'boolean' },
   },
 } satisfies Meta<typeof Button>;

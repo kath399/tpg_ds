@@ -1,4 +1,5 @@
 import { Meta } from '@storybook/addon-docs';
+import Overview from './assets/Shadow_overview.png';
 
 <Meta title="Foundation/Shadow" />
 
@@ -29,7 +30,7 @@ import { Meta } from '@storybook/addon-docs';
     text-align: left;
   }
   .usage-column {
-    width: 278px;
+    width: 500px;
     height: 70px;
     padding: 12px 16px;
     align-items: center;
@@ -87,6 +88,7 @@ import { Meta } from '@storybook/addon-docs';
     font-size: 16px;
     font-weight: 400;
     color: black;
+    text-align: left;
   }
   .heading-2 {
     font-size: 28px;
@@ -124,21 +126,92 @@ import { Meta } from '@storybook/addon-docs';
 <div style={{fontSize: '28px' }}>Contents</div>
 <div style={{ height: '16px'}}/>
 <p><a href="#overview" target="_self" className='text'><u>Overview</u></a></p>
-<p><a href="#corner-radius" target="_self" className='text'><u>Base shadow</u></a></p>
-<p><a href="#corner-radius" target="_self" className='text'><u>Component shadow</u></a></p>
+<p><a href="#base-shadow" target="_self" className='text'><u>Base shadow</u></a></p>
+<p><a href="#component-shadow" target="_self" className='text'><u>Component shadow</u></a></p>
 <div style={{ height: '48px'}}/>
 
 ---
 
 <div style={{ height: '48px'}}/>
-<span id="overview" className='heading-1'> Overview</span> 
+<span id="overview" className='heading-1'>Overview</span> 
 <div style={{ height: '32px'}}/>
 <span className='text'>Virtual light comes from the top to create shadows from UI elements like in real world. In some instances, we place the virtual light on the bottom do create specific scenes within the UI.</span>
 <div style={{ height: '48px'}}/>
+<img src={Overview} alt='' />
+<div style={{ height: '32px'}}/>
+<span className='text'>Using Beautiful Shadows plugin to create shadows by dragging a “light source” which casts a shadow on the selected element</span>
+<div style={{ height: '48px'}}/>
 ---
 
 <div style={{ height: '48px'}}/>
-<span id="corner-radius" className='heading-1'> Base Shadow</span> 
+<span id="base-shadow" className='heading-1'>Top shadows</span> 
+<div style={{ height: '32px'}}/>
+<span className='text'>Top shadows express the level of elevation between surfaces and explain interactions</span>
+<div style={{ height: '32px'}}/>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th className='token-column'>
+          Token Name
+        </th>
+        <th className='usage-column'>
+          Usage
+        </th>
+        <th className='sample-column'>
+          Sample
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            box-shadow-top-small
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '0px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            box-shadow-top-medium
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '4px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+      <tr>
+        <td className='token-column'>
+          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
+            box-shadow-top-large
+          </div>
+        </td>
+        <td className='usage-column'>
+          Text
+        </td>
+        <td className="sample-column">
+          <div className='sample-swatch' style={{ borderRadius: '8px', background: '#F2F2F2' }}/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{ height: '48px'}}/>
+---
+
+<div style={{ height: '48px'}}/>
+<span id="semantic-corner-radius" className='heading-1'>Bottom shadows</span> 
 <div style={{ height: '32px'}}/>
 <span className='text'></span>
 <div style={{ height: '32px'}}/>
@@ -153,12 +226,6 @@ import { Meta } from '@storybook/addon-docs';
         <th className='usage-column'>
           Usage
         </th>
-        <th className='base-unit-column'>
-          Base Unit Multiplier
-        </th>
-        <th className='value-column'>
-          Value
-        </th>
         <th className='sample-column'>
           Sample
         </th>
@@ -168,172 +235,14 @@ import { Meta } from '@storybook/addon-docs';
       <tr>
         <td className='token-column'>
           <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            corner-radius-000
+            box-shadow-bottom-large
           </div>
         </td>
         <td className='usage-column'>
           Text
-        </td>
-        <td className="base-unit-column">
-          0x
-        </td>
-        <td className="value-column">
-          0px / 0rem
         </td>
         <td className="sample-column">
           <div className='sample-swatch' style={{ borderRadius: '0px', background: '#F2F2F2' }}/>
-        </td>
-      </tr>
-      <tr>
-        <td className='token-column'>
-          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            corner-radius-100
-          </div>
-        </td>
-        <td className='usage-column'>
-          Text
-        </td>
-        <td className="base-unit-column">
-          1x
-        </td>
-        <td className="value-column">
-          4px / 0.25rem
-        </td>
-        <td className="sample-column">
-          <div className='sample-swatch' style={{ borderRadius: '4px', background: '#F2F2F2' }}/>
-        </td>
-      </tr>
-      <tr>
-        <td className='token-column'>
-          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            corner-radius-200
-          </div>
-        </td>
-        <td className='usage-column'>
-          Text
-        </td>
-        <td className="base-unit-column">
-          2x
-        </td>
-        <td className="value-column">
-          8px / 0.5rem
-        </td>
-        <td className="sample-column">
-          <div className='sample-swatch' style={{ borderRadius: '8px', background: '#F2F2F2' }}/>
-        </td>
-      </tr>
-      <tr>
-        <td className='token-column'>
-          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            corner-radius-300
-          </div>
-        </td>
-        <td className='usage-column'>
-          Text
-        </td>
-        <td className="base-unit-column">
-          3x
-        </td>
-        <td className="value-column">
-          12px / 0.75rem
-        </td>
-        <td className="sample-column">
-          <div className='sample-swatch' style={{ borderRadius: '12px', background: '#F2F2F2' }}/>
-        </td>
-      </tr>
-      <tr>
-        <td className='token-column'>
-          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            corner-radius-400
-          </div>
-        </td>
-        <td className='usage-column'>
-          Text
-        </td>
-        <td className="base-unit-column">
-          4x
-        </td>
-        <td className="value-column">
-          16px / 1rem
-        </td>
-        <td className="sample-column">
-          <div className='sample-swatch' style={{ borderRadius: '16px', background: '#F2F2F2' }}/>
-        </td>
-      </tr>
-      <tr>
-        <td className='token-column'>
-          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            corner-radius-600
-          </div>
-        </td>
-        <td className='usage-column'>
-          Text
-        </td>
-        <td className="base-unit-column">
-          6x
-        </td>
-        <td className="value-column">
-          24px / 1.5rem
-        </td>
-        <td className="sample-column">
-          <div className='sample-swatch' style={{ borderRadius: '24px', background: '#F2F2F2' }}/>
-        </td>
-      </tr>
-      <tr>
-        <td className='token-column'>
-          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            corner-radius-800
-          </div>
-        </td>
-        <td className='usage-column'>
-          Text
-        </td>
-        <td className="base-unit-column">
-          8x
-        </td>
-        <td className="value-column">
-          32px / 2rem
-        </td>
-        <td className="sample-column">
-          <div className='sample-swatch' style={{ borderRadius: '32px', background: '#F2F2F2' }}/>
-        </td>
-      </tr>
-      <tr>
-        <td className='token-column'>
-          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            corner-radius-1000
-          </div>
-        </td>
-        <td className='usage-column'>
-          Text
-        </td>
-        <td className="base-unit-column">
-          10x
-        </td>
-        <td className="value-column">
-          40px / 2.5rem
-        </td>
-        <td className="sample-column">
-          <div className='sample-swatch' style={{ borderRadius: '40px', background: '#F2F2F2' }}/>
-        </td>
-      </tr>
-      <tr>
-        <td className='token-column'>
-          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            corner-radius-rounded
-          </div>
-        </td>
-        <td className='usage-column'>
-          Text
-        </td>
-        <td className="base-unit-column">
-          -
-        </td>
-        <td className="value-column">
-          999px
-        </td>
-        <td className="sample-column">
-          <div className='sample-swatch' style={{ borderRadius: '999px', background: '#F2F2F2' }}/>
         </td>
       </tr>
     </tbody>
@@ -343,9 +252,9 @@ import { Meta } from '@storybook/addon-docs';
 ---
 
 <div style={{ height: '48px'}}/>
-<span id="semantic-corner-radius" className='heading-1'> Semantic corner radius</span> 
+<span id="base-shadow" className='heading-1'>Component shadows</span> 
 <div style={{ height: '32px'}}/>
-<span className='text'></span>
+<span className='text'>Text</span>
 <div style={{ height: '32px'}}/>
 
 <div>
@@ -355,11 +264,8 @@ import { Meta } from '@storybook/addon-docs';
         <th className='token-column'>
           Token Name
         </th>
-        <th className='usage-column-large'>
+        <th className='usage-column'>
           Usage
-        </th>
-        <th className='value-column'>
-          Value
         </th>
         <th className='sample-column'>
           Sample
@@ -370,14 +276,11 @@ import { Meta } from '@storybook/addon-docs';
       <tr>
         <td className='token-column'>
           <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            corner-radius-none
+            box-shadow-all-dsp-header
           </div>
         </td>
-        <td className='usage-column-large'>
+        <td className='usage-column'>
           Text
-        </td>
-        <td className="value-column">
-          0px / 0rem
         </td>
         <td className="sample-column">
           <div className='sample-swatch' style={{ borderRadius: '0px', background: '#F2F2F2' }}/>
@@ -386,14 +289,11 @@ import { Meta } from '@storybook/addon-docs';
       <tr>
         <td className='token-column'>
           <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            corner-radius-small
+            box-shadow-all-dsp-tooltip
           </div>
         </td>
-        <td className='usage-column-large'>
-          form fields, dropdowns.
-        </td>
-        <td className="value-column">
-          4px / 0.25rem
+        <td className='usage-column'>
+          Text
         </td>
         <td className="sample-column">
           <div className='sample-swatch' style={{ borderRadius: '4px', background: '#F2F2F2' }}/>
@@ -402,14 +302,11 @@ import { Meta } from '@storybook/addon-docs';
       <tr>
         <td className='token-column'>
           <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            corner-radius-medium
+            box-shadow-lg-dsp-hover
           </div>
         </td>
-        <td className='usage-column-large'>
-          Buttons
-        </td>
-        <td className="value-column">
-          8px / 0.5rem
+        <td className='usage-column'>
+          Text
         </td>
         <td className="sample-column">
           <div className='sample-swatch' style={{ borderRadius: '8px', background: '#F2F2F2' }}/>
@@ -418,51 +315,31 @@ import { Meta } from '@storybook/addon-docs';
       <tr>
         <td className='token-column'>
           <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            corner-radius-large
+            box-shadow-lg-dsp-modal
           </div>
         </td>
-        <td className='usage-column-large'>
-          n/a
-        </td>
-        <td className="value-column">
-          12px / 0.75rem
+        <td className='usage-column'>
+          Text
         </td>
         <td className="sample-column">
-          <div className='sample-swatch' style={{ borderRadius: '12px', background: '#F2F2F2' }}/>
+          <div className='sample-swatch' style={{ borderRadius: '8px', background: '#F2F2F2' }}/>
         </td>
       </tr>
       <tr>
         <td className='token-column'>
           <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            corner-radius-xlarge
+            box-shadow-sm-dsp-modal
           </div>
         </td>
-        <td className='usage-column-large'>
-          Cards, modals
-        </td>
-        <td className="value-column">
-          24px / 1.5rem
+        <td className='usage-column'>
+          Text
         </td>
         <td className="sample-column">
-          <div className='sample-swatch' style={{ borderRadius: '24px', background: '#F2F2F2' }}/>
-        </td>
-      </tr>
-      <tr>
-        <td className='token-column'>
-          <div style={{ backgroundColor: '#eeeeee', borderRadius: '8px', padding: '8px', height: '36px', display: 'inline-block', textAlign: 'center' }}>
-            corner-radius-rounded
-          </div>
-        </td>
-        <td className='usage-column-large'>
-          n/a
-        </td>
-        <td className="value-column">
-          999px
-        </td>
-        <td className="sample-column">
-          <div className='sample-swatch' style={{ borderRadius: '999px', background: '#F2F2F2' }}/>
+          <div className='sample-swatch' style={{ borderRadius: '8px', background: '#F2F2F2' }}/>
         </td>
       </tr>
     </tbody>
   </table>
 </div>
+<div style={{ height: '48px'}}/>
+---

@@ -53,7 +53,7 @@ export const Single: Story = {
   },
 };
 
-export const Inline: Story = { 
+export const Group: Story = { 
   args: {
     Checked: false,
     State: 'Enable',
@@ -71,23 +71,3 @@ export const Inline: Story = {
     }
   },
 };
-
-export const Stacked: Story = { 
-  args: {
-    Checked: false,
-    State: 'Enable',
-    ShowText: true,
-    Text: 'Checkbox',
-    ShowError: false,
-    ErrorText: 'Error Text',
-    Single: false,
-    Inline: false,
-  },
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?type=design&node-id=5594-89741&mode=dev"
-    }
-  }
-};
-  

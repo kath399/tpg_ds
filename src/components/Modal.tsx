@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../tokens.css'
 import { Button } from './Button';
 
 import * as Dialog from '@radix-ui/react-dialog';
@@ -11,7 +12,7 @@ interface ModalProps {
     ShowBodyText: boolean;
     BodyText: string;
     ShowButtons: boolean;
-    ShowButton02: boolean;
+    ShowSecondaryButton: boolean;
 }
 
 export const Modal = ({
@@ -20,7 +21,7 @@ export const Modal = ({
     ShowBodyText = true,
     BodyText = 'Body text',
     ShowButtons = true,
-    ShowButton02 = true,
+    ShowSecondaryButton = true,
 }: ModalProps) => {
 
     // SIZES
@@ -43,6 +44,7 @@ export const Modal = ({
                     <Button Size={Size} Colour='Primary' State='Enabled' Text='Label'/>
                 </Dialog.Trigger>
                 <Dialog.Portal>
+                    <Dialog.Overlay className={`bg-[rgba(13,13,13,0.60)] data-[state=open]:animate-overlayShow fixed inset-0`} />
                     <Dialog.Content className={`data-[state=open]:animate-contentShow fixed -translate-x-2/4 translate-y-2/4 left-2/4 bottom-2/4 ${modalSize} ${modalSmall} ${shadow} bg-white p-[25px] focus:outline-none`}>
                         <Dialog.Title className={`font-vodafone pt-[32px]  ${headSize} sm:text-[28px]`}>
                             {HeadingText}
@@ -51,7 +53,7 @@ export const Modal = ({
                             <p className='break-all'>{BodyText}</p>
                         </div>}
                         {ShowButtons && <div className={`${btnSize} sm:inline-block sm:absolute sm:bottom-0 sm:pb-[24px]`}>
-                            {ShowButton02 && <Button Size={Size} Colour='Tertiary' State='Enabled' Text='Label'/>}
+                            {ShowSecondaryButton && <Button Size={Size} Colour='Tertiary' State='Enabled' Text='Label'/>}
                             <div className={`${btnSmall} sm:h-[12px]`}/>
                                 <Button Size={Size} Colour='Primary' State='Enabled' Text='Label'/>
                             </div>
