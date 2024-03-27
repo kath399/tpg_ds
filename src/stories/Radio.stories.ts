@@ -38,11 +38,6 @@ export const Single: Story = {
         url: "https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?type=design&node-id=5915-715&mode=design&t=tMCJiBlFOTqX0r9d-4"
       },
     },
-    play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      const checkedRadioButton = canvas.getByRole('radio', {checked: true});
-      await userEvent.click(checkedRadioButton);
-    }
 }
 
 export const Group: Story = {
@@ -60,9 +55,4 @@ export const Group: Story = {
       url: "https://www.figma.com/file/Xl129GKsg3kTgKt6spkUM5/2.1-Web-Core?type=design&node-id=5945-3821&mode=design&t=tMCJiBlFOTqX0r9d-4"
     },
   },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const checkedRadioButton = canvas.getByLabelText('Button Label 1');
-    await userEvent.click(checkedRadioButton);
-  }
 }
