@@ -1,9 +1,10 @@
+import React, { useState } from 'react';
 import './chip.css';
 import Icon from './assets/Icon_white2.svg';
 
 interface ChipProps {
     Size?: 'Large' | 'Small';
-    State?: 'Default' | 'Focus' | 'Hover' | 'Pressed';
+    State: 'Default' | 'Focus' | 'Hover' | 'Pressed';
     LabelText?: string;
     Single?: boolean;
     ShowChip02?: boolean;
@@ -26,54 +27,58 @@ export const Chip = ({
     ShowChip06 = false,
     ...props
 }: ChipProps) => {
-    return(
+    const [buttonState, setButtonState] = useState(State);
+
+    const handleButtonClick = () => {
+        setButtonState('Pressed');
+    };
+
+    const handleBlur = () => {
+        setButtonState('Default');
+    };
+
+    return (
         <>
-            {Single && <button 
-                className={[
-                    `chip`, 
-                    `chip--${Size}`, 
-                    `chip--${State}`,
-                    `chip--${State}--${Size}`
-                ].join(' ')}
-                {...props}
-            >
-                <div 
-                    style={{
-                        marginRight: (State==='Pressed') ? '32px' : '0px',
-                    }}
+            {Single && (
+                <button
+                    className={[
+                        `chip`,
+                        `chip--${Size}`,
+                        `chip--${buttonState}`,
+                        `chip--${buttonState}--${Size}`
+                    ].join(' ')}
+                    onClick={handleButtonClick}
+                    onBlur={handleBlur}
+                    {...props}
                 >
-                    {LabelText}
+                    <div
+                        style={{
+                            marginRight: buttonState === 'Pressed' ? '32px' : '0px'
+                        }}
+                    >
+                        {LabelText}
+                    </div>
+                </button>
+            )}
+            {!Single && (
+                <div>
+                    <div className='chipHeading'>Heading</div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            width: Size === 'Small' ? '328px' : '780px'
+                        }}
+                    >
+                        <button className='chip'>{LabelText}</button>
+                        {ShowChip02 && <button className='chip'>{LabelText}</button>}
+                        {ShowChip03 && <button className='chip'>{LabelText}</button>}
+                        {ShowChip04 && <button className='chip'>{LabelText}</button>}
+                        {ShowChip05 && <button className='chip'>{LabelText}</button>}
+                        {ShowChip06 && <button className='chip'>{LabelText}</button>}
+                    </div>
                 </div>
-            </button>}
-            {!Single && <div>
-                <div className='chipHeading'>Heading</div>
-                <div 
-                    style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        width: (Size==='Small') ? '328px' : '780px',
-                    }}
-                >
-                    <button className='chip'>
-                        {LabelText}
-                    </button>
-                    {ShowChip02 && <button className='chip'>
-                        {LabelText}
-                    </button>}
-                    {ShowChip03 && <button className='chip'>
-                        {LabelText}
-                    </button>}
-                    {ShowChip04 && <button className='chip'>
-                        {LabelText}
-                    </button>}
-                    {ShowChip05 && <button className='chip'>
-                        {LabelText}
-                    </button>}
-                    {ShowChip06 && <button className='chip'>
-                        {LabelText}
-                    </button>}
-                </div>
-            </div>}
+            )}
         </>
-    )
-}
+    );
+};

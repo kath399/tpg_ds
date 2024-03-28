@@ -50,6 +50,7 @@ type Story = StoryObj<typeof meta>;
 export const Main: Story = {
   args: { 
     Size: 'Large',
+    Colour: 'Primary',
     State: 'Enabled',
     Text: 'Link',
     ShowLeftIcon: false,

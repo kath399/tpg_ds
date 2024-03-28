@@ -41,10 +41,22 @@ font-face {
     outline-offset: 2px;
 }
 
-.chip:focus {
+
+.chip:focus-visible {
     background-color: #0D0D0D26;
     outline: 2px solid #0096AD; 
     outline-offset: 2px;
+}
+
+.chip:focus:not(.focus-visible) {
+    color: white;
+    background-color: #E60000;
+    padding-right: 56px;
+    background-image: url(./assets/Icon_white2.svg);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: right 24px center;
+    outline: none;
 }
 
 .chip--Pressed {

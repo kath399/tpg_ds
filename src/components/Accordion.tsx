@@ -83,7 +83,7 @@ export const Accordion = ({
         </RadixAccordion.Header>
         <RadixAccordion.Content>
           {ShowTitle && <div className={`flex p-[8px_16px] font-vodafone font-bold ${textSize} text-left`}>
-            {ShowTitleIcon && <img src={BlackIcon} alt='' style={{marginRight: '12px'}}/>}
+            {ShowTitleIcon && <img src={BlackIcon} alt='' style={{marginRight: '12px', marginTop: '0', marginBottom: 'auto'}}/>}
             {TitleText}
           </div>}
           <div className={`pl-[16px] pr-[16px] pt-[8px] pb-[16px] font-vodafone ${textSize} text-left`}>

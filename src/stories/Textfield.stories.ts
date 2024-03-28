@@ -35,7 +35,7 @@ export const Simple: Story = {
       ShowLeftIcon: false,
       ShowInputText: true,
       ShowRightIcon: false,
-      InputText: 'User Input Text',
+      InputText: '',
       ShowSupportingText: false,
       SupportingText: 'Support Text',
       ShowErrorText: false,

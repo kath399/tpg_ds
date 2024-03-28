@@ -52,7 +52,7 @@ export const NoIcon: Story = {
     OnOff: true,
     State: 'Active',
     ShowLabel: true,
-    Label: 'Toggle label'
+    Label: 'Switch'
   },
   parameters: {
     design: {
@@ -68,7 +68,7 @@ export const WithIcon: Story = {
     OnOff: true,
     State: 'Active',
     ShowLabel: true,
-    Label: 'Toggle label'
+    Label: 'Switch'
   },
   parameters: {
     design: {

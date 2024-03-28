@@ -117,7 +117,7 @@ export const Textfield = ({
             disabled={State === 'Disabled'}
             required={(State === 'Error')}
             list="suggestions"
-            placeholder='User Input Text'
+            placeholder='Inputted Text'
             value={inputValue}
           />
         }

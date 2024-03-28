@@ -66,6 +66,7 @@ export const Single: Story = {
 
 export const Group: Story = {
   args: { 
+    State: 'Default',
     Size: 'Large',
     ShowChip02: true,
     ShowChip03: true,
